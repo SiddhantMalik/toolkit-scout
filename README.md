@@ -31,7 +31,7 @@ python agent/run_all.py --research        # stage 1 (network) then the offline s
 # have it append one JSON line per app to data/pass2/raw_<k>.jsonl
 python agent/gate.py                                              # stage 3
 ```
-Stage 2 here ran as Claude subagents; Composio's SDK/MCP was **not** used (no API key was available); that step is still open. The prompt is model-agnostic and can be driven through Composio tools (search + fetch) instead.
+Stage 2 here ran as Claude subagents; Composio was only tried briefly (see `data/composio_attempt.json`): its free fetch tool was rate-limited and returned nothing usable, the key got a 401 from the Python SDK's REST endpoint, and no repo script calls Composio. Treat the Composio step as not done. The prompt is model-agnostic and can be driven through Composio tools (search + fetch) instead.
 
 ## Known limits
 No human has reviewed the rows yet (10-app checklist is on the page). Gold sets are model-labelled; gold B is n=20 (CI roughly ±20 pts). Some pages were unreadable by script (JS-only or bot-blocked); 31 quotes are web-fetch only and cannot be machine-checked. Facts are dated 2026-11-23.
