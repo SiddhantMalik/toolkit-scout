@@ -7,7 +7,7 @@
 
 <nav class="nav"><div class="in">
   <a class="logo" href="https://sidmalik.dev" target="_blank" rel="noopener">sid<span>.dev</span></a>
-  <div class="links"><a href="#patterns">Patterns</a><a href="#findings">All apps</a><a href="#agent">The agent</a><a href="#verify">Verification</a><a href="#human">Human check</a></div>
+  <div class="links"><a href="#patterns">Patterns</a><a href="#findings">All apps</a><a href="#agent">The agent</a><a href="#verify">Verification</a><a href="#human">Human check</a><a href="https://github.com/SiddhantMalik/toolkit-scout" target="_blank" rel="noopener">GitHub ↗</a></div>
 </div></nav>
 
 <main>
@@ -15,7 +15,7 @@
   <span class="eyebrow">Composio research take-home · data as of {{retrieved}}</span>
   <h1>Toolkit <em>Scout</em></h1>
   <p class="lead">I built an agent pipeline that researched <b>{{n}} apps</b> the way a toolkit team would: how auth works, whether a developer can get credentials alone, what the API covers, whether an official MCP exists, and what blocks a toolkit. Every answer carries a quote and the URL it came from. Then I measured how often it was right.</p>
-  <p class="byline">By <a href="https://sidmalik.dev" target="_blank" rel="noopener">Siddhant Malik · sidmalik.dev</a></p>
+  <p class="byline">By <a href="https://sidmalik.dev" target="_blank" rel="noopener">Siddhant Malik · sidmalik.dev</a> · Source code: <a href="https://github.com/SiddhantMalik/toolkit-scout" target="_blank" rel="noopener">github.com/SiddhantMalik/toolkit-scout</a></p>
 </header>
 
 <div class="glass tldr">
@@ -141,7 +141,8 @@
 
 <section id="rerun">
   <h2><span class="n">06</span>Re-running it</h2>
-  <details><summary>Commands (from the source repo)</summary>
+  <p class="intro">Code and README: <a href="https://github.com/SiddhantMalik/toolkit-scout" target="_blank" rel="noopener">github.com/SiddhantMalik/toolkit-scout</a>.</p>
+  <details><summary>Commands</summary>
 <pre class="run" id="run-cmd">pip install -r requirements.txt
 python agent/run_all.py              # verify -> score -> analyze -> rebuild this page (offline, ~5 s)
 python -m pytest -q tests            # rubric, scorer, quote-checker and Composio-client tests
@@ -151,7 +152,7 @@ python agent/run_all.py --research   # re-fetch docs, then re-check script-block
 </section>
 </main>
 
-<footer><span>Toolkit Scout · Siddhant Malik · data as of {{retrieved}}</span><a href="https://sidmalik.dev" target="_blank" rel="noopener">sidmalik.dev →</a></footer>
+<footer><span>Toolkit Scout · Siddhant Malik · data as of {{retrieved}}</span><span><a href="https://github.com/SiddhantMalik/toolkit-scout" target="_blank" rel="noopener">Source on GitHub</a> · <a href="https://sidmalik.dev" target="_blank" rel="noopener">sidmalik.dev →</a></span></footer>
 
 <script type="application/json" id="data">{{app_data_json}}</script>
 <script type="application/json" id="summary">{{summary_json}}</script>

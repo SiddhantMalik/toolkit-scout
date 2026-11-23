@@ -1,6 +1,6 @@
 # Toolkit Scout
 
-**Live case study:** https://siddhantmalik.github.io/toolkit-scout/ · by [Siddhant Malik](https://sidmalik.dev)
+**Live case study:** https://sidmalik.dev/toolkit-scout/ · by [Siddhant Malik](https://sidmalik.dev)
 
 Researches 100 apps (auth, self-serve vs gated, API surface, MCP, buildability verdict) with an agent pipeline, then checks its own accuracy against frozen gold sets. Output: `site/index.html` (single-page case study) and `data/final.json` (machine-readable).
 
