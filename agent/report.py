@@ -149,12 +149,18 @@ def build_context():
                   for a in (by_id[i] for i in human_ids)]
 
     human = json.loads((ROOT / "data/human_check.json").read_text())
+    browser = list(_jsonl("data/pass2/browser_loop.jsonl"))
     agree = sum(r[f] == "agree" for r in human["results"] for f in human["fields"])
     total = len(human["results"]) * len(human["fields"])
     ctx = {
         **_composio_loop(scores),
         "hc_agree": agree, "hc_total": total, "hc_apps": len(human["results"]), "hc_ci_low": _wilson_low(agree, total),
         "n_excluded": n - nr,
+        "denominator_note": (f"Why {nr}, not {n}: the counts use the {nr} apps identified with medium or high confidence; "
+                             f"the other {n - nr} are listed in the table." if nr < n else
+                             f"Counts cover all {n} apps. {len(browser)} that the pipeline could not settle ({', '.join(b['name'] for b in browser)}) "
+                             "were settled in a last browser-and-search loop, described under Verification."),
+        "browser_names": ", ".join(b["name"] for b in browser),
         "hc_apps_ok": sum(all(r[f] == "agree" for f in human["fields"]) for r in human["results"]),
         "hc_app_ci_low": _wilson_low(sum(all(r[f] == "agree" for f in human["fields"]) for r in human["results"]), len(human["results"])),
         "excluded_names": ", ".join(f'{a["name"]} ({"product unclear" if a.get("entity_status") == "ambiguous" else "low confidence"})'
@@ -182,6 +188,7 @@ def build_context():
             ["Category", "n", "Free/trial dev access", "Paid/gated dev access", "Official MCP", "Easy", "Caveat", "Hard"]),
         # accuracy: random held-out sample (gold B), the number to trust
         "b_mcp_p1": _frac(scores, "pass1_memory", B, "mcp_official"), "b_mcp_p2": _frac(scores, "pass2b", B, "mcp_official"),
+        "b_auth_p1": _frac(scores, "pass1_memory", B, "auth"), "b_auth_p2": _frac(scores, "pass2b", B, "auth"),
         "b_acc_p1": _frac(scores, "pass1_memory", B, "access"), "b_acc_p2": _frac(scores, "pass2b", B, "access"),
         "b_ver_p1": sc("pass1_memory", B, "verdict")["acc"], "b_ver_v1": sc("pass2b", B, "verdict")["acc"],
         "b_ver_v3": sc("pass2b_v3", B, "verdict")["acc"],

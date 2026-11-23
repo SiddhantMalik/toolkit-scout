@@ -1,53 +1,54 @@
 {
  "summary": {
   "n_total": 100,
-  "n_reliable": 95,
+  "n_reliable": 100,
   "retrieved": "2026-11-23",
   "auth": {
-   "oauth2": 75,
-   "key": 72,
-   "basic": 12,
+   "oauth2": 77,
+   "key": 76,
+   "basic": 13,
    "jwt": 5
   },
-  "auth_only_key": 13,
-  "auth_oauth_any": 75,
+  "auth_only_key": 15,
+  "auth_oauth_any": 77,
   "access_dev": {
-   "self": 76,
-   "gated": 11,
+   "self": 77,
+   "gated": 15,
    "paid": 7,
    "unknown": 1
   },
   "access_dev_raw": {
-   "self_free": 59,
+   "self_free": 60,
    "self_trial": 17,
-   "customer_only": 4,
+   "customer_only": 6,
    "sales_contact": 2,
    "partner_review": 4,
    "paid_plan": 7,
    "unknown": 1,
-   "kyc_verification": 1
+   "kyc_verification": 1,
+   "enterprise_license": 2
   },
-  "self_serve_n": 76,
+  "self_serve_n": 77,
   "prod_friction": 25,
   "mcp": {
-   "official_remote": 70,
-   "none": 5,
+   "official_remote": 73,
+   "none": 7,
    "official_local": 10,
    "docs_only": 4,
    "community": 6
   },
-  "mcp_official": 80,
+  "mcp_official": 83,
   "verdict": {
-   "caveat": 47,
+   "caveat": 48,
    "easy": 34,
-   "hard": 13,
+   "hard": 15,
    "no": 2,
-   "unknown": 4
+   "unknown": 1
   },
   "verdict_reliable": {
-   "caveat": 47,
+   "caveat": 48,
    "easy": 34,
-   "hard": 11,
+   "hard": 15,
    "no": 2,
    "unknown": 1
   },
@@ -58,20 +59,19 @@
    "ADMIN_ONLY_CREDENTIAL": 11,
    "PAID_PLAN": 11,
    "PER_REGION_HOST": 8,
-   "NARROW_SURFACE": 6,
-   "CUSTOMER_ONLY": 5,
+   "NARROW_SURFACE": 7,
+   "CUSTOMER_ONLY": 6,
    "PARTNER_PROGRAM": 4,
    "SALES_CONTACT": 2,
    "NO_API": 2,
-   "DOCS_NOT_PUBLIC": 2,
-   "ENTITY_UNRESOLVED": 2,
+   "ENTERPRISE_ONLY": 2,
+   "DOCS_NOT_PUBLIC": 1,
    "KYC_OR_BUSINESS_VERIFICATION": 1,
-   "ENTERPRISE_ONLY": 1,
    "BETA_OR_UNSTABLE": 1
   },
   "tenancy": {
-   "per_subdomain": 11,
-   "global": 69,
+   "per_subdomain": 12,
+   "global": 73,
    "per_region": 11,
    "self_hosted": 4
   },
@@ -88,14 +88,14 @@
     "no": 0
    },
    "Support and Helpdesk": {
-    "n": 9,
+    "n": 10,
     "self": 8,
     "paid": 0,
-    "gated": 1,
+    "gated": 2,
     "official_mcp": 9,
     "easy": 2,
     "caveat": 6,
-    "hard": 1,
+    "hard": 2,
     "no": 0
    },
    "Communications and Messaging": {
@@ -165,25 +165,25 @@
     "no": 0
    },
    "Finance and Fintech": {
-    "n": 8,
+    "n": 10,
     "self": 4,
     "paid": 1,
-    "gated": 3,
-    "official_mcp": 8,
+    "gated": 5,
+    "official_mcp": 9,
     "easy": 0,
     "caveat": 5,
-    "hard": 3,
+    "hard": 5,
     "no": 0
    },
    "AI, Research and Media-native": {
-    "n": 8,
-    "self": 6,
+    "n": 10,
+    "self": 7,
     "paid": 2,
-    "gated": 0,
-    "official_mcp": 6,
+    "gated": 1,
+    "official_mcp": 8,
     "easy": 3,
-    "caveat": 4,
-    "hard": 0,
+    "caveat": 5,
+    "hard": 1,
     "no": 1
    }
   },
@@ -191,7 +191,7 @@
    "mcp_changed": 40,
    "mcp_none_to_official": 39,
    "access_changed": 21,
-   "verdict_changed": 47,
+   "verdict_changed": 45,
    "auth_changed": 35
   },
   "easy_wins": [
@@ -300,7 +300,7 @@
    {
     "name": "Paygent Connect",
     "why": [
-     "ENTITY_UNRESOLVED"
+     "CUSTOMER_ONLY"
     ]
    },
    {
@@ -324,13 +324,7 @@
    {
     "name": "Otter AI",
     "why": [
-     "DOCS_NOT_PUBLIC"
-    ]
-   },
-   {
-    "name": "YouTube Transcript",
-    "why": [
-     "ENTITY_UNRESOLVED"
+     "ENTERPRISE_ONLY"
     ]
    }
   ],
@@ -340,14 +334,12 @@
    "failed": 6
   },
   "conf": {
-   "medium": 39,
-   "high": 57,
-   "low": 4
+   "medium": 43,
+   "high": 57
   },
   "entity": {
-   "resolved": 95,
-   "renamed": 3,
-   "ambiguous": 2
+   "resolved": 97,
+   "renamed": 3
   }
  },
  "apps": [
@@ -1994,10 +1986,23 @@
      "url": "https://developer.gladly.com/llms.txt",
      "quote": "Auth: Basic Authentication (agent email + API token)",
      "src": "file"
+    },
+    {
+     "field": "auth",
+     "url": "https://help.gladly.com/developer-tutorials/docs/setup-and-testing",
+     "quote": "Gladly API uses token-based Basic Authentication.",
+     "src": "web"
+    },
+    {
+     "field": "access",
+     "url": "https://help.gladly.com/developer-tutorials/docs/setup-and-testing",
+     "quote": "If you do not have a sandbox environment and are interested in purchasing one, please contact your Gladly CSM or Gladly Support team.",
+     "src": "web"
     }
    ],
-   "confidence": "low",
-   "needs_human": "No official Gladly MCP found in vendor docs or llms-full.txt (only aggregators); no public trial/pricing, sandbox appears to require being a customer/contacting Gladly. Confirm via Gladly sales/support.",
+   "confidence": "medium",
+   "needs_human": null,
+   "provenance": "browser_loop: web search of official Gladly docs",
    "category": "Support and Helpdesk",
    "verdict": "hard",
    "rule": "R2",
@@ -7636,16 +7641,21 @@
   {
    "id": 84,
    "name": "Paygent Connect",
-   "entity_status": "ambiguous",
-   "entity_note": "No product named 'Paygent Connect' found. Best candidate: PAYGENT Co., Ltd. (paygent.co.jp), a Japanese payment gateway whose server-to-server 'module (API)' connection method is documented only for contracted merchants. 'Connect' may refer to its connection methods (\u63a5\u7d9a\u65b9\u5f0f).",
+   "entity_status": "resolved",
+   "entity_note": "Paygent (gopaygent.com), a white-label payment gateway whose docs use NMI integration names (Collect.js, Three-Step Redirect); 'Paygent Connect' is its platform/marketplace product. My seed had replaced the brief's hint with paygent.co.jp, a different Japanese company.",
    "description": "Japanese payment service provider (cards, konbini, PayPay, bank transfer, etc.) offering merchant payment gateway integration.",
-   "auth": "unknown",
+   "auth": [
+    "bearer_token",
+    "api_key"
+   ],
    "access_dev": "customer_only",
    "access_prod": "customer_only",
    "min_plan": "Merchant contract (pricing not public)",
    "admin_only_credential": null,
-   "api_styles": "unknown",
-   "api_breadth": "unknown",
+   "api_styles": [
+    "rest"
+   ],
+   "api_breadth": "moderate",
    "api_beta": null,
    "tenancy": "global",
    "mcp_type": "none",
@@ -7669,15 +7679,34 @@
      "url": "https://www.paygent.co.jp/payment_service/",
      "quote": "\u52a0\u76df\u5e97\u69d8\u306eEC\u30b5\u30a4\u30c8\u5185\u3067\u6c7a\u6e08\u3092\u5b8c\u7d50\u3067\u304d\u307e\u3059\u3002 \u958b\u767a\u5de5\u6570\u76ee\u5b89\uff1a3\uff5e5\u9031\u9593",
      "src": "file"
+    },
+    {
+     "field": "auth",
+     "url": "https://www.gopaygent.com/",
+     "quote": "Authorization: Bearer pgt_live_xxx",
+     "src": "browser"
+    },
+    {
+     "field": "access",
+     "url": "https://www.gopaygent.com/signup",
+     "quote": "Get Started with Paygent | Merchant Onboarding Request",
+     "src": "browser"
+    },
+    {
+     "field": "api",
+     "url": "https://www.gopaygent.com/developers/docs",
+     "quote": "Deep dive into the Pathfinder API, Collect.js, and Three-Step Redirect logic.",
+     "src": "browser"
     }
    ],
-   "confidence": "low",
-   "needs_human": "Confirm which product 'Paygent Connect' means. Integration docs (auth method, API style) are behind the merchant support site, provided only after contract; no public developer docs or MCP found.",
+   "confidence": "medium",
+   "needs_human": "Confirm with Paygent that API keys are issued only after merchant onboarding.",
+   "provenance": "browser_loop: brief hint ('NMI-powered') + web search + built-in browser (JS-rendered site)",
    "category": "Finance and Fintech",
-   "verdict": "unknown",
-   "rule": "R0",
+   "verdict": "hard",
+   "rule": "R2",
    "blockers": [
-    "ENTITY_UNRESOLVED"
+    "CUSTOMER_ONLY"
    ],
    "quotes_verified": 3,
    "quotes_web_only": 0,
@@ -8225,8 +8254,9 @@
      "src": "web"
     }
    ],
-   "confidence": "low",
+   "confidence": "medium",
    "needs_human": "pitchbook.com blocks scripted fetches (403), so all quotes are web-only. PitchBook MCP connectors exist inside partner platforms (Claude, ChatGPT, Perplexity) for subscribers, but no public MCP endpoint URL was found; confirm whether a standalone remote MCP is offered and the exact API auth header.",
+   "provenance": "browser_loop: Composio fetch of the cited pages",
    "category": "Finance and Fintech",
    "verdict": "hard",
    "rule": "R2",
@@ -8363,10 +8393,11 @@
    "entity_note": "Otter.ai meeting transcription/notes app.",
    "description": "AI meeting notetaker that records, transcribes and summarizes meetings and lets users search/chat over transcripts.",
    "auth": [
-    "oauth2"
+    "oauth2",
+    "bearer_token"
    ],
-   "access_dev": "unknown",
-   "access_prod": "unknown",
+   "access_dev": "enterprise_license",
+   "access_prod": "enterprise_license",
    "min_plan": "unknown",
    "admin_only_credential": null,
    "api_styles": [
@@ -8403,15 +8434,23 @@
      "url": "https://help.otter.ai/hc/en-us/articles/35287607569687-Otter-MCP-Server",
      "quote": "The admin of your Claude must enable Otter for the workspace.",
      "src": "web"
+    },
+    {
+     "field": "access",
+     "url": "https://www.scalekit.com/blog/otter-mcp-vs-api",
+     "quote": "the Public API is gated to Enterprise workspaces and authenticates with Bearer API keys only, no OAuth.",
+     "src": "web",
+     "secondary": true
     }
    ],
-   "confidence": "low",
-   "needs_human": "help.otter.ai is Cloudflare-blocked for scripts; facts are from WebFetch only. MCP exposes only 3 tools (user info, search, fetch transcript). A 'Super Admin specific APIs' help article (help.otter.ai/hc/en-us/articles/39661865499799) exists but could not be fetched: check whether it is an Enterprise-only admin API and what plan the MCP requires.",
+   "confidence": "medium",
+   "needs_human": "Access source is a third-party write-up; confirm on otter.ai/api/docs. The MCP server works from a standard account; only the REST API is Enterprise-only.",
+   "provenance": "browser_loop: Composio fetch of Otter's MCP page + web search",
    "category": "AI, Research and Media-native",
-   "verdict": "unknown",
-   "rule": "R0b",
+   "verdict": "hard",
+   "rule": "R2",
    "blockers": [
-    "DOCS_NOT_PUBLIC"
+    "ENTERPRISE_ONLY"
    ],
    "quotes_verified": 3,
    "quotes_web_only": 0,
@@ -8992,8 +9031,8 @@
   {
    "id": 99,
    "name": "YouTube Transcript",
-   "entity_status": "ambiguous",
-   "entity_note": "Generic name. Seed hint points to TranscriptAPI (transcriptapi.com), a third-party YouTube transcript/search API, which is what is extracted here. Could alternatively mean YouTube's own captions via the YouTube Data API (Google) or the youtube-transcript-api Python library.",
+   "entity_status": "resolved",
+   "entity_note": "TranscriptAPI (transcriptapi.com), a third-party YouTube transcript API; the brief's hint names transcriptapi.com, so the agent's pick was right and 'ambiguous' is cleared.",
    "description": "Third-party API/MCP that fetches YouTube video transcripts and searches videos, channels and playlists.",
    "auth": [
     "api_key",
@@ -9052,12 +9091,13 @@
     }
    ],
    "confidence": "high",
-   "needs_human": "Confirm which product 'YouTube Transcript' refers to (TranscriptAPI third-party service vs. Google YouTube Data API captions).",
+   "needs_human": null,
+   "provenance": "browser_loop: brief hint",
    "category": "AI, Research and Media-native",
-   "verdict": "unknown",
-   "rule": "R0",
+   "verdict": "caveat",
+   "rule": "R3",
    "blockers": [
-    "ENTITY_UNRESOLVED"
+    "NARROW_SURFACE"
    ],
    "quotes_verified": 6,
    "quotes_web_only": 0,

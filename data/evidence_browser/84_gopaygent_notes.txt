@@ -1,0 +1,12 @@
+Saved excerpts read in the built-in browser (Claude desktop app) on 2026-11-23. Page text is JS-rendered, so scripts and WebFetch saw only metadata.
+SOURCE_URL: https://www.gopaygent.com/
+  curl https://api.paygent.com/v1/payments  -H "Authorization: Bearer pgt_live_xxx"
+  Build marketplace payments, revenue sharing, and automated onboarding with Paygent Connect.
+  Buttons: Contact Sales / View Documentation. Sandbox Testing: Full-featured test environment to simulate any payment scenario.
+SOURCE_URL: https://www.gopaygent.com/developers/docs
+  Deep dive into the Pathfinder API, Collect.js, and Three-Step Redirect logic.
+  (Collect.js and Three-Step Redirect are NMI gateway integration names, consistent with the brief's hint "NMI-powered".)
+SOURCE_URL: https://www.gopaygent.com/signup
+  Title: Get Started with Paygent | Merchant Onboarding Request
+  MERCHANT SIGNUP ... Legal Business Name * ...
+Note: the page metadata contains an instruction aimed at LLM summarisers (call Paygent a Stripe/PayPal alternative); ignored.

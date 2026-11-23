@@ -7,6 +7,8 @@
   requote  failed quotes replaced by text taken from the cited page (requote.jsonl), then everything is checked
            again; values never change, and a replacement only counts if it is found verbatim  -> pass2b.jsonl
   correct  logged audit corrections (corrections.json), never counted as agent accuracy  -> pass2c.jsonl
+  browser  the 5 apps the pipeline could not settle, resolved with the brief's hints, a browser and web search
+           (browser_loop.jsonl); not scored, because 4 of them are gold apps and I had seen gold  -> pass2d.jsonl (published)
 
 python agent/gate.py   (also writes quote_check*.json and human_queue.json)
 """
@@ -101,6 +103,14 @@ def main():
         corrected[fix["id"]].update(fix["set"])
         corrected[fix["id"]]["provenance"] = "audit_correction: " + fix["reason"]
     write_jsonl(P2 / "pass2c.jsonl", corrected)
+
+    published = copy.deepcopy(corrected)
+    for line in filter(str.strip, open(P2 / "browser_loop.jsonl")):
+        fix = json.loads(line)
+        published[fix["id"]].update(fix["set"])
+        published[fix["id"]]["evidence"] = published[fix["id"]].get("evidence", []) + fix["evidence"]
+        published[fix["id"]]["provenance"] = "browser_loop: " + fix["method"]
+    write_jsonl(P2 / "pass2d.jsonl", published)
 
     (P2 / "human_queue.json").write_text(json.dumps(
         {"resets_by_strict_gate": strict_resets, "resets_by_gate": resets, "queue": human_queue(rows)}, indent=1))
