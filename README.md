@@ -1,5 +1,7 @@
 # Toolkit Scout
 
+**Live case study:** https://siddhantmalik.github.io/toolkit-scout/ · by [Siddhant Malik](https://sidmalik.dev)
+
 Researches 100 apps (auth, self-serve vs gated, API surface, MCP, buildability verdict) with an agent pipeline, then checks its own accuracy against frozen gold sets. Output: `site/index.html` (single-page case study) and `data/final.json` (machine-readable).
 
 ## Layout
@@ -46,3 +48,7 @@ Result on this run: 20 of 21 cited pages fetched; 33 web-tool quotes checked aga
 
 ## Known limits
 Five apps the pipeline could not settle were settled in a final browser-and-search loop (`data/pass2/browser_loop.jsonl`, not scored). The author checked 10 random apps by hand against the docs (auth, access, MCP): 30/30 agree (`data/human_check.json`); one checker, so treat it as a spot-check. The verdict column is not validated. Gold sets are model-labelled; gold B is n=20 (CI roughly ±20 pts). Some pages were unreadable by script (JS-only or bot-blocked); their pages were re-fetched through Composio, and 1 web-tool quote (a 404 PitchBook URL) is still unchecked. Quotes from script-saved pages are matched against all text saved for the app, not the exact cited URL. Facts are dated 2026-11-23.
+
+
+## Notes
+`data/evidence*/` hold cached text of public developer-docs pages, kept so the quote checker can be re-run offline. The single-file page is `site/index.html` (mirrored to `docs/` for GitHub Pages).

@@ -34,4 +34,6 @@ if __name__ == "__main__":
         research = research + [["gate.py"], COMPOSIO_STEP]   # gate first so quote_check.json lists the web-only quotes
     for step in research + OFFLINE_STEPS:
         run(step)
-    print("done: site/index.html, data/final.json, data/scores.json")
+    import shutil
+    shutil.copy(ROOT / "site/index.html", ROOT / "docs/index.html")   # GitHub Pages serves docs/
+    print("done: site/index.html (+ docs/index.html), data/final.json, data/scores.json")
