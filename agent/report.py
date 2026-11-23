@@ -158,8 +158,9 @@ def build_context():
         "n_excluded": n - nr,
         "denominator_note": (f"Why {nr}, not {n}: the counts use the {nr} apps identified with medium or high confidence; "
                              f"the other {n - nr} are listed in the table." if nr < n else
-                             f"Counts cover all {n} apps. {len(browser)} that the pipeline could not settle ({', '.join(b['name'] for b in browser)}) "
-                             "were settled in a last browser-and-search loop, described under Verification."),
+                             f"Counts cover all {n} apps. The pipeline couldn't settle {len(browser)} of them ({', '.join(b['name'] for b in browser)}); "
+                             "I settled those by hand in a browser (see Verification)."),
+        "summary_json": json.dumps({"summary": summary, "scores": scores}, ensure_ascii=False).replace("</", "<\\/"),
         "browser_names": ", ".join(b["name"] for b in browser),
         "hc_apps_ok": sum(all(r[f] == "agree" for f in human["fields"]) for r in human["results"]),
         "hc_app_ci_low": _wilson_low(sum(all(r[f] == "agree" for f in human["fields"]) for r in human["results"]), len(human["results"])),

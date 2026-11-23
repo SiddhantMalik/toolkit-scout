@@ -1,5 +1,5 @@
 {
- "checker": "Siddhant Malik (repo author), not an independent reviewer",
+ "checker": "Siddhant Malik (the author)",
  "date": "2026-11-23",
  "method": "Opened the linked docs for each app and compared auth, dev->prod access and official-MCP status with the page's values.",
  "fields": [
@@ -191,5 +191,6 @@
     "mcp": "official_remote"
    }
   }
- ]
+ ],
+ "independent": false
 }
