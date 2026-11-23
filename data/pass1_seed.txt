@@ -1,0 +1,102 @@
+# id|name|category|docs_urls(space sep)|auth|access|api|mcp|verdict|blocker
+# PASS 1 = written from model memory only, no docs opened. Vocab: auth=oauth2,apikey,basic,token,jwt,none | access=self,trial,paid,gated | api=rest,graphql,rest+graphql,none | mcp=official,community,none | verdict=easy,caveat,hard,no
+1|Salesforce|CRM and Sales|https://developer.salesforce.com/docs/apis|oauth2|self|rest+graphql|community|easy|-
+2|HubSpot|CRM and Sales|https://developers.hubspot.com/docs/api/overview|oauth2,token|self|rest|official|easy|-
+3|Pipedrive|CRM and Sales|https://developers.pipedrive.com/docs/api/v1|oauth2,apikey|trial|rest|community|easy|-
+4|Attio|CRM and Sales|https://docs.attio.com/rest-api/overview|oauth2,token|self|rest|official|easy|-
+5|Twenty|CRM and Sales|https://twenty.com/developers|apikey|self|rest+graphql|community|easy|-
+6|Podio|CRM and Sales|https://developers.podio.com/|oauth2|self|rest|none|caveat|legacy product
+7|Zoho CRM|CRM and Sales|https://www.zoho.com/crm/developer/docs/api/v8/|oauth2|self|rest|official|caveat|per-region data centers
+8|Close|CRM and Sales|https://developer.close.com/|apikey,oauth2|trial|rest|community|easy|-
+9|Copper|CRM and Sales|https://developer.copper.com/|apikey|paid|rest|none|caveat|API key needs paid plan
+10|DealCloud|CRM and Sales|https://api.docs.dealcloud.com/|oauth2|gated|rest|none|hard|customer-only tenant
+11|Zendesk|Support and Helpdesk|https://developer.zendesk.com/api-reference/|oauth2,basic|trial|rest|community|easy|-
+12|Intercom|Support and Helpdesk|https://developers.intercom.com/docs|oauth2,token|self|rest|official|easy|-
+13|Freshdesk|Support and Helpdesk|https://developers.freshdesk.com/api/|apikey,basic|trial|rest|none|easy|-
+14|Front|Support and Helpdesk|https://dev.frontapp.com/reference/introduction|oauth2,token|trial|rest|none|easy|-
+15|Pylon|Support and Helpdesk|https://docs.usepylon.com/pylon-docs/developer/api|token|paid|rest|none|caveat|admin-issued token on paid plan
+16|LiveAgent|Support and Helpdesk|https://www.liveagent.com/support/api/|apikey|trial|rest|none|caveat|thin docs
+17|Plain|Support and Helpdesk|https://www.plain.com/docs/api-reference/graphql/introduction|apikey|self|graphql|official|easy|-
+18|Help Scout|Support and Helpdesk|https://developer.helpscout.com/|oauth2|trial|rest|none|easy|-
+19|Gorgias|Support and Helpdesk|https://developers.gorgias.com/|oauth2,basic|trial|rest|none|caveat|per-store subdomain
+20|Gladly|Support and Helpdesk|https://developer.gladly.com/rest/|basic|gated|rest|none|hard|customer-only
+21|Slack|Communications and Messaging|https://api.slack.com/docs|oauth2|self|rest|official|easy|-
+22|Twilio|Communications and Messaging|https://www.twilio.com/docs/usage/api|basic,apikey|trial|rest|official|easy|-
+23|Zoho Cliq|Communications and Messaging|https://www.zoho.com/cliq/help/restapi/v2/|oauth2|self|rest|none|easy|-
+24|Lark (Larksuite)|Communications and Messaging|https://open.larksuite.com/document|oauth2|self|rest|official|caveat|tenant vs user tokens
+25|Pumble|Communications and Messaging|https://pumble.com/help/integrations/add-pumble-apps/|apikey|paid|rest|none|caveat|new API
+26|Discord|Communications and Messaging|https://discord.com/developers/docs/intro|token,oauth2|self|rest|community|easy|-
+27|Telegram|Communications and Messaging|https://core.telegram.org/bots/api|token|self|rest|community|easy|-
+28|WhatsApp Business|Communications and Messaging|https://developers.facebook.com/docs/whatsapp|oauth2,token|gated|rest|none|hard|business verification
+29|Aircall|Communications and Messaging|https://developer.aircall.io/api-references/|basic,oauth2|paid|rest|none|caveat|paid plan
+30|Vonage|Communications and Messaging|https://developer.vonage.com/en/api|basic,jwt|trial|rest|none|easy|-
+31|Google Ads|Marketing, Ads, Email and Social|https://developers.google.com/google-ads/api/docs/start|oauth2|gated|rest|official|hard|developer token approval
+32|Meta Ads|Marketing, Ads, Email and Social|https://developers.facebook.com/docs/marketing-apis|oauth2|gated|rest|none|hard|app review
+33|LinkedIn Ads|Marketing, Ads, Email and Social|https://learn.microsoft.com/en-us/linkedin/marketing/|oauth2|gated|rest|none|hard|Marketing Developer Platform approval
+34|GoHighLevel|Marketing, Ads, Email and Social|https://highlevel.stoplight.io/docs/integrations|oauth2,apikey|paid|rest|official|caveat|paid plan
+35|Mailchimp|Marketing, Ads, Email and Social|https://mailchimp.com/developer/marketing/api/|oauth2,apikey|self|rest|community|easy|-
+36|Klaviyo|Marketing, Ads, Email and Social|https://developers.klaviyo.com/en/reference/api_overview|apikey,oauth2|self|rest|official|easy|-
+37|systeme.io|Marketing, Ads, Email and Social|https://systeme.io/|apikey|paid|rest|none|caveat|thin API
+38|Pinterest|Marketing, Ads, Email and Social|https://developers.pinterest.com/docs/api/v5/|oauth2|gated|rest|none|hard|trial access approval
+39|Threads (Meta)|Marketing, Ads, Email and Social|https://developers.facebook.com/docs/threads|oauth2|gated|rest|none|caveat|app review
+40|SendGrid|Marketing, Ads, Email and Social|https://www.twilio.com/docs/sendgrid/api-reference|apikey|self|rest|community|easy|-
+41|Shopify|Ecommerce|https://shopify.dev/docs/api|oauth2,token|self|rest+graphql|official|easy|-
+42|WooCommerce|Ecommerce|https://woocommerce.github.io/woocommerce-rest-api-docs/|basic|self|rest|none|caveat|per-store URL
+43|BigCommerce|Ecommerce|https://developer.bigcommerce.com/docs|oauth2,token|trial|rest|none|easy|-
+44|Salesforce Commerce Cloud|Ecommerce|https://developer.salesforce.com/docs/commerce/commerce-api/overview|oauth2|gated|rest|none|hard|customer-only
+45|Magento (Adobe Commerce)|Ecommerce|https://developer.adobe.com/commerce/webapi/|token,oauth2|self|rest+graphql|none|caveat|per-store URL
+46|Squarespace|Ecommerce|https://developers.squarespace.com/|oauth2,apikey|paid|rest|none|caveat|paid plan
+47|Ecwid|Ecommerce|https://api-docs.ecwid.com/|oauth2,token|self|rest|none|easy|-
+48|Gumroad|Ecommerce|https://gumroad.com/api|oauth2,token|self|rest|none|caveat|small API
+49|Amazon Selling Partner|Ecommerce|https://developer-docs.amazon.com/sp-api|oauth2|gated|rest|none|hard|seller registration and role approval
+50|fanbasis|Ecommerce|https://fanbasis.com/|apikey|paid|rest|none|caveat|unknown docs
+51|DataForSEO|Data, SEO and Scraping|https://docs.dataforseo.com/v3/|basic|trial|rest|official|easy|-
+52|SE Ranking|Data, SEO and Scraping|https://seranking.com/api/|apikey|paid|rest|official|caveat|paid
+53|Ahrefs|Data, SEO and Scraping|https://docs.ahrefs.com/|apikey|paid|rest|official|caveat|paid plan
+54|MrScraper|Data, SEO and Scraping|https://docs.mrscraper.com/|apikey|trial|rest|none|caveat|-
+55|Apify|Data, SEO and Scraping|https://docs.apify.com/api/v2|token,oauth2|self|rest|official|easy|-
+56|Firecrawl|Data, SEO and Scraping|https://docs.firecrawl.dev/introduction|apikey|self|rest|official|easy|-
+57|Bright Data|Data, SEO and Scraping|https://docs.brightdata.com/|apikey|trial|rest|official|easy|-
+58|Sherlock|Data, SEO and Scraping|https://github.com/sherlock-project/sherlock|none|self|none|community|no|CLI, no API
+59|Waterfall.io|Data, SEO and Scraping|https://waterfall.io/|apikey|paid|rest|none|caveat|paid
+60|Clay|Data, SEO and Scraping|https://university.clay.com/docs|apikey|paid|none|none|hard|no public REST
+61|GitHub|Developer, Infra and Data platforms|https://docs.github.com/en/rest|oauth2,token|self|rest+graphql|official|easy|-
+62|Vercel|Developer, Infra and Data platforms|https://vercel.com/docs/rest-api|token,oauth2|self|rest|official|easy|-
+63|Netlify|Developer, Infra and Data platforms|https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-netlify-api/|token,oauth2|self|rest|community|easy|-
+64|Cloudflare|Developer, Infra and Data platforms|https://developers.cloudflare.com/api/|token,apikey|self|rest|official|easy|-
+65|Supabase|Developer, Infra and Data platforms|https://supabase.com/docs/reference/api/introduction|token,oauth2|self|rest|official|easy|-
+66|Neo4j|Developer, Infra and Data platforms|https://neo4j.com/docs/aura/platform/api/overview/|oauth2,basic|self|rest|official|caveat|per-instance DB endpoint
+67|Snowflake|Developer, Infra and Data platforms|https://docs.snowflake.com/en/developer-guide/sql-api/index|oauth2,jwt|trial|rest|official|easy|-
+68|MongoDB Atlas|Developer, Infra and Data platforms|https://www.mongodb.com/docs/atlas/api/|basic,oauth2|self|rest|official|easy|-
+69|Datadog|Developer, Infra and Data platforms|https://docs.datadoghq.com/api/latest/|apikey|trial|rest|official|easy|-
+70|Sentry|Developer, Infra and Data platforms|https://docs.sentry.io/api/|token,oauth2|self|rest|official|easy|-
+71|Notion|Productivity and Project Management|https://developers.notion.com/|oauth2,token|self|rest|official|easy|-
+72|Airtable|Productivity and Project Management|https://airtable.com/developers/web/api/introduction|oauth2,token|self|rest|community|easy|-
+73|Linear|Productivity and Project Management|https://developers.linear.app/docs|oauth2,apikey|self|graphql|official|easy|-
+74|Jira|Productivity and Project Management|https://developer.atlassian.com/cloud/jira/platform/rest/v3/intro/|oauth2,basic|self|rest|official|easy|-
+75|Asana|Productivity and Project Management|https://developers.asana.com/docs|oauth2,token|self|rest|official|easy|-
+76|Monday.com|Productivity and Project Management|https://developer.monday.com/api-reference/docs|oauth2,token|self|graphql|official|easy|-
+77|ClickUp|Productivity and Project Management|https://developer.clickup.com/docs|oauth2,token|self|rest|official|easy|-
+78|Coda|Productivity and Project Management|https://coda.io/developers/apis/v1|token|self|rest|official|easy|-
+79|Smartsheet|Productivity and Project Management|https://developers.smartsheet.com/api/smartsheet|oauth2,token|paid|rest|official|caveat|API needs plan
+80|Harvest|Productivity and Project Management|https://help.getharvest.com/api-v2/|oauth2,token|trial|rest|none|easy|-
+81|Stripe|Finance and Fintech|https://docs.stripe.com/api|apikey,oauth2|self|rest|official|easy|-
+82|Plaid|Finance and Fintech|https://plaid.com/docs/|apikey|self|rest|official|caveat|production approval
+83|Binance|Finance and Fintech|https://binance-docs.github.io/apidocs/spot/en/|apikey|self|rest|community|caveat|trading actions prohibited
+84|Paygent Connect|Finance and Fintech|https://www.paygent.co.jp/|apikey|gated|rest|none|hard|merchant contract
+85|iPayX|Finance and Fintech|https://ipayx.ai/docs|apikey|self|rest|none|caveat|new product
+86|QuickBooks|Finance and Fintech|https://developer.intuit.com/app/developer/qbo/docs/develop|oauth2|self|rest|official|easy|-
+87|Xero|Finance and Fintech|https://developer.xero.com/documentation/|oauth2|self|rest|official|easy|-
+88|Brex|Finance and Fintech|https://developer.brex.com/|oauth2,token|gated|rest|none|caveat|customer only
+89|Ramp|Finance and Fintech|https://docs.ramp.com/|oauth2|gated|rest|official|caveat|customer only
+90|PitchBook|Finance and Fintech|https://pitchbook.com/|apikey|gated|rest|none|hard|contract
+91|NotebookLM|AI, Research and Media-native|https://cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks|oauth2|gated|rest|none|hard|enterprise only
+92|Otter AI|AI, Research and Media-native|https://help.otter.ai/|oauth2|gated|none|official|hard|no public API
+93|Fathom|AI, Research and Media-native|https://developers.fathom.ai/|apikey,oauth2|self|rest|official|easy|-
+94|Consensus|AI, Research and Media-native|https://consensus.app/|none|gated|none|none|hard|no public API
+95|Reducto|AI, Research and Media-native|https://docs.reducto.ai/|apikey|self|rest|none|easy|-
+96|Devin|AI, Research and Media-native|https://docs.devin.ai/api-reference/overview|apikey|paid|rest|official|caveat|paid plan
+97|higgsfield|AI, Research and Media-native|https://higgsfield.ai/|apikey|paid|rest|none|caveat|unknown
+98|Mermaid CLI|AI, Research and Media-native|https://github.com/mermaid-js/mermaid-cli|none|self|none|none|no|CLI, no API
+99|YouTube Transcript|AI, Research and Media-native|https://transcriptapi.com/|apikey|self|rest|official|easy|-
+100|Grain|AI, Research and Media-native|https://developers.grain.com/|oauth2,token|paid|rest|official|caveat|paid plan

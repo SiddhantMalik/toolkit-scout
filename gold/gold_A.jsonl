@@ -1,0 +1,27 @@
+{"id": 1, "labeller": "independent Opus subagent (not human)", "labelled": "2026-11-23", "auth": ["oauth2"], "access": "self", "mcp_official": true, "verdict": "easy"}
+{"id": 8, "labeller": "independent Opus subagent (not human)", "labelled": "2026-11-23", "auth": ["key", "oauth2"], "access": "self", "mcp_official": true, "verdict": "easy"}
+{"id": 10, "labeller": "independent Opus subagent (not human)", "labelled": "2026-11-23", "auth": ["oauth2"], "access": "gated", "mcp_official": true, "verdict": "hard"}
+{"id": 15, "labeller": "independent Opus subagent (not human)", "labelled": "2026-11-23", "auth": ["key"], "access": "gated", "mcp_official": true}
+{"id": 20, "labeller": "independent Opus subagent (not human)", "labelled": "2026-11-23", "auth": ["basic"], "access": "gated", "mcp_official": false, "verdict": "hard"}
+{"id": 23, "labeller": "independent Opus subagent (not human)", "labelled": "2026-11-23", "auth": ["oauth2"], "access": "self", "mcp_official": true, "verdict": "easy"}
+{"id": 25, "labeller": "independent Opus subagent (not human)", "labelled": "2026-11-23", "auth": ["key"], "access": "self", "mcp_official": false}
+{"id": 32, "labeller": "independent Opus subagent (not human)", "labelled": "2026-11-23", "auth": ["oauth2"], "access": "gated", "mcp_official": true, "verdict": "hard"}
+{"id": 37, "labeller": "independent Opus subagent (not human)", "labelled": "2026-11-23", "auth": ["key"], "mcp_official": true, "verdict": "easy"}
+{"id": 42, "labeller": "independent Opus subagent (not human)", "labelled": "2026-11-23", "mcp_official": true, "verdict": "caveat"}
+{"id": 43, "labeller": "independent Opus subagent (not human)", "labelled": "2026-11-23", "mcp_official": false}
+{"id": 46, "labeller": "independent Opus subagent (not human)", "labelled": "2026-11-23", "mcp_official": true}
+{"id": 50, "labeller": "independent Opus subagent (not human)", "labelled": "2026-11-23", "verdict": "unknown"}
+{"id": 53, "labeller": "independent Opus subagent (not human)", "labelled": "2026-11-23", "auth": ["key"], "access": "paid", "mcp_official": true, "verdict": "caveat"}
+{"id": 54, "labeller": "independent Opus subagent (not human)", "labelled": "2026-11-23", "auth": ["key"], "mcp_official": true}
+{"id": 59, "labeller": "independent Opus subagent (not human)", "labelled": "2026-11-23", "auth": ["key"], "access": "gated", "mcp_official": false}
+{"id": 60, "labeller": "independent Opus subagent (not human)", "labelled": "2026-11-23", "auth": ["key"], "mcp_official": true, "verdict": "caveat"}
+{"id": 63, "labeller": "independent Opus subagent (not human)", "labelled": "2026-11-23", "mcp_official": true}
+{"id": 79, "labeller": "independent Opus subagent (not human)", "labelled": "2026-11-23", "mcp_official": true, "verdict": "caveat"}
+{"id": 82, "labeller": "independent Opus subagent (not human)", "labelled": "2026-11-23", "auth": ["key"], "access": "self", "verdict": "caveat"}
+{"id": 84, "labeller": "independent Opus subagent (not human)", "labelled": "2026-11-23", "verdict": "unknown"}
+{"id": 88, "labeller": "independent Opus subagent (not human)", "labelled": "2026-11-23", "auth": ["oauth2"], "access": "gated", "mcp_official": true, "verdict": "caveat"}
+{"id": 91, "labeller": "independent Opus subagent (not human)", "labelled": "2026-11-23", "auth": ["oauth2"], "access": "gated", "mcp_official": false, "verdict": "hard"}
+{"id": 92, "labeller": "independent Opus subagent (not human)", "labelled": "2026-11-23", "mcp_official": true, "verdict": "caveat"}
+{"id": 94, "labeller": "independent Opus subagent (not human)", "labelled": "2026-11-23", "auth": ["key"], "mcp_official": true}
+{"id": 95, "labeller": "independent Opus subagent (not human)", "labelled": "2026-11-23", "mcp_official": true}
+{"id": 97, "labeller": "independent Opus subagent (not human)", "labelled": "2026-11-23", "mcp_official": true}
