@@ -28,3 +28,11 @@ for i, r in rows.items():
 (ROOT/"data/pass2/pass2b.jsonl").write_text("".join(json.dumps(b[i])+"\n" for i in sorted(b)))
 (ROOT/"data/pass2/human_queue.json").write_text(json.dumps({"resets_by_gate": resets, "queue": queue}, indent=1))
 print(qc["summary"], "| gate resets:", resets, "| human queue:", len(queue))
+
+# Stage 3c: logged corrections after the second audit -> pass2c (provenance marked; never counted as agent accuracy)
+corr = json.load(open(ROOT/"data/pass2/corrections.json"))["fixes"]
+c = {i: json.loads(json.dumps(b[i])) for i in b}
+for f in corr:
+    c[f["id"]].update(f["set"]); c[f["id"]]["provenance"] = "audit_correction: " + f["reason"]
+(ROOT/"data/pass2/pass2c.jsonl").write_text("".join(json.dumps(c[i])+"\n" for i in sorted(c)))
+print("corrections applied:", [f["id"] for f in corr])

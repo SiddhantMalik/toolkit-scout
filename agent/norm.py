@@ -8,8 +8,8 @@ def access_cls(v):
             "sales_contact":"gated","customer_only":"gated","partner_review":"gated","enterprise_license":"gated","kyc_verification":"gated"}.get(v)
 def from_pass1(a):
     return {"auth": auth_set(a["auth"]), "access": access_cls(a["access"]), "mcp_official": a["mcp"]=="official", "verdict": a["verdict"]}
-def from_pass2(r, exempt=True):
-    v = verdict(r, mcp_exempt=exempt)[0]
+def from_pass2(r, fixed=False):
+    v = verdict(r, fixed=fixed)[0]
     mo = None if r.get("mcp_type") in (None,"unknown") else r["mcp_type"] in ("official_remote","official_local")
     return {"auth": auth_set(r.get("auth") or []), "access": access_cls(r.get("access_dev")), "mcp_official": mo, "verdict": v}
 def from_goldB(g):

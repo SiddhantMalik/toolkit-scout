@@ -134,12 +134,12 @@
    },
    "verdict": {
     "n": 17,
-    "correct": 9,
-    "abstained": 1,
-    "acc": 53,
+    "correct": 10,
+    "abstained": 0,
+    "acc": 59,
     "ci95": [
-     31,
-     74
+     36,
+     78
     ]
    }
   },
@@ -230,12 +230,12 @@
    },
    "verdict": {
     "n": 17,
-    "correct": 9,
-    "abstained": 1,
-    "acc": 53,
+    "correct": 10,
+    "abstained": 0,
+    "acc": 59,
     "ci95": [
-     31,
-     74
+     36,
+     78
     ]
    }
   },
@@ -287,12 +287,12 @@
    }
   }
  },
- "pass2b_v2": {
+ "pass2b_v3": {
   "goldA_hard_cases": {
    "auth_jaccard_mean": 0.76,
    "verdict_within_one": {
-    "n": 15,
-    "correct": 15
+    "n": 14,
+    "correct": 14
    },
    "auth": {
     "n": 17,

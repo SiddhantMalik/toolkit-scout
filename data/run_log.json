@@ -1,0 +1,14 @@
+{"note": "Orchestration log recorded by the orchestrator from the session (no tool-side logs exist for subagent model tags). Stage-2 extractors were launched together; model per range is what was passed at launch.",
+ "extractors": [
+  {"ids": "1-10", "model": "sonnet", "status": "completed first run"},
+  {"ids": "11-20", "model": "sonnet", "status": "completed first run"},
+  {"ids": "51-60", "model": "sonnet", "status": "completed first run"},
+  {"ids": "61-70", "model": "sonnet", "status": "first run died (HTTP 529 overloaded); re-run on sonnet completed"},
+  {"ids": "21-30", "model": "sonnet -> opus", "status": "first run died (HTTP 529); re-run on opus completed"},
+  {"ids": "31-40", "model": "sonnet -> opus", "status": "first run died (HTTP 529); re-run on opus completed"},
+  {"ids": "41-50", "model": "sonnet -> opus", "status": "first run died (HTTP 529); re-run on opus completed"},
+  {"ids": "71-80", "model": "sonnet -> opus", "status": "first run died (HTTP 529); re-run on opus completed"},
+  {"ids": "81-90", "model": "sonnet -> opus", "status": "first run died (HTTP 529); re-run on opus completed"},
+  {"ids": "91-100", "model": "sonnet -> opus", "status": "first run died (HTTP 529); re-run on opus completed"}],
+ "totals": {"final_rows_by_sonnet": 40, "final_rows_by_opus": 60, "first_launch_runs_that_died": 7},
+ "other_agents": ["Opus reviewer #1 (design critique + 28-app fact-check of pass 1) -> gold A", "Opus blind labeler (20 random apps) -> gold B", "Opus auditor #2 (code review, page-vs-data, 30 fresh apps, 40 evidence entries) -> audit/"]}

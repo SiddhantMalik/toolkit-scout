@@ -4,63 +4,66 @@
   "n_reliable": 95,
   "retrieved": "2026-11-23",
   "auth": {
-   "oauth2": 76,
+   "oauth2": 75,
    "key": 72,
-   "basic": 13,
+   "basic": 12,
    "jwt": 5
   },
   "auth_only_key": 13,
-  "auth_oauth_any": 76,
+  "auth_oauth_any": 75,
   "access_dev": {
-   "self": 77,
+   "self": 76,
    "gated": 11,
-   "paid": 6,
+   "paid": 7,
    "unknown": 1
   },
   "access_dev_raw": {
-   "self_free": 60,
+   "self_free": 59,
    "self_trial": 17,
    "customer_only": 4,
    "sales_contact": 2,
    "partner_review": 4,
-   "paid_plan": 6,
+   "paid_plan": 7,
    "unknown": 1,
    "kyc_verification": 1
   },
-  "prod_friction": 34,
+  "self_serve_n": 76,
+  "prod_friction": 25,
   "mcp": {
-   "official_remote": 71,
-   "none": 4,
+   "official_remote": 70,
+   "none": 5,
    "official_local": 10,
    "docs_only": 4,
    "community": 6
   },
-  "mcp_official": 81,
+  "mcp_official": 80,
   "verdict": {
-   "caveat": 44,
-   "easy": 39,
+   "caveat": 47,
+   "easy": 34,
    "hard": 13,
    "no": 2,
-   "unknown": 2
+   "unknown": 4
   },
   "verdict_reliable": {
-   "caveat": 43,
-   "easy": 39,
+   "caveat": 47,
+   "easy": 34,
    "hard": 11,
-   "no": 2
+   "no": 2,
+   "unknown": 1
   },
   "blockers": {
    "PER_TENANT_HOST": 12,
    "PROD_APPROVAL": 12,
    "APP_REVIEW": 12,
    "ADMIN_ONLY_CREDENTIAL": 11,
+   "PAID_PLAN": 11,
    "PER_REGION_HOST": 8,
-   "NARROW_SURFACE": 7,
-   "PAID_PLAN": 6,
+   "NARROW_SURFACE": 6,
    "CUSTOMER_ONLY": 5,
    "PARTNER_PROGRAM": 4,
    "SALES_CONTACT": 2,
    "NO_API": 2,
+   "DOCS_NOT_PUBLIC": 2,
    "ENTITY_UNRESOLVED": 2,
    "KYC_OR_BUSINESS_VERIFICATION": 1,
    "ENTERPRISE_ONLY": 1,
@@ -101,8 +104,8 @@
     "paid": 0,
     "gated": 1,
     "official_mcp": 7,
-    "easy": 4,
-    "caveat": 5,
+    "easy": 2,
+    "caveat": 7,
     "hard": 1,
     "no": 0
    },
@@ -111,9 +114,9 @@
     "self": 8,
     "paid": 0,
     "gated": 2,
-    "official_mcp": 7,
-    "easy": 3,
-    "caveat": 5,
+    "official_mcp": 6,
+    "easy": 2,
+    "caveat": 6,
     "hard": 2,
     "no": 0
    },
@@ -145,7 +148,7 @@
     "paid": 0,
     "gated": 0,
     "official_mcp": 10,
-    "easy": 5,
+    "easy": 4,
     "caveat": 5,
     "hard": 0,
     "no": 0
@@ -163,12 +166,12 @@
    },
    "Finance and Fintech": {
     "n": 8,
-    "self": 5,
-    "paid": 0,
+    "self": 4,
+    "paid": 1,
     "gated": 3,
     "official_mcp": 8,
-    "easy": 1,
-    "caveat": 4,
+    "easy": 0,
+    "caveat": 5,
     "hard": 3,
     "no": 0
    },
@@ -185,11 +188,11 @@
    }
   },
   "drift_vs_pass1": {
-   "mcp_changed": 41,
-   "mcp_none_to_official": 40,
-   "access_changed": 20,
-   "verdict_changed": 42,
-   "auth_changed": 36
+   "mcp_changed": 40,
+   "mcp_none_to_official": 39,
+   "access_changed": 21,
+   "verdict_changed": 47,
+   "auth_changed": 35
   },
   "easy_wins": [
    "HubSpot",
@@ -199,12 +202,9 @@
    "Plain",
    "Help Scout",
    "Slack",
-   "Twilio",
    "Telegram",
-   "Vonage",
    "Mailchimp",
    "systeme.io",
-   "SendGrid",
    "Gumroad",
    "fanbasis",
    "DataForSEO",
@@ -217,7 +217,6 @@
    "GitHub",
    "Vercel",
    "Netlify",
-   "Cloudflare",
    "Supabase",
    "Notion",
    "Airtable",
@@ -227,7 +226,6 @@
    "ClickUp",
    "Coda",
    "Harvest",
-   "Xero",
    "Fathom",
    "Reducto",
    "higgsfield"
@@ -288,6 +286,12 @@
     ]
    },
    {
+    "name": "Cloudflare",
+    "why": [
+     "DOCS_NOT_PUBLIC"
+    ]
+   },
+   {
     "name": "Binance",
     "why": [
      "KYC_OR_BUSINESS_VERIFICATION"
@@ -315,6 +319,12 @@
     "name": "PitchBook",
     "why": [
      "ENTERPRISE_ONLY"
+    ]
+   },
+   {
+    "name": "Otter AI",
+    "why": [
+     "DOCS_NOT_PUBLIC"
     ]
    },
    {
@@ -2173,10 +2183,10 @@
    "confidence": "high",
    "needs_human": "MCP is published under the twilio-labs GitHub org as 'Twilio Alpha' (experimental, local npx); confirm it counts as official. Twilio also documents OAuth Apps (not verified here); US SMS production also needs A2P 10DLC registration.",
    "category": "Communications and Messaging",
-   "verdict": "easy",
-   "rule": "R4",
+   "verdict": "caveat",
+   "rule": "R3",
    "blockers": [
-    "NONE"
+    "PAID_PLAN"
    ],
    "quotes_verified": 5,
    "quotes_web_only": 0,
@@ -2905,10 +2915,10 @@
    "confidence": "high",
    "needs_human": "Two official MCPs: a local npx 'API bindings' server (acts on the API) and a remote docs-only server (https://documentation-mcp.vonage.dev/mcp). DEMO mode limits sends to a small set of destination numbers until top-up. 'websocket' reflects Voice API WebSocket audio streaming, not quote-verified here.",
    "category": "Communications and Messaging",
-   "verdict": "easy",
-   "rule": "R4",
+   "verdict": "caveat",
+   "rule": "R3",
    "blockers": [
-    "NONE"
+    "PAID_PLAN"
    ],
    "quotes_verified": 6,
    "quotes_web_only": 0,
@@ -3617,8 +3627,8 @@
    "api_breadth": "moderate",
    "api_beta": false,
    "tenancy": "global",
-   "mcp_type": "official_remote",
-   "mcp_url": "https://api.pinterest.com/mcp",
+   "mcp_type": "none",
+   "mcp_url": null,
    "docs_url": "https://developers.pinterest.com/docs/getting-started/set-up-authentication-and-authorization/",
    "evidence": [
     {
@@ -3666,6 +3676,7 @@
    ],
    "confidence": "medium",
    "needs_human": "Pinterest MCP page (announced 2026-09-22) still says 'Be the first to know when it launches' - confirm whether https://api.pinterest.com/mcp is generally available or waitlist-only.",
+   "provenance": "audit_correction: Pinterest MCP is announced, not launched: the cited page says 'Be the first to know when it launches.'",
    "category": "Marketing, Ads, Email and Social",
    "verdict": "hard",
    "rule": "R2",
@@ -3839,10 +3850,10 @@
    "confidence": "medium",
    "needs_human": "No vendor-published SendGrid MCP server found; only a Twilio community-blog DIY tutorial and third-party servers. Check whether Twilio's own MCP (twilio-labs) covers SendGrid. EU data-residency (regional subusers) not verified for tenancy.",
    "category": "Marketing, Ads, Email and Social",
-   "verdict": "easy",
-   "rule": "R4",
+   "verdict": "caveat",
+   "rule": "R3",
    "blockers": [
-    "NONE"
+    "PAID_PLAN"
    ],
    "quotes_verified": 5,
    "quotes_web_only": 0,
@@ -4235,7 +4246,6 @@
    "entity_note": "Magento Open Source (free, self-hosted) and Adobe Commerce (licensed; on-prem/cloud, plus Adobe Commerce as a Cloud Service SaaS using Adobe IMS). Each store is its own deployment.",
    "description": "Ecommerce platform (open source + Adobe-licensed editions) exposing REST, GraphQL and SOAP web APIs per store.",
    "auth": [
-    "oauth2",
     "bearer_token",
     "other"
    ],
@@ -4294,6 +4304,7 @@
    ],
    "confidence": "medium",
    "needs_human": "Auth uses OAuth 1.0a (integration) + bearer tokens, and IMS OAuth server-to-server for the SaaS edition; 'oauth2' is tagged only for the IMS SaaS path, verify. Vendor MCP is a dev-tooling (App Builder) server, not a store-data MCP; no 'free' wording quote for Magento Open Source (README calls it open source). SOAP support not quoted.",
+   "provenance": "audit_correction: Magento cited docs describe OAuth 1.0a and bearer tokens, not OAuth 2 ('other' = OAuth 1.0a).",
    "category": "Ecommerce",
    "verdict": "caveat",
    "rule": "R3",
@@ -5883,10 +5894,10 @@
     }
    ],
    "category": "Developer, Infra and Data platforms",
-   "verdict": "easy",
-   "rule": "R4",
+   "verdict": "unknown",
+   "rule": "R0b",
    "blockers": [
-    "NONE"
+    "DOCS_NOT_PUBLIC"
    ],
    "quotes_verified": 4,
    "quotes_web_only": 0,
@@ -7696,7 +7707,7 @@
     "api_key",
     "bearer_token"
    ],
-   "access_dev": "self_free",
+   "access_dev": "paid_plan",
    "access_prod": "paid_plan",
    "min_plan": "Free allowance (3 audits/IP/month, public tools); API plans from $99/mo",
    "admin_only_credential": null,
@@ -7749,10 +7760,12 @@
    ],
    "confidence": "medium",
    "needs_human": "Docs/pricing pages are JS-rendered; pricing taken from llms.txt summary. Very small/new vendor; verify stability and whether API keys are self-serve at /developers.",
+   "provenance": "audit_correction: iPayX API key plans start at $99/mo; only 3 free public audits per IP per month without a key.",
    "category": "Finance and Fintech",
    "verdict": "caveat",
    "rule": "R3",
    "blockers": [
+    "PAID_PLAN",
     "NARROW_SURFACE"
    ],
    "quotes_verified": 6,
@@ -7933,10 +7946,10 @@
    "confidence": "high",
    "needs_human": "Xero pricing page also lists a vendor 'Remote MCP server' (Starter tier: demo org only); its URL was not found because developer.xero.com docs are JS-rendered. Confirm remote endpoint. Developer docs (auth guide) could not be fetched as text.",
    "category": "Finance and Fintech",
-   "verdict": "easy",
-   "rule": "R4",
+   "verdict": "caveat",
+   "rule": "R3",
    "blockers": [
-    "NONE"
+    "PAID_PLAN"
    ],
    "quotes_verified": 6,
    "quotes_web_only": 0,
@@ -8061,8 +8074,7 @@
    "entity_note": "Ramp corporate card and spend management (docs.ramp.com).",
    "description": "Corporate cards, expense management, bill pay and procurement platform with a REST Developer API.",
    "auth": [
-    "oauth2",
-    "basic"
+    "oauth2"
    ],
    "access_dev": "customer_only",
    "access_prod": "unknown",
@@ -8129,6 +8141,7 @@
    ],
    "confidence": "high",
    "needs_human": "Unclear whether third-party (Authorization Code) apps serving other Ramp customers need Ramp approval/partnership; sandbox is by request. Custom MCP clients need a redirect URI allowlisted by Ramp.",
+   "provenance": "audit_correction: Ramp 'basic' is only HTTP Basic client authentication at the token endpoint, not a separate API auth method.",
    "category": "Finance and Fintech",
    "verdict": "hard",
    "rule": "R2",
@@ -8392,10 +8405,10 @@
    "confidence": "low",
    "needs_human": "help.otter.ai is Cloudflare-blocked for scripts; facts are from WebFetch only. MCP exposes only 3 tools (user info, search, fetch transcript). A 'Super Admin specific APIs' help article (help.otter.ai/hc/en-us/articles/39661865499799) exists but could not be fetched: check whether it is an Enterprise-only admin API and what plan the MCP requires.",
    "category": "AI, Research and Media-native",
-   "verdict": "caveat",
-   "rule": "R3",
+   "verdict": "unknown",
+   "rule": "R0b",
    "blockers": [
-    "NARROW_SURFACE"
+    "DOCS_NOT_PUBLIC"
    ],
    "quotes_verified": 0,
    "quotes_web_only": 4,

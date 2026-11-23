@@ -4,11 +4,11 @@ from common import ROOT, load_seed
 from verdict import verdict
 from norm import auth_set, access_cls, from_pass1
 seed = {a["id"]: a for a in load_seed()}
-rows = [json.loads(l) for l in open(ROOT/"data/pass2/pass2b.jsonl")]
+rows = [json.loads(l) for l in open(ROOT/"data/pass2/pass2c.jsonl")]
 qc = {r["id"]: r["quotes"] for r in json.load(open(ROOT/"data/pass2/quote_check.json"))["rows"]}
 final = []
 for r in rows:
-    v, rule, blockers = verdict(r, mcp_exempt=False)
+    v, rule, blockers = verdict(r, fixed=True)
     q = qc[r["id"]]
     final.append({**r, "category": seed[r["id"]]["category"], "verdict": v, "rule": rule, "blockers": blockers,
                   "quotes_verified": sum(x["status"]=="verified" for x in q), "quotes_web_only": sum(x["status"]=="unchecked_web" for x in q),
@@ -24,7 +24,9 @@ out["auth_only_key"] = sum(1 for r in R if auth_set(r["auth"]) == ["key"])
 out["auth_oauth_any"] = out["auth"]["oauth2"]
 out["access_dev"] = dict(C.Counter(access_cls(r["access_dev"]) or "unknown" for r in R))
 out["access_dev_raw"] = dict(C.Counter(r["access_dev"] for r in R))
-out["prod_friction"] = sum(1 for r in R if r.get("access_prod") not in ("same_as_dev", r["access_dev"], "unknown", None))
+SS = [r for r in R if access_cls(r["access_dev"]) == "self"]
+out["self_serve_n"] = len(SS)
+out["prod_friction"] = sum(1 for r in SS if r.get("access_prod") not in ("same_as_dev", r["access_dev"], "unknown", None))
 out["mcp"] = dict(C.Counter(r["mcp_type"] for r in R))
 out["mcp_official"] = sum(1 for r in R if r["mcp_type"] in ("official_remote","official_local"))
 out["verdict"] = dict(C.Counter(r["verdict"] for r in final)); out["verdict_reliable"] = dict(C.Counter(r["verdict"] for r in R))

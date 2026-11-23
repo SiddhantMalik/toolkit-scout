@@ -1,0 +1,7 @@
+{"note": "Human-in-the-loop style corrections made by the orchestrator after the second Opus audit (audit/crosscheck.jsonl). These are NOT agent output and are excluded from agent-accuracy claims. None of these apps is in gold A or gold B.",
+ "fixes": [
+  {"id": 38, "set": {"mcp_type": "none", "mcp_url": null}, "reason": "Pinterest MCP is announced, not launched: the cited page says 'Be the first to know when it launches.'", "source": "audit/crosscheck.jsonl"},
+  {"id": 45, "set": {"auth": ["bearer_token", "other"]}, "reason": "Magento cited docs describe OAuth 1.0a and bearer tokens, not OAuth 2 ('other' = OAuth 1.0a).", "source": "audit/crosscheck.jsonl"},
+  {"id": 85, "set": {"access_dev": "paid_plan", "access_prod": "paid_plan"}, "reason": "iPayX API key plans start at $99/mo; only 3 free public audits per IP per month without a key.", "source": "audit/crosscheck.jsonl"},
+  {"id": 89, "set": {"auth": ["oauth2"]}, "reason": "Ramp 'basic' is only HTTP Basic client authentication at the token endpoint, not a separate API auth method.", "source": "audit/crosscheck.jsonl"}
+ ]}

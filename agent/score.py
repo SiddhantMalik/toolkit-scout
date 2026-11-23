@@ -34,20 +34,21 @@ def score(pred, gold):
             if f not in g or g[f] in (None,[]) and f!="auth": continue
             if f=="auth" and not g[f]: continue
             p = pred.get(i, {}).get(f)
+            if p is not None and p == g[f]: n += 1; k += 1; continue   # exact match, including a correct 'unknown'
             if p in (None,"unknown") and f!="auth" or (f=="auth" and p is None):
                 ab += 1; n += 1; continue          # abstention counts as not-correct, reported separately
             n += 1; k += (p == g[f])
         out[f] = {"n":n,"correct":k,"abstained":ab,"acc":round(100*k/n) if n else None,"ci95":wilson(k,n)}
     return out
 def pass1_preds(): return {a["id"]: from_pass1(a) for a in load_seed()}
-def pass2_preds(path, exempt=True):
+def pass2_preds(path, fixed=False):
     P={}
     for l in pathlib.Path(path).read_text().splitlines():
-        if l.strip(): r=json.loads(l); P[r["id"]] = from_pass2(r, exempt)
+        if l.strip(): r=json.loads(l); P[r["id"]] = from_pass2(r, fixed)
     return P
 if __name__=="__main__":
     A,B = load_gold(); res={}
     runs = {"pass1_memory": pass1_preds()}
-    for lab,path in [x.split("=") for x in sys.argv[1:]]: runs[lab] = pass2_preds(path, exempt=not lab.endswith("_v2"))
+    for lab,path in [x.split("=") for x in sys.argv[1:]]: runs[lab] = pass2_preds(path, fixed=lab.endswith("_v3"))
     for lab,P in runs.items(): res[lab] = {"goldA_hard_cases": score(P,A), "goldB_random_heldout": score(P,B) if B else None}
     (ROOT/"data/scores.json").write_text(json.dumps(res, indent=1)); print(json.dumps(res, indent=1))
