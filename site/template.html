@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Toolkit Scout: 100 apps researched for agent-toolkit buildability</title>
+<style>/*STYLE*/</style></head><body><main>
+
+<h1>Toolkit Scout</h1>
+<p class="sub">An agent pipeline researched {{n}} apps for Composio-style toolkit work: auth, how a developer gets credentials, API surface, MCP status and a buildability verdict. Every row carries a quote and URL. Retrieved <b>{{retrieved}}</b>; plan limits and MCP launches move fast, so treat every row as dated.</p>
+<div class="links">
+  <a href="#patterns">Patterns</a><a href="#all-apps">All {{n}} apps</a><a href="#agent">The agent</a><a href="#verify">Verification</a><a href="#run">Run it</a>
+  <a href="final.json">data: final.json</a><a href="scores.json">scores.json</a><a href="audit.md">audit.md</a>
+</div>
+
+<div class="kpis">
+  <div class="card kpi"><b>{{mcp_official}}/{{nr}}</b><span>apps ship an official MCP server</span></div>
+  <div class="card kpi"><b>{{self_dev}}/{{nr}}</b><span>give a developer free or trial credentials</span></div>
+  <div class="card kpi"><b>{{b_mcp_p2}} · {{b_acc_p2}}</b><span>official-MCP and dev-access calls correct on a random held-out sample of 20 (memory-only pass 1: {{b_mcp_p1}} · {{b_acc_p1}})</span></div>
+  <div class="card kpi warn"><b>{{b_ver_v1}}%</b><span>verdict agreement on that sample, below memory ({{b_ver_p1}}%). The verdict column is not validated.</span></div>
+</div>
+<div class="banner"><b>Not yet human-verified.</b> Both gold sets were labelled by Opus agents, not people, and the extractors and auditor are Claude models too. A 10-app human check is at the bottom. Details and every miss are in <a href="#verify">Verification</a>.</div>
+
+<h2 id="patterns">1 · Patterns</h2>
+<ol class="pat">
+<li><b>A developer key is easy to get; production is where the gates are.</b> {{self_dev}} of {{nr}} apps give free or trial credentials, but {{prod_friction}} of those {{self_serve_n}} add a production gate (app review, partner approval, KYC, a paid plan). Only {{gated_dev}} gate the first credential and {{paid_dev}} need a paid plan.</li>
+<li><b>OAuth2 and API keys, usually both.</b> OAuth2 in {{oauth2}}/{{nr}} apps, key or bearer token in {{key}}, Basic in {{basic}}, JWT in {{jwt}}. Only {{key_only}} are key-only.</li>
+<li><b>An official MCP is now the norm.</b> {{mcp_official}}/{{nr}} ({{mcp_remote}} remote, {{mcp_local}} local). My memory-only pass missed it for {{mcp_flipped}} of {{n}} apps.
+  <details><summary>Caveats</summary><div>The second audit counted roughly 8 of these as beta, early access or preview (for example Stripe, Podio, BigCommerce, WooCommerce), and some cover only part of the product (Plaid's covers Dashboard diagnostics). Docs-only MCPs (Mailchimp, Magento, Shopify's dev MCP) are not counted. "Has an official MCP" does not mean "toolkit is done".</div></details></li>
+<li><b>Blockers are friction, not paywalls.</b> Per-tenant hosts, production approval, app review and admin-only credentials outnumber paid-plan gates.
+  <details open><summary>Apps with each blocker (agent-judged flags such as tenancy and admin-only were not required to carry a quote, so these are the least verified numbers here)</summary><div>{{blocker_bars}}</div></details></li>
+<li><b>Easy wins: productivity ({{easy_prod}} easy) and data/SEO ({{easy_data}}). Most friction: fintech ({{easy_fin}}), ecommerce ({{easy_eco}}), support ({{easy_sup}}).</b>
+  <details><summary>By category</summary>{{category_table}}</details></li>
+<li><b>Needs outreach:</b> {{hard_names}}. <b>Not an API toolkit:</b> {{no_names}}. <b>Needs a human to say what the app is:</b> {{unknown_names}}.</li>
+</ol>
+<p class="sub">Verdicts across {{n}} apps: easy {{v_easy}}, caveat {{v_caveat}}, hard {{v_hard}}, no {{v_no}}, unknown {{v_unknown}}. Computed by code, first matching rule wins: <code>unknown</code> entity unresolved or access unknown, then <code>no</code> no network API, then <code>hard</code> developer credentials need sales, customer, partner, enterprise or KYC, then <code>caveat</code> any friction (paid plan, production approval, admin-only credential, per-tenant or per-region host, narrow API, beta), else <code>easy</code>. Each row shows its rule and blocker codes.</p>
+
+<h2 id="all-apps">2 · All {{n}} apps</h2>
+<div class="chips" id="chips"></div>
+<div class="tablewrap"><table class="t" id="apps"><thead><tr><th>#</th><th>App</th><th>Auth</th><th>Dev → prod access</th><th>API</th><th>MCP</th><th>Verdict</th><th>Conf.</th></tr></thead><tbody></tbody></table></div>
+<p class="sub">Click a row for the description, blockers, evidence quotes with URLs and open questions. The same data is in <a href="final.json">final.json</a> and embedded in this page's source (<code>&lt;script id="data"&gt;</code>) for agents.</p>
+
+<h2 id="agent">3 · The agent, and where a human was needed</h2>
+<div class="flow">
+<div class="card"><b>0 · Baseline <span class="tag">memory</span></b>Pass 1 written from model memory before I opened any docs (git timestamps can't prove that, so treat it as stated, not proven).</div>
+<div class="card"><b>1 · Retrieve <span class="tag">script</span></b><code>fetch_evidence.py</code>: docs, <code>llms.txt</code>, one hop to auth/pricing/MCP pages, JS-shell detection. <code>mcp_probe.py</code>: MCP Registry leads.</div>
+<div class="card"><b>2 · Extract <span class="tag">LLM agents</span></b>10 parallel extractor agents, one prompt and schema. Every field needs a verbatim quote and URL, otherwise <code>unknown</code>.</div>
+<div class="card"><b>3 · Verify <span class="tag">script</span></b><code>check_quotes.py</code> looks for each quote in the page text saved for that app; <code>gate.py</code> resets fields whose quotes all fail.</div>
+<div class="card"><b>4 · Verdict <span class="tag">code</span></b><code>verdict.py</code> derives the label from the fields, so it is reproducible.</div>
+<div class="card"><b>5 · Score <span class="tag">script</span></b><code>score.py</code> against gold sets frozen in git before scoring.</div>
+</div>
+<ul>
+<li><b>What ran where.</b> Stage 2 ran as Claude subagents (40 apps Sonnet, 60 Opus). Seven of ten first-launch runs died on API overload (HTTP 529) and were re-run, six on Opus; the log is <code>data/run_log.json</code>, written by me because the tooling kept no model tags. <b>I did not use Composio's SDK or MCP.</b> Stages 1, 3, 4 and 5 are plain Python, and the stage-2 prompt (<code>agent/prompts/extract.md</code>) is model-agnostic.</li>
+<li><b>Where the shell could not read.</b> {{web_only_apps}} apps have at least one quote that came through a web-fetch tool rather than a saved page ({{q_web}} quotes), so it could not be machine-checked. Bot-blocked or JavaScript-only sites included Salesforce, Otter, PitchBook, Binance, Lark, Airtable, Gumroad, Consensus and the Amazon and Google docs.</li>
+<li><b>Human involvement: none so far.</b> {{queue_n}} apps carry an open question. The 7 that most need a person: Paygent Connect and YouTube Transcript (entity ambiguous); fanbasis, Coda and NotebookLM (renamed); Otter and PitchBook (docs unreadable to the agent). I corrected four rows myself after the second audit (Pinterest MCP, Magento auth, iPayX access, Ramp auth); they are logged in <code>data/pass2/corrections.json</code>, and none is in a gold set.</li>
+</ul>
+
+<h2 id="verify">4 · Verification, honestly</h2>
+<div class="banner"><b>Read first.</b> Gold B (20 apps, seeded random, 2 per category, labelled blind before any pass-2 output existed) is the fair estimate, but at n=20 the 95% intervals are about ±20 points. Gold A (27 apps picked by a reviewer to be suspicious) exaggerates pass-1 error and is <b>not blind</b>: I had read its answers before launching the extractors, and extractors were only told not to open gold files. Treat gold A's pass-2 numbers as contaminated.</div>
+<h3>Gold B: random held-out sample (n=20)</h3>{{score_table_b}}
+<details><summary>Gold A: hard cases (27 apps, n varies by field)</summary>{{score_table_a}}</details>
+<h3>What moved accuracy, and what didn't</h3>
+<ul>
+<li><b>Evidence-grounded extraction did the work.</b> Official-MCP detection went from {{b_mcp_p1}} to {{b_mcp_p2}} on the random sample and from {{a_mcp_p1}} to {{a_mcp_p2}} on the hard cases. Most of that is freshness (2025–26 vendor MCP launches, renames), which a memory-only baseline cannot know. That baseline is deliberately weak.</li>
+<li><b>The quote gate barely mattered for accuracy.</b> Of {{q_total}} quotes, {{q_verified}} were found in the page text saved for that app (it does not check that the text came from the cited URL), {{q_web}} could not be checked and {{q_failed}} failed. It reset one field (Cloudflare access) and changed no gold-scored result. It also had a bug of its own: it dropped non-Latin characters until a Japanese quote failed.</li>
+<li><b>Verdict is worse than memory under the rubric as first written (v1).</b> Gold B {{b_ver_p1}}% to {{b_ver_v1}}%, gold A {{a_ver_p1}}% to {{a_ver_v1}}%; every disagreement is within one step. The second audit found holes in my rubric (an official MCP excused gated developer access, a paid plan needed only for production never counted as friction, unknown fields defaulted to "easy"). I fixed them after seeing gold (v3, used for the per-app labels above). v3 scores {{b_ver_v3}}% on gold B (the gain is two apps, Amazon SP-API and PitchBook) and {{a_ver_v3}}% on gold A, so it is a post-hoc variant, not a clean improvement.</li>
+<li><b>Auth fell on gold A by exact match ({{a_auth_p1}}% to {{a_auth_p2}}%).</b> Extractors list every supported method while gold lists the reviewer's primary one, so adding OAuth to an API-key app fails exact match. Jaccard (shown beside it) is the softer metric. Neither is clean because gold A's auth labels are incomplete.</li>
+<li>Pass 1 and pass 2 differ on {{drift_mcp}} MCP calls, {{drift_access}} access classes, {{drift_auth}} auth sets and {{drift_verdict}} verdicts across all {{n}} apps. Only the gold-sampled apps have ground truth to say which side was right.</li>
+</ul>
+<details><summary>Where pass 2 still disagrees with gold ({{miss_count}} field-level misses)</summary>{{miss_table}}
+<p class="sub">Frozen gold: <code>gold/gold_A.jsonl</code> sha256 <code>4552cb48…</code>, <code>gold/gold_B.jsonl</code> sha256 <code>133239ac…</code>, committed before the scored pass-2 run.</p></details>
+<h3>Second independent audit (Opus: 30 fresh apps outside both gold sets, plus 40 random evidence entries)</h3>{{audit_table}}
+<p class="sub">With n=30 each rate has a 95% interval about 15–20 points wide. The weak spot is <b>evidence quality, not the facts</b>: in {{audit_ev_bad}} of {{audit_n}} apps at least one cited quote only partly supports its value or contradicts it (Pinterest, Magento and iPayX were outright wrong and are corrected). In the 40-entry check, {{e40_present}} of {{e40_n}} quotes were still on the cited page, but only {{e40_clean}} clearly supported their field; {{e40_weak}} supported it weakly or trivially, {{e40_part}} partly and {{e40_no}} not at all. The auditor is the same model family as the extractors, so "agrees" is not human-grade truth. See <a href="audit.md">audit.md</a>.</p>
+<details><summary>Other things the agents got wrong or could not settle</summary><ul>
+<li>Entities: "Paygent Connect" matches no single product; "YouTube Transcript" resolved to a third-party service (TranscriptAPI), not Google's captions API; fanbasis is now Commas; Coda is now Superhuman Docs; NotebookLM's API is the enterprise "Gemini Notebook Enterprise". All are flagged, not guessed.</li>
+<li>Provisional labels: Threads' MCP type is inferred from a docs index whose pages came back empty; WhatsApp's "admin-only credential" has no quote; Shopify's store-management MCP is announced but not live (recorded docs-only); WooCommerce's MCP is a per-site developer preview.</li>
+<li>Pricing tables rendered as icons or JavaScript could not be read for Copper, Devin and Pylon, so "which plan unlocks the API" is unconfirmed there.</li></ul></details>
+
+<h2 id="human">5 · Your turn: 10-app human spot-check</h2>
+<p class="sub">Seeded random sample (seed 7) of apps in neither gold set. Open the docs and tick what matches. This is the human check that hasn't happened yet.</p>
+{{human_rows}}
+
+<h2 id="run">6 · Run it</h2>
+<p class="sub">One command rebuilds every number and this page from the committed research data (about 5 seconds, offline).</p>
+<pre class="run" id="run-cmd">pip install -r requirements.txt
+python agent/run_all.py              # gate -> score -> analyze -> build the page
+python -m pytest -q tests            # rubric, scorer and quote-checker tests
+python agent/run_all.py --research   # also re-fetch evidence (needs network)</pre>
+<button class="copy" id="copy-run">copy commands</button>
+<p class="sub">Stage 2 (LLM extraction) is run by giving <code>agent/prompts/extract.md</code> to any agent with web and shell tools; outputs go to <code>data/pass2/raw_*.jsonl</code>.</p>
+
+</main>
+<script type="application/json" id="data">{{app_data_json}}</script>
+<script>/*SCRIPT*/</script>
+</body></html>
