@@ -1,0 +1,16 @@
+URL: https://mailchimp.com/developer/marketing/docs/fundamentals.md
+FINAL: https://mailchimp.com/developer/marketing/api-concepts/api-structure.md
+STATUS: 200
+> This page is for Mailchimp Marketing API.
+> For clean Markdown of any page, append .md to the page URL.
+> For a complete documentation index, see https://mailchimp.com/developer/llms.txt.
+# API structure
+> How the Marketing API is organized—REST conventions and the root URL.
+The Marketing API generally follows REST conventions, with some deviations.
+* *Resources* are typically nouns like `subscribers` or `campaigns`.
+* *Subresources* can be multiply nested under resources.
+* *Actions* are usually represented by [HTTP methods](/developer/marketing/api-concepts/methods-and-parameters). Actions that do not correspond to HTTP methods are collected under an `actions/` subresource.
+* *Responses* use the generic JSON content type.
+We use the [OpenAPI Specification](https://www.openapis.org/) (formerly known as Swagger) to describe each endpoint. [The API self-description](https://api.mailchimp.com/schema/openapi/OpenAPI.json?expand) also contains type information to help you error-check your requests.
+The root url for the API is `https://api.mailchimp.com/3.0/`. All API endpoints for your account are available relative to this URL.
+For more details on how to query Marketing API endpoints, see [Methods and Parameters](/developer/marketing/api-concepts/methods-and-parameters). For troubleshooting API calls, see the [Errors](/developer/marketing/api-concepts/errors) docs.

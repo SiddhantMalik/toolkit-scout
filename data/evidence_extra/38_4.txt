@@ -1,0 +1,15 @@
+URL: https://community.pinterest.biz/t/introducing-the-pinterest-mcp-server/51358.md
+FINAL: https://community.pinterest.biz/t/introducing-the-pinterest-mcp-server/51358.md
+STATUS: 200
+# Introducing the Pinterest MCP Server
+**URL:** \
+**Category:** Developers\
+**Tags:** Resources, Engineering-blog\
+**Created:** [September 22, 2026, 9:50pm UTC](https://community.pinterest.biz/t/introducing-the-pinterest-mcp-server/51358 "2026-09-22T21:50:18Z")\
+**Posts on this page:** 1\
+**Page:** 1
+**Author:** ![PinterestButtercup](https://sea2.discourse-cdn.com/pinterest/user_avatar/community.pinterest.biz/pinterestbuttercup/32/22377_2.png) [@PinterestButtercup](https://community.pinterest.biz/u/PinterestButtercup)\
+**Post date:** [September 22, 2026, 9:50pm UTC](https://community.pinterest.biz/t/introducing-the-pinterest-mcp-server/51358/1 "2026-09-22T21:50:18Z")
+![image](https://us1.discourse-cdn.com/pinterest/original/3X/d/9/d92bbcce133e774c9af81b9ce69eeb8cc10416ee.jpeg)
+Pinterest is bringing its data and Ads capabilities directly into the AI tools teams already use. Built on the open Model Context Protocol (MCP), the Pinterest MCP Server lets AI assistants, copilots, and agentic workflows securely access Pinterest intelligence through natural-language prompts.
+Want to learn more? Read all about it here: [Pinterest Developers](https://developers.pinterest.com/about-pinterest-mcp/)

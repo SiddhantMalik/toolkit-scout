@@ -1,0 +1,234 @@
+URL: https://cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/faq
+FAQs about Gemini Notebook Enterprise  |  Google Cloud Documentation
+Skip to main content
+Documentation
+close
+Get Started
+Get Started with Google Cloud
+Product List
+Cloud Customer Care
+Featured Products
+Agent Platform
+Apigee API Management
+BigQuery
+Compute Engine
+Cloud CDN
+Cloud Run
+Cloud Storage
+Cloud SQL
+Gemini Enterprise
+Google Kubernetes Engine
+Looker
+Cross-product Tools
+Access and resources management
+Costs and usage management
+Infrastructure as code
+SDK, languages, frameworks, and tools
+Technology Areas
+AI and ML
+Application development
+Application hosting
+Compute
+Data analytics and pipelines
+Databases
+Distributed, hybrid, and multicloud
+Industry solutions
+Migration
+Networking
+Observability and monitoring
+Security
+Storage
+/
+Console
+English
+Deutsch
+Español – América Latina
+Français
+Indonesia
+Italiano
+Português – Brasil
+עברית
+中文 – 简体
+中文 – 繁體
+日本語
+한국어
+Sign in
+Gemini Enterprise
+Gemini Notebook Enterprise
+Start free
+Overview
+Administrator guide
+App user guide
+Developer guide
+Gemini Notebook for business
+AlphaEvolve
+Reference
+Resources
+Documentation
+More
+Overview
+Administrator guide
+App user guide
+Developer guide
+Gemini Notebook for business
+AlphaEvolve
+Reference
+Resources
+Console
+Gemini Notebook for business
+Overview
+Set up Gemini Notebook for business
+Get licenses for Gemini Notebook for business
+Work with notebooks and their sources
+Create and manage notebooks (API)
+Add and manage data sources in a notebook (API)
+Create an audio overview of your notebook (API)
+Customer-managed encryption keys
+Enable Model Armor
+Protect sensitive data in Gemini Notebook for business sources
+Configure usage audit logging
+Share notebooks
+FAQs about Gemini Notebook for business
+Standalone API
+Generate podcasts (API method)
+Get Started
+Get Started with Google Cloud
+Product List
+Cloud Customer Care
+Featured Products
+Agent Platform
+Apigee API Management
+BigQuery
+Compute Engine
+Cloud CDN
+Cloud Run
+Cloud Storage
+Cloud SQL
+Gemini Enterprise
+Google Kubernetes Engine
+Looker
+Cross-product Tools
+Access and resources management
+Costs and usage management
+Infrastructure as code
+SDK, languages, frameworks, and tools
+Technology Areas
+AI and ML
+Application development
+Application hosting
+Compute
+Data analytics and pipelines
+Databases
+Distributed, hybrid, and multicloud
+Industry solutions
+Migration
+Networking
+Observability and monitoring
+Security
+Storage
+Home
+Documentation
+AI and ML
+Gemini Enterprise
+Gemini Notebook Enterprise
+Gemini Notebook for business
+Send feedback
+FAQs about Gemini Notebook Enterprise
+Stay organized with collections
+Save and categorize content based on your preferences.
+This page provides answers to frequently asked questions (FAQs) about
+Gemini Notebook Enterprise.
+Can I move my notebooks to a different organization?
+No, you can't directly transfer or share notebooks between different
+Google Cloud organizations. To move your data, you need to manually export your
+notebooks and sources from one organization and then import them into an account
+in the other organization. For more information, see
+Share notebooks
+.
+Can I use my Gemini Notebook Plus notebooks with Gemini Notebook Enterprise?
+No, Gemini Notebook Plus is designed for Google Workspace and isn't a
+Google Cloud product. Your existing Gemini Notebook Plus notebooks can't be
+used or directly accessed in Gemini Notebook Enterprise or Gemini Enterprise.
+Can I enable Nano Banana in Gemini Notebook Enterprise ?
+No, Nano Banana isn't supported in Gemini Notebook Enterprise.
+Does Model Armor support data masking or de-identification in Gemini Notebook Enterprise?
+No. Model Armor does not support data de-identification or masking
+in Gemini Notebook Enterprise. If a prompt or response triggers a
+configured Sensitive Data Protection detector and the enforcement type is
+Inspect and block
+, Gemini Notebook Enterprise blocks the request or
+response rather than de-identifying it. For more information, see
+Considerations when using Model Armor
+.
+Why can't I add a website URL as a source in Gemini Notebook Enterprise?
+If your project is protected by
+VPC Service Controls
+, adding public or external
+website URLs as notebook sources is disabled.
+Adding a website URL as a source performs a live crawl of the public web,
+which generates outbound network traffic outside Google networks. Because
+VPC Service Controls blocks outbound network traffic to maintain security and
+compliance, direct website ingestion is blocked for VPC Service Controls-protected
+projects.
+Other source types, such as Google Drive documents and YouTube video links,
+remain supported. YouTube video links remain supported because YouTube
+transcripts are retrieved using an internal service rather than live public web
+crawling.
+Send feedback
+Except as otherwise noted, the content of this page is licensed under the
+Creative Commons Attribution 4.0 License
+, and code samples are licensed under the
+Apache 2.0 License
+. For details, see the
+Google Developers Site Policies
+. Java is a registered trademark of Oracle and/or its affiliates.
+Last updated 2026-11-10 UTC.
+Need to tell us more?
+[[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-11-10 UTC."],[],[]]
+Products and pricing
+See all products
+Google Cloud pricing
+Google Cloud Marketplace
+Contact sales
+Support
+Community forums
+Support
+Release Notes
+System status
+Resources
+GitHub
+Getting Started with Google Cloud
+Code samples
+Cloud Architecture Center
+Training and Certification
+Builders Hub
+Engage
+Blog
+Events
+X (Twitter)
+Google Cloud on YouTube
+Google Cloud Tech on YouTube
+Android
+Chrome
+Firebase
+Google AI
+About Google
+Privacy
+Site terms
+Google Cloud terms
+Manage cookies
+Our third decade of climate action: join us
+Sign up for the Google Cloud newsletter
+Subscribe
+English
+Deutsch
+Español – América Latina
+Français
+Indonesia
+Italiano
+Português – Brasil
+עברית
+中文 – 简体
+中文 – 繁體
+日本語
+한국어

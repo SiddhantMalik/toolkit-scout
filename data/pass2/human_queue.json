@@ -1,0 +1,564 @@
+{
+ "resets_by_gate": [
+  {
+   "id": 64,
+   "name": "Cloudflare",
+   "field": "access"
+  }
+ ],
+ "queue": [
+  {
+   "id": 1,
+   "name": "Salesforce",
+   "entity_status": "resolved",
+   "confidence": "medium",
+   "question": "Core API docs are 403 to scripted fetch; REST/SOAP/GraphQL styles, per-org My Domain tenancy and API-edition gating (Professional needs add-on?) are from general knowledge, not quoted. Verify in a browser. MCP URL pattern not seen; no MCP endpoint captured. AppExchange review only needed for listing, not verified."
+  },
+  {
+   "id": 2,
+   "name": "HubSpot",
+   "entity_status": "resolved",
+   "confidence": "medium",
+   "question": "Static-token auth (private apps / service keys) and any app-marketplace review needed for public distribution were not found in the fetched pages; confirm. Free-tier API access inferred from standard-account migration, not an explicit pricing quote."
+  },
+  {
+   "id": 3,
+   "name": "Pipedrive",
+   "entity_status": "resolved",
+   "confidence": "medium",
+   "question": "MCP endpoint URL and its docs page not found (support article 404); pricing page 403; sandbox cost and Marketplace review requirement for public apps not confirmed."
+  },
+  {
+   "id": 4,
+   "name": "Attio",
+   "entity_status": "resolved",
+   "confidence": "high",
+   "question": "Public-app listing/review process (App Store) not verified; GraphQL listed only for lack of evidence, remove if unsure."
+  },
+  {
+   "id": 6,
+   "name": "Podio",
+   "entity_status": "resolved",
+   "confidence": "high",
+   "question": "MCP server is beta; legacy product with low API change activity."
+  },
+  {
+   "id": 7,
+   "name": "Zoho CRM",
+   "entity_status": "resolved",
+   "confidence": "medium",
+   "question": "MCP server endpoint URL/plan gating not captured (setup section not read); Zoho CRM free edition API access limits per plan not fully verified."
+  },
+  {
+   "id": 8,
+   "name": "Close",
+   "entity_status": "resolved",
+   "confidence": "medium",
+   "question": "Free-trial terms for Close itself not quoted (pricing not fetched); partner dev org requires emailing support."
+  },
+  {
+   "id": 9,
+   "name": "Copper",
+   "entity_status": "resolved",
+   "confidence": "medium",
+   "question": "No official MCP found, but absence cannot be quoted; only third-party MCPs and a Copper ChatGPT GPT turned up."
+  },
+  {
+   "id": 11,
+   "name": "Zendesk",
+   "entity_status": "resolved",
+   "confidence": "high",
+   "question": "MCP server is an early access program (EAP) via Zendesk Bridge; confirm GA status/pricing before relying on it. Generic MCP URL pattern is https://example.zendesk.com/mcp."
+  },
+  {
+   "id": 13,
+   "name": "Freshdesk",
+   "entity_status": "resolved",
+   "confidence": "medium",
+   "question": "Marketplace/OAuth app distribution process for third parties not verified; OAuth 2.0 appears in endpoint scope labels but the OAuth app registration page was not fetched. MCP article is titled EAP in URL; plans/actions table says Growth/Pro/Enterprise with action packs."
+  },
+  {
+   "id": 15,
+   "name": "Pylon",
+   "entity_status": "resolved",
+   "confidence": "medium",
+   "question": "Is there any free trial/sandbox for non-customers? Pricing page only shows Book a demo."
+  },
+  {
+   "id": 16,
+   "name": "LiveAgent",
+   "entity_status": "resolved",
+   "confidence": "medium",
+   "question": "MCP endpoint URL and transport (remote vs local) not found on the feature page; OAuth 2.1 sign-in implies remote. REST v3 API-key page fetch returned 404, API auth details only inferred from rate-limit page and PHP example."
+  },
+  {
+   "id": 17,
+   "name": "Plain",
+   "entity_status": "resolved",
+   "confidence": "medium",
+   "question": "Whether OAuth apps can be installed by other (non-owner) workspaces (multi-tenant distribution) is not stated."
+  },
+  {
+   "id": 18,
+   "name": "Help Scout",
+   "entity_status": "resolved",
+   "confidence": "medium",
+   "question": "Whether OAuth apps can be used across other customers' accounts without review (no marketplace/approval process found in docs fetched). MCP is read-only for new connections."
+  },
+  {
+   "id": 20,
+   "name": "Gladly",
+   "entity_status": "resolved",
+   "confidence": "low",
+   "question": "No official Gladly MCP found in vendor docs or llms-full.txt (only aggregators); no public trial/pricing, sandbox appears to require being a customer/contacting Gladly. Confirm via Gladly sales/support."
+  },
+  {
+   "id": 21,
+   "name": "Slack",
+   "entity_status": "resolved",
+   "confidence": "high",
+   "question": "Unlisted public distribution works without review, but Marketplace review is expected for commercial apps and non-Marketplace apps may face tighter rate limits on some methods (e.g. conversations.history); confirm whether access_prod should be app_review."
+  },
+  {
+   "id": 22,
+   "name": "Twilio",
+   "entity_status": "resolved",
+   "confidence": "high",
+   "question": "MCP is published under the twilio-labs GitHub org as 'Twilio Alpha' (experimental, local npx); confirm it counts as official. Twilio also documents OAuth Apps (not verified here); US SMS production also needs A2P 10DLC registration."
+  },
+  {
+   "id": 23,
+   "name": "Zoho Cliq",
+   "entity_status": "resolved",
+   "confidence": "high",
+   "question": "Zoho MCP generates per-user server URLs rather than one fixed endpoint; confirm whether API access is available on the Free Cliq plan (pricing page lists Free plan but API gating per plan not verified). Maintenance APIs are org-admin only."
+  },
+  {
+   "id": 24,
+   "name": "Lark (Larksuite)",
+   "entity_status": "resolved",
+   "confidence": "medium",
+   "question": "Docs site is a JS shell; pricing page not readable (free Starter only from meta description). Multi-tenant distribution (store apps) requires ISV qualification and scopes need tenant-admin approval - confirm partner_review. Feishu (China) and Lark are separate regional platforms."
+  },
+  {
+   "id": 25,
+   "name": "Pumble",
+   "entity_status": "resolved",
+   "confidence": "high",
+   "question": "API-key addon covers a narrow set of actions (messages, reactions, channels); Pumble also has an app platform with app/user/bot tokens (used by MCP) whose OAuth flow and multi-workspace distribution rules were not verified."
+  },
+  {
+   "id": 26,
+   "name": "Discord",
+   "entity_status": "resolved",
+   "confidence": "medium",
+   "question": "No vendor MCP for the Discord API found (only a docs-search MCP on docs.discord.com, likely auto-generated by the docs host). Free-to-start; verification is required only past 100 guilds and for privileged intents - confirm access_prod=app_review is the right label. 'other' auth = 'Bot' token type."
+  },
+  {
+   "id": 27,
+   "name": "Telegram",
+   "entity_status": "resolved",
+   "confidence": "medium",
+   "question": "No vendor MCP found in core.telegram.org docs (absence not provable by quote). Auth is a bot token placed in the URL path - mapped to api_key. Decide whether the toolkit should target Bot API or MTProto user API."
+  },
+  {
+   "id": 28,
+   "name": "WhatsApp Business",
+   "entity_status": "resolved",
+   "confidence": "high",
+   "question": "Serving other businesses requires becoming a Tech Provider with business verification + App Review (and Embedded Signup); this is closer to kyc_verification+app_review. Official MCP is beta and acts on apps/businesses you administer. admin_only_credential=true assumes System User tokens are created by business admins - not quote-verified."
+  },
+  {
+   "id": 29,
+   "name": "Aircall",
+   "entity_status": "resolved",
+   "confidence": "high",
+   "question": "Without an Aircall subscription, dev credentials require an approved Technology Partner application. Aircall's MCP docs are about Aircall AI consuming partner MCP servers, not exposing Aircall's API. Paid plan tier needed for API keys not verified."
+  },
+  {
+   "id": 30,
+   "name": "Vonage",
+   "entity_status": "resolved",
+   "confidence": "high",
+   "question": "Two official MCPs: a local npx 'API bindings' server (acts on the API) and a remote docs-only server (https://documentation-mcp.vonage.dev/mcp). DEMO mode limits sends to a small set of destination numbers until top-up. 'websocket' reflects Voice API WebSocket audio streaming, not quote-verified here."
+  },
+  {
+   "id": 31,
+   "name": "Google Ads",
+   "entity_status": "resolved",
+   "confidence": "high",
+   "question": "MCP is vendor-published (googleads/google-ads-mcp) but self-hosted (stdio or your own Cloud Run); no Google-hosted remote endpoint found."
+  },
+  {
+   "id": 33,
+   "name": "LinkedIn Ads",
+   "entity_status": "resolved",
+   "confidence": "medium",
+   "question": "No vendor (LinkedIn/Microsoft) MCP found in Marketing API docs; only third-party servers in web search. Confirm none is official."
+  },
+  {
+   "id": 34,
+   "name": "GoHighLevel",
+   "entity_status": "resolved",
+   "confidence": "high",
+   "question": "Confirm which HighLevel subscription tier is needed for API/Private Integration use in production (pricing not reviewed). admin_only_credential=true refers to Private Integration Tokens (agency admins by default); OAuth installs are by the account user."
+  },
+  {
+   "id": 35,
+   "name": "Mailchimp",
+   "entity_status": "resolved",
+   "confidence": "medium",
+   "question": "Confirm Marketing API/API keys are usable on the Free plan (no explicit plan-gating quote found)."
+  },
+  {
+   "id": 36,
+   "name": "Klaviyo",
+   "entity_status": "resolved",
+   "confidence": "medium",
+   "question": "Pricing/free-plan API availability not quoted from a pricing page; confirm whether unlisted OAuth apps can be installed by other accounts without App Marketplace review."
+  },
+  {
+   "id": 37,
+   "name": "systeme.io",
+   "entity_status": "resolved",
+   "confidence": "medium",
+   "question": "Confirm the Public API is available on the Free plan (pricing table lists 'API requests per minute' per plan but values were not extractable). MCP uses static key (OAuth 'currently planned'); docs page says MCP limited to contacts/newsletters while help center lists broader tools."
+  },
+  {
+   "id": 38,
+   "name": "Pinterest",
+   "entity_status": "resolved",
+   "confidence": "medium",
+   "question": "Pinterest MCP page (announced 2026-09-22) still says 'Be the first to know when it launches' - confirm whether https://api.pinterest.com/mcp is generally available or waitlist-only."
+  },
+  {
+   "id": 39,
+   "name": "Threads (Meta)",
+   "entity_status": "resolved",
+   "confidence": "medium",
+   "question": "Threads MCP server is listed in Meta's docs index but its pages returned only titles (no body); endpoint URL and whether it is Meta-hosted remote are not confirmed (official_remote inferred from 'sign in with Threads'). Meta's MCP index page lists only ads/whatsapp/devtools endpoints."
+  },
+  {
+   "id": 40,
+   "name": "SendGrid",
+   "entity_status": "resolved",
+   "confidence": "medium",
+   "question": "No vendor-published SendGrid MCP server found; only a Twilio community-blog DIY tutorial and third-party servers. Check whether Twilio's own MCP (twilio-labs) covers SendGrid. EU data-residency (regional subusers) not verified for tenancy."
+  },
+  {
+   "id": 41,
+   "name": "Shopify",
+   "entity_status": "resolved",
+   "confidence": "high",
+   "question": "Vendor remote 'Shopify MCP' (store management) is announced but 'coming soon'; only the local docs Dev MCP is live today. Re-check availability before choosing mcp_type official_remote."
+  },
+  {
+   "id": 42,
+   "name": "WooCommerce",
+   "entity_status": "resolved",
+   "confidence": "high",
+   "question": "MCP is per-store (served by each merchant's WordPress via the MCP Adapter plugin) and in developer preview; confirm whether this counts as official_remote for a hosted toolkit. admin_only_credential=true is inferred from keys being created in WooCommerce admin settings (no explicit 'admin only' quote)."
+  },
+  {
+   "id": 43,
+   "name": "BigCommerce",
+   "entity_status": "resolved",
+   "confidence": "high",
+   "question": "Store Management MCP is early access and must be enabled by the store owner; Storefront MCP is GA but shopper-scoped. Store-level API account creation rights (owner vs any admin user) not confirmed from docs (lives in a Knowledge Base article)."
+  },
+  {
+   "id": 44,
+   "name": "Salesforce Commerce Cloud",
+   "entity_status": "resolved",
+   "confidence": "medium",
+   "question": "No primary quote explicitly states a B2C Commerce license is required (inferred from instance/Account Manager model; docs are bot-blocked). Confirm partner sandbox availability. Official MCP (b2c-dx-mcp) is local stdio and labelled Developer Preview on its site; there is also a pilot 'Agentic MCP Shopper Tools'."
+  },
+  {
+   "id": 45,
+   "name": "Magento (Adobe Commerce)",
+   "entity_status": "resolved",
+   "confidence": "medium",
+   "question": "Auth uses OAuth 1.0a (integration) + bearer tokens, and IMS OAuth server-to-server for the SaaS edition; 'oauth2' is tagged only for the IMS SaaS path, verify. Vendor MCP is a dev-tooling (App Builder) server, not a store-data MCP; no 'free' wording quote for Magento Open Source (README calls it open source). SOAP support not quoted."
+  },
+  {
+   "id": 46,
+   "name": "Squarespace",
+   "entity_status": "resolved",
+   "confidence": "high",
+   "question": "MCP commerce tools say 'currently only available in Claude and ChatGPT' - confirm whether a third-party agent can use them. Who on a site may create API keys (owner/admin) not confirmed."
+  },
+  {
+   "id": 47,
+   "name": "Ecwid",
+   "entity_status": "resolved",
+   "confidence": "high",
+   "question": "No vendor MCP found; only third-party/aggregator MCPs (Zapier, viaSocket, etc.) in web search. The MCP 'quote' comes from the docs site's AI answer endpoint, so treat it as weak evidence of absence."
+  },
+  {
+   "id": 48,
+   "name": "Gumroad",
+   "entity_status": "resolved",
+   "confidence": "high",
+   "question": "MCP manifest lists per-client endpoints (muse/claude/chatgpt/cursor) with dynamic client registration; confirm a generic third-party client may use the /muse/v1/mcp endpoint."
+  },
+  {
+   "id": 49,
+   "name": "Amazon Selling Partner",
+   "entity_status": "resolved",
+   "confidence": "high",
+   "question": "Vendor MCP lives in the amzn samples repo (local, dev-assistant oriented incl. API execution) rather than a hosted product; confirm whether it is supported for production use. Role approval timelines/restricted roles (PII) not assessed."
+  },
+  {
+   "id": 50,
+   "name": "fanbasis",
+   "entity_status": "renamed",
+   "confidence": "medium",
+   "question": "Production access requirements (merchant onboarding/KYC for a payments platform) and plan gating are not stated in the docs; sign-up flow not checked. The vendor MCP is in beta and ships as a local Claude Desktop .mcpb extension/config. The remote endpoint https://www.fanbasis.com/mcp is marked 'coming soon'."
+  },
+  {
+   "id": 53,
+   "name": "Ahrefs",
+   "entity_status": "resolved",
+   "confidence": "medium",
+   "question": "Which Ahrefs plan tier is required for REST API v3 keys (pricing page not fetched; Enterprise implied by 'Free test queries ... without an Enterprise plan')? Also confirm Ahrefs Connect OAuth approval is required for production use on customer accounts."
+  },
+  {
+   "id": 54,
+   "name": "MrScraper",
+   "entity_status": "resolved",
+   "confidence": "high",
+   "question": "Billing page table says Free = 1,000 tokens but text says 100 tokens/month; minor inconsistency."
+  },
+  {
+   "id": 58,
+   "name": "Sherlock",
+   "entity_status": "resolved",
+   "confidence": "medium",
+   "question": "No vendor-published MCP or API found; only third-party MCP wrappers (e.g. Burnsedia/sherlock-mcp). Confirm CLI-only is acceptable scope."
+  },
+  {
+   "id": 59,
+   "name": "Waterfall.io",
+   "entity_status": "resolved",
+   "confidence": "medium",
+   "question": "Is self-serve key issuance or a trial available? Docs only say to contact the team. Vendor offers agent skills, not an MCP server."
+  },
+  {
+   "id": 60,
+   "name": "Clay",
+   "entity_status": "resolved",
+   "confidence": "medium",
+   "question": "Public API endpoint breadth/beta status and Editor/Admin requirement for key creation not fully checked; MCP access setup requires an admin to enable and invite reps."
+  },
+  {
+   "id": 61,
+   "name": "GitHub",
+   "entity_status": "resolved",
+   "confidence": "medium",
+   "question": "Free-plan self-signup is not quoted on a fetched primary page; access_dev relies on well-known PAT creation. Confirm GitHub Apps/OAuth apps need no marketplace review for other orgs."
+  },
+  {
+   "id": 62,
+   "name": "Vercel",
+   "entity_status": "resolved",
+   "confidence": "high",
+   "question": "Hobby is non-commercial only; a commercial toolkit test likely needs Pro. REST OAuth for third-party apps goes through Vercel Integrations (not verified in fetched text)."
+  },
+  {
+   "id": 66,
+   "name": "Neo4j",
+   "entity_status": "resolved",
+   "confidence": "medium",
+   "question": "Aura API manages instances only; data access is per-instance Bolt/Query API. Which surface should the toolkit target? Also confirm whether a hosted remote Neo4j MCP exists (only local server found)."
+  },
+  {
+   "id": 67,
+   "name": "Snowflake",
+   "entity_status": "resolved",
+   "confidence": "high",
+   "question": "Production use is inside each customer's own Snowflake account (account-specific URL, OAuth/key-pair setup by customer admin). Trial limitations not reviewed."
+  },
+  {
+   "id": 68,
+   "name": "MongoDB Atlas",
+   "entity_status": "resolved",
+   "confidence": "medium",
+   "question": "Atlas Managed MCP Server is described as public preview; confirm hosted URL and GA status. Remote vs local both official."
+  },
+  {
+   "id": 69,
+   "name": "Datadog",
+   "entity_status": "resolved",
+   "confidence": "medium",
+   "question": "Free trial duration and who can create API/app keys (admin permission) not verified; remote MCP endpoint URL not captured; production OAuth client registration process unclear. MCP page text says not supported on some sites (e.g. GovCloud)."
+  },
+  {
+   "id": 70,
+   "name": "Sentry",
+   "entity_status": "resolved",
+   "confidence": "medium",
+   "question": "Free-plan self-signup quote is indirect (pricing llms.txt line). Creating an internal integration may need org manager/owner role; not verified."
+  },
+  {
+   "id": 72,
+   "name": "Airtable",
+   "entity_status": "resolved",
+   "confidence": "high",
+   "question": "Airtable developer docs are JS-rendered; auth and OAuth-review quotes came via WebFetch only. Confirm no app review is needed for public OAuth integrations."
+  },
+  {
+   "id": 78,
+   "name": "Coda",
+   "entity_status": "renamed",
+   "confidence": "high",
+   "question": "Public API docs show only Bearer API tokens; no documented OAuth flow for third-party apps on the REST API (MCP uses OAuth). Confirm whether multi-tenant OAuth exists. MCP URL came only via WebFetch of a Cloudflare-blocked help page."
+  },
+  {
+   "id": 79,
+   "name": "Smartsheet",
+   "entity_status": "resolved",
+   "confidence": "high",
+   "question": "Docs do not mention a free developer sandbox; confirm whether a Smartsheet trial grants API token generation for development."
+  },
+  {
+   "id": 80,
+   "name": "Harvest",
+   "entity_status": "resolved",
+   "confidence": "medium",
+   "question": "Harvest MCP support article is Cloudflare-blocked to scripts; MCP URL and existence confirmed only via WebFetch. Verify the article and whether MCP is beta."
+  },
+  {
+   "id": 81,
+   "name": "Stripe",
+   "entity_status": "resolved",
+   "confidence": "high",
+   "question": "MCP server is labelled 'Public preview'. Live-mode keys require Stripe account activation; OAuth (Stripe Apps) distribution to other accounts requires marketplace review unless using external test links."
+  },
+  {
+   "id": 82,
+   "name": "Plaid",
+   "entity_status": "resolved",
+   "confidence": "high",
+   "question": "Official remote MCP covers Dashboard diagnostics/analytics, not the core end-user data API; a local dev MCP also exists. Full Production use requires a Production access request (some products/institutions need extra approval)."
+  },
+  {
+   "id": 83,
+   "name": "Binance",
+   "entity_status": "resolved",
+   "confidence": "medium",
+   "question": "developers.binance.com is bot-challenged so MCP/access quotes are web-only (unverifiable by script). Confirm the remote MCP endpoint https://agent.binance.com/mcp/agentic and that it operates on an 'Agentic sub-account' via OAuth-style consent. Exchange access is region-restricted (e.g. US users use Binance.US)."
+  },
+  {
+   "id": 84,
+   "name": "Paygent Connect",
+   "entity_status": "ambiguous",
+   "confidence": "low",
+   "question": "Confirm which product 'Paygent Connect' means. Integration docs (auth method, API style) are behind the merchant support site, provided only after contract; no public developer docs or MCP found."
+  },
+  {
+   "id": 85,
+   "name": "iPayX",
+   "entity_status": "resolved",
+   "confidence": "medium",
+   "question": "Docs/pricing pages are JS-rendered; pricing taken from llms.txt summary. Very small/new vendor; verify stability and whether API keys are self-serve at /developers."
+  },
+  {
+   "id": 86,
+   "name": "QuickBooks",
+   "entity_status": "resolved",
+   "confidence": "high",
+   "question": "Production keys require completing Intuit's publishing requirements/app assessment; App Partner Program tier may impose API-call fees for high volume. Intuit's separate 'Developer Plugin' MCP is for dev onboarding, not company data."
+  },
+  {
+   "id": 87,
+   "name": "Xero",
+   "entity_status": "resolved",
+   "confidence": "high",
+   "question": "Xero pricing page also lists a vendor 'Remote MCP server' (Starter tier: demo org only); its URL was not found because developer.xero.com docs are JS-rendered. Confirm remote endpoint. Developer docs (auth guide) could not be fetched as text."
+  },
+  {
+   "id": 88,
+   "name": "Brex",
+   "entity_status": "resolved",
+   "confidence": "high",
+   "question": "Developer access requires being a Brex customer; building for other Brex customers needs a partner OAuth client issued on request by Brex developer support."
+  },
+  {
+   "id": 89,
+   "name": "Ramp",
+   "entity_status": "resolved",
+   "confidence": "high",
+   "question": "Unclear whether third-party (Authorization Code) apps serving other Ramp customers need Ramp approval/partnership; sandbox is by request. Custom MCP clients need a redirect URI allowlisted by Ramp."
+  },
+  {
+   "id": 90,
+   "name": "PitchBook",
+   "entity_status": "resolved",
+   "confidence": "low",
+   "question": "pitchbook.com blocks scripted fetches (403), so all quotes are web-only. PitchBook MCP connectors exist inside partner platforms (Claude, ChatGPT, Perplexity) for subscribers, but no public MCP endpoint URL was found; confirm whether a standalone remote MCP is offered and the exact API auth header."
+  },
+  {
+   "id": 91,
+   "name": "NotebookLM",
+   "entity_status": "renamed",
+   "confidence": "medium",
+   "question": "No official Google MCP found; only third-party (community) servers, which typically drive the consumer UI rather than the enterprise API. Confirm no Google-published NotebookLM MCP exists."
+  },
+  {
+   "id": 92,
+   "name": "Otter AI",
+   "entity_status": "resolved",
+   "confidence": "low",
+   "question": "help.otter.ai is Cloudflare-blocked for scripts; facts are from WebFetch only. MCP exposes only 3 tools (user info, search, fetch transcript). A 'Super Admin specific APIs' help article (help.otter.ai/hc/en-us/articles/39661865499799) exists but could not be fetched: check whether it is an Enterprise-only admin API and what plan the MCP requires."
+  },
+  {
+   "id": 93,
+   "name": "Fathom",
+   "entity_status": "resolved",
+   "confidence": "high",
+   "question": "OAuth apps self-register at fathom.video/marketplace_applications/new; docs say they are 'subject to review' but unclear whether review gates installs by other users or only marketplace listing."
+  },
+  {
+   "id": 94,
+   "name": "Consensus",
+   "entity_status": "resolved",
+   "confidence": "medium",
+   "question": "docs.consensus.app returns 403 to scripts; API terms come from consensus.app llms-full/pricing.md. Confirm REST API gating (Team/Enterprise + approval vs. separately purchasable API plan at consensus.app/home/api/)."
+  },
+  {
+   "id": 96,
+   "name": "Devin",
+   "entity_status": "resolved",
+   "confidence": "high",
+   "question": "Confirm whether individual Free/Pro/Max users can create PATs and call the v3 API, or whether a Teams/Enterprise org is required. No third-party OAuth app flow found."
+  },
+  {
+   "id": 97,
+   "name": "higgsfield",
+   "entity_status": "resolved",
+   "confidence": "high",
+   "question": "MCP sign-in is a browser login (assumed OAuth, not explicitly documented). MCP URL taken from the decoded Claude-connector button href on higgsfield.ai/mcp (saved in evidence_extra/97_3.txt)."
+  },
+  {
+   "id": 98,
+   "name": "Mermaid CLI",
+   "entity_status": "resolved",
+   "confidence": "medium",
+   "question": "No vendor MCP for mermaid-cli; several third-party Mermaid MCP servers exist. Mermaid Chart (commercial product by the Mermaid team) reportedly has a remote MCP: decide whether that counts for this entry. Local tool, so auth/access are N/A (no credentials)."
+  },
+  {
+   "id": 99,
+   "name": "YouTube Transcript",
+   "entity_status": "ambiguous",
+   "confidence": "high",
+   "question": "Confirm which product 'YouTube Transcript' refers to (TranscriptAPI third-party service vs. Google YouTube Data API captions)."
+  },
+  {
+   "id": 100,
+   "name": "Grain",
+   "entity_status": "resolved",
+   "confidence": "high",
+   "question": "Confirm PATs can be generated on the Free plan, and how server-side OAuth client_id/secret are obtained (docs say requested manually; public clients can self-serve via Client ID Metadata Document)."
+  }
+ ]
+}

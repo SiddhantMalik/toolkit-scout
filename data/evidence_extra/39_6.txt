@@ -1,0 +1,48 @@
+URL: https://developers.facebook.com/documentation/mcp.md
+FINAL: https://developers.facebook.com/documentation/mcp.md
+STATUS: 200
+ Connect AI agents to Meta with MCP # Connect AI agents to Meta with MCP
+Meta runs official remote Model Context Protocol (MCP) servers that bring Facebook, Instagram, WhatsApp, and Meta Ads capabilities to your agentic workflows.
+**Note:** **This page is documentation, not an MCP server.** Don't add this page's URL to your MCP client. Use one of these server URLs instead:
+- Meta Ads MCP: `https://mcp.facebook.com/ads`
+- Meta Social Technologies MCP: `https://mcp.facebook.com/devtools`
+- WhatsApp Business Tools MCP: `https://mcp.facebook.com/whatsapp_business_tools`
+To set up a client, see [Connect an MCP client to Meta](https://developers.facebook.com/documentation/mcp/connect-an-mcp-client).
+## Benefits
+- **One protocol, built for agent workflows.** Your agent connects to a Meta MCP server and discovers available tools at runtime. Tool descriptions, parameter schemas, and error responses are designed for large language models (LLMs) to interpret correctly. This design minimizes hallucination and failed tool calls.
+- **Standard authentication.** OAuth-based authentication with permissions that you control from your Meta account settings. Each server defines its own permissions, so check the server-specific page for the ones it requests. Revoke access at any time.
+## Available MCP servers
+The following table lists the available Meta MCP servers:
+| Server | Description | Type |
+|---|---|---|
+| [Meta Ads MCP](https://developers.facebook.com/documentation/ads-commerce/ads-ai-connectors/ads-mcp-server/ads-mcp-server-overview) | Manage Meta ads - analyze campaign performance, create and edit ads, campaigns, and catalogs, assess signal health, run experiments, review activity logs, and search help articles. Includes structured, permission-scoped access capabilities. | Remote MCP |
+| [Meta Social Technologies MCP](https://developers.facebook.com/documentation/mcp/devtools-mcp) | Manage the Meta apps and integrations you build on the Meta Social Technologies Developer Platform (developers.facebook.com) — configure webhooks, check compliance, review app status, monitor API health, and search developer documentation. Formerly known as Meta Developer Tools MCP. | Remote MCP |
+| [WhatsApp Business Tools MCP](https://developers.facebook.com/documentation/mcp/whatsapp-business-tools-mcp) | Manage your WhatsApp Business Platform integration — discover businesses and accounts, onboard and register phone numbers, manage message templates, configure webhooks, and send messages. | Remote MCP |
+## Supported clients
+The Meta team has validated these clients for general availability:
+- Claude Desktop
+- Claude Code
+- ChatGPT
+- Codex app
+- Codex CLI
+- Cursor app
+- Cursor CLI
+Each client needs explicit support, so clients not in this list aren't supported. A client is supported on a given server only if that server's page lists it, and a server-specific page can support fewer clients than this list.
+## Security and best practices
+By accessing or using a Meta MCP server, you and the agent acting on your behalf are bound by the [Meta Platform Terms](https://developers.facebook.com/terms/). The Terms govern how data returned by Meta APIs may be stored, processed, shared, and displayed. You are responsible for ensuring that any agent or downstream system that consumes MCP responses complies with these obligations, including data retention limits, prohibited uses, and end-user transparency requirements.
+**Warning:** **Important:** AI agents act on your behalf. An AI agent can directly call anything your granted permissions allow, without asking you first — including in response to malicious instructions hidden in tool outputs (prompt injection). These instructions come from untrusted content the AI agent processes, such as webhook payloads, documents, or web pages — not from the Meta MCP server itself. Treat MCP servers like any third-party integration.
+### Recommended practices
+- **Grant only the permissions you need.** Give an agent read-only access unless it needs to make changes, and set permissions per app from your Business Integrations settings.
+- **Use separate apps for dev and prod.** Don't grant production app permissions to experimental agents.
+- **Audit periodically.** Review connected MCP servers on Facebook under **Settings** > **Your Activity** > **Business Integrations** every few months. Revoke ones you no longer use.
+- **Watch for prompt injection.** Untrusted content — webhook payloads, documents, web pages, or data returned by other tools — can carry hidden instructions. Those instructions can manipulate an AI agent into misusing the permissions you granted. Don't grant permissions that can make changes to AI agents that process untrusted input.
+## Get started
+Follow [Connect an MCP client to Meta](https://developers.facebook.com/documentation/mcp/connect-an-mcp-client) to configure a supported client, complete OAuth authorization, and verify the connection. Check the server-specific page for the server's URL, client ID requirements, permissions, and recommended verification tool.
+## More resources
+For more context about Meta MCP servers, the Platform Terms, and the protocol spec, see:
+- [Meta Platform Terms](https://developers.facebook.com/terms/)
+- [Responsible Platform Initiatives](https://developers.facebook.com/documentation/resp-plat-initiatives)
+- [Business Integrations](https://www.facebook.com/settings/?tab=business_tools)
+- [Model Context Protocol Spec](https://modelcontextprotocol.io)
+- [llms.txt](https://developers.facebook.com/llms.txt)
+ 

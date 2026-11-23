@@ -1,0 +1,5 @@
+URL: https://developers.facebook.com/documentation/threads/mcp-server/get-started.md
+FINAL: https://developers.facebook.com/documentation/threads/mcp-server/get-started.md
+STATUS: 200
+ Get started with the Threads MCP server # Get started with the Threads MCP server
+ 

@@ -1,0 +1,6 @@
+URL: https://developers.facebook.com/documentation/mcp/ads-mcp-server.md
+FINAL: https://developers.facebook.com/documentation/mcp/ads-mcp-server.md
+STATUS: 200
+ Meta Ads MCP # Meta Ads MCP
+The Ads MCP Server lets you manage Meta ads from an AI agent. See [Ads MCP Server](https://developers.facebook.com/documentation/ads-commerce/ads-ai-connectors/ads-mcp-server/ads-mcp-server-overview) for setup instructions, available tools, and supported clients.
+ 

@@ -1,0 +1,65 @@
+URL: https://developers.facebook.com/documentation/threads/llms.txt
+FINAL: https://developers.facebook.com/documentation/threads/llms.txt
+STATUS: 200
+ Threads API Documentation llms.txt # Threads API Documentation
+> The Threads API enables developers to create posts, manage replies, retrieve user profiles, discover content, and access engagement insights on Threads.
+- [Threads API](https://developers.facebook.com/documentation/threads.md): The Threads API lets developers build integrations that create and publish posts, retrieve media and profiles, moderate replies, and access insights on Threads.
+## Guides & Documentation
+- [Overview](https://developers.facebook.com/documentation/threads/overview.md): You can use the Threads API to enable people to create and publish content on a person's behalf on Threads, and to display those posts within your app solely to the person who created it.
+- [Get started](https://developers.facebook.com/documentation/threads/get-started.md): This guide provides information on what you need to get started using the Threads API.
+- [Create an app](https://developers.facebook.com/documentation/threads/get-started/create-an-app.md): "Learn how to customize the Access the Threads API use case in your Meta app: add permissions, set OAuth redirect URIs, configure roles, and publish."
+- [Get access tokens](https://developers.facebook.com/documentation/threads/get-started/get-access-tokens-and-permissions.md): This guide explains how to use the Authorization Window to get short-lived Threads user access tokens and permissions from Threads users.
+- [Long-lived tokens](https://developers.facebook.com/documentation/threads/get-started/long-lived-tokens.md): Short-lived tokens can be exchanged for long-lived tokens.
+- [App access tokens](https://developers.facebook.com/documentation/threads/get-started/app-access-tokens.md): Use app access tokens to make requests to the Threads API on behalf of an app rather than a user, including APIs like oEmbed that require them.
+- [Create posts](https://developers.facebook.com/documentation/threads/create-posts.md): You can use the Threads API to publish image, video, text, or carousel posts as well as quote and repost other posts.
+- [Posts](https://developers.facebook.com/documentation/threads/posts.md): Publish a single image, video, text, or carousel post on Threads.
+- [Create replies](https://developers.facebook.com/documentation/threads/retrieve-and-manage-replies/create-replies.md): Creating replies to posts and other replies.
+- [Reposts](https://developers.facebook.com/documentation/threads/posts/reposts.md): You can use the Threads API to repost another post.
+- [Quote posts](https://developers.facebook.com/documentation/threads/posts/quote-posts.md): You can use the Threads API to quote another post.
+- [Ghost posts](https://developers.facebook.com/documentation/threads/create-posts/ghost-posts.md): Ghost posts allow you to create text posts that are active for 24 hours and automatically expire afterward.
+- [Polls](https://developers.facebook.com/documentation/threads/create-posts/polls.md): You can use the Threads API to create posts with polls and retrieve the poll attached to a post.
+- [Spoilers](https://developers.facebook.com/documentation/threads/create-posts/spoilers.md): Spoilers can be added to text in a post or can be used with media types like images and videos.
+- [Text attachments](https://developers.facebook.com/documentation/threads/create-posts/text-attachments.md): Text attachments allow you to share long-form writing in a post or a reply with up to 10,000 characters and a link.
+- [Share to Instagram Stories](https://developers.facebook.com/documentation/threads/create-posts/share-to-ig-stories.md): Learn how to cross-share a Threads post to the user's linked Instagram account as a Story using the Threads API.
+- [Location tagging](https://developers.facebook.com/documentation/threads/create-posts/location-tagging.md): You can use the Threads API to search for and tag locations when creating media.
+- [Geo-gated content](https://developers.facebook.com/documentation/threads/posts/geo-gating.md): You can use the Threads API to create geo-gated content restricted to one or more specific countries.
+- [Accessibility](https://developers.facebook.com/documentation/threads/posts/accessibility.md): You can use the Threads API to set alt text for the images and videos in your posts.
+- [Retrieve and discover posts](https://developers.facebook.com/documentation/threads/retrieve-and-discover-posts.md): You can use the Threads API to search for public posts by keyword and retrieve posts and mentions for a specific user.
+- [Retrieve user posts](https://developers.facebook.com/documentation/threads/retrieve-and-discover-posts/retrieve-posts.md): Retrieve either a list of a user's Threads posts or a single Threads media object.
+- [Mentions](https://developers.facebook.com/documentation/threads/threads-mentions.md): You can use the Threads API to retrieve public posts in which another Threads profile has mentioned a user.
+- [Keyword search](https://developers.facebook.com/documentation/threads/keyword-search.md): You can use the Threads API to search for public Threads posts by keyword or topic tag.
+- [Trending topics](https://developers.facebook.com/documentation/threads/trending-topics.md): Get data on current trending topics on the Threads app and the top and recent posts associated with those trends.
+- [Retrieve and manage replies](https://developers.facebook.com/documentation/threads/retrieve-and-manage-replies.md): The Threads Reply Management API allows you to read and manage replies to users' own Threads posts.
+- [Retrieve replies](https://developers.facebook.com/documentation/threads/retrieve-and-manage-replies/retrieve-replies.md): Retrieve a list of a user's replies.
+- [Replies and conversations](https://developers.facebook.com/documentation/threads/retrieve-and-manage-replies/replies-and-conversations.md): "There are two ways of retrieving a thread's replies: `GET /{threads-media-id}/replies` and `GET /{threads-media-id}/conversation`."
+- [Reply management](https://developers.facebook.com/documentation/threads/reply-management.md): "Learn how to manage replies to your Threads posts with the Reply Management API, hiding replies, controlling who can reply, and approving pending replies."
+- [Delete posts](https://developers.facebook.com/documentation/threads/posts/delete-posts.md): You can use the Threads API to delete your own posts.
+- [Profiles](https://developers.facebook.com/documentation/threads/threads-profiles.md): Retrieve a Threads profile information.
+- [Insights](https://developers.facebook.com/documentation/threads/insights.md): Read insights for a user's own Threads posts and profile.
+- [Webhooks](https://developers.facebook.com/documentation/threads/webhooks.md): Webhooks for Threads allow you to receive real-time notifications for the subscribed topics and fields.
+- [oEmbed](https://developers.facebook.com/documentation/threads/tools-and-resources/embed-a-threads-post.md): How to use the Threads API to embed posts and profiles
+- [Web intents](https://developers.facebook.com/documentation/threads/threads-web-intents.md): Web intents let users share content to Threads and start conversations directly from any major third-party platform.
+- [Troubleshooting](https://developers.facebook.com/documentation/threads/troubleshooting.md): Troubleshoot common Threads issues.
+- [Debug access token](https://developers.facebook.com/documentation/threads/troubleshooting/debug-access-token.md): Inspect a Threads access token with the /debug_token endpoint. Call it with an app access token or a Threads tester user access token.
+- [Reference](https://developers.facebook.com/documentation/threads/reference.md): A list of the Threads API endpoints.
+- [Publishing](https://developers.facebook.com/documentation/threads/reference/publishing.md): Publishing
+- [Media retrieval](https://developers.facebook.com/documentation/threads/reference/media-retrieval.md): Media retrieval
+- [Reply management](https://developers.facebook.com/documentation/threads/reference/reply-management.md): Reply management
+- [User](https://developers.facebook.com/documentation/threads/reference/user.md): User
+- [Locations](https://developers.facebook.com/documentation/threads/reference/locations.md): Locations
+- [Location search](https://developers.facebook.com/documentation/threads/reference/location-search.md): Location search
+- [Insights](https://developers.facebook.com/documentation/threads/reference/insights.md): Insights
+- [oEmbed](https://developers.facebook.com/documentation/threads/reference/oembed.md): oEmbed
+- [Debug](https://developers.facebook.com/documentation/threads/reference/debug.md): Debug
+- [Tools and resources](https://developers.facebook.com/documentation/threads/tools-and-resources.md): A listing of tools and resources to use with the Threads API
+- [Postman collection](https://developers.facebook.com/documentation/threads/tools-and-resources/postman-collection.md): The Threads API Postman collection contains a full set of API calls to help you integrate with the Threads API.
+- [Threads MCP server](https://developers.facebook.com/documentation/threads/mcp-server.md): Connect your Threads account to an AI assistant with the Threads MCP server to publish posts and check how they perform.
+- [Overview](https://developers.facebook.com/documentation/threads/mcp-server/overview.md): Learn what the Threads MCP server exposes, who can use it, and how sign-in, scopes, human confirmation, and data access work.
+- [Get started](https://developers.facebook.com/documentation/threads/mcp-server/get-started.md): Connect your assistant to the Threads MCP server, sign in with Threads, publish your first post, and check how it performed.
+- [Publishing posts](https://developers.facebook.com/documentation/threads/mcp-server/publishing-posts.md): Publish text, image, video, and carousel posts to Threads from your AI assistant, confirm each post before it goes live, and label AI-generated content.
+- [Insights](https://developers.facebook.com/documentation/threads/mcp-server/insights.md): Ask your AI assistant for post-level and account-level Threads metrics such as views, likes, replies, reposts, quotes, clicks, and follower count.
+- [Tool reference](https://developers.facebook.com/documentation/threads/mcp-server/tool-reference.md): Reference for the Threads MCP server tools, including parameters, results, human confirmation, errors, and rate limits.
+- [Troubleshooting](https://developers.facebook.com/documentation/threads/mcp-server/troubleshooting.md): Fix connection failures, sign-in errors, permission errors, publishing errors, and rate limit errors with the Threads MCP server.
+- [Changelog](https://developers.facebook.com/documentation/threads/mcp-server/changelog.md): New tools and changes to the Threads MCP server.
+- [Changelog](https://developers.facebook.com/documentation/threads/changelog.md): Threads Changelog
+ 

@@ -1,0 +1,5 @@
+URL: https://www.atlassian.com/software/jira/pricing
+FINAL: https://www.atlassian.com/software/jira/pricing
+STATUS: 200
+
+Jira pricing: Free, Standard, Premium, Enterprise | Atlassian

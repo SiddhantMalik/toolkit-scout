@@ -1,0 +1,2 @@
+URL: https://higgsfield.ai/mcp (decoded href of Connect button)
+https://claude.ai/customize/connectors?modal=add-custom-connector&connectorName=Higgsfield&connectorUrl=https://mcp.higgsfield.ai/mcp

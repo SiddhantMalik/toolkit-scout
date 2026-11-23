@@ -1,0 +1,1296 @@
+[
+ {
+  "id": 1,
+  "name": "Salesforce",
+  "cands": []
+ },
+ {
+  "id": 2,
+  "name": "HubSpot",
+  "cands": []
+ },
+ {
+  "id": 3,
+  "name": "Pipedrive",
+  "cands": []
+ },
+ {
+  "id": 4,
+  "name": "Attio",
+  "cands": []
+ },
+ {
+  "id": 5,
+  "name": "Twenty",
+  "cands": [
+   {
+    "name": "com.twentyclubs.mcp/premier-league",
+    "remote": [
+     "https://mcp.twentyclubs.com/mcp"
+    ],
+    "repo": "",
+    "desc": "Premier League fixtures, results, table, team news, referees and UK TV, from twentyclubs.c"
+   }
+  ]
+ },
+ {
+  "id": 6,
+  "name": "Podio",
+  "cands": []
+ },
+ {
+  "id": 7,
+  "name": "Zoho CRM",
+  "cands": []
+ },
+ {
+  "id": 8,
+  "name": "Close",
+  "cands": [
+   {
+    "name": "ai.salescloser/salescloser",
+    "remote": [
+     "https://app.salescloser.ai/mcp"
+    ],
+    "repo": "",
+    "desc": "Manage SalesCloser AI sales agents, leads, campaigns and calls from your AI assistant."
+   },
+   {
+    "name": "city.close/close-api",
+    "remote": [
+     "https://mcp.close.city/mcp"
+    ],
+    "repo": "https://github.com/henryspatialanalysis/wtm.api",
+    "desc": "Walk, bike, and transit travel times from every US census block to nearby amenities."
+   },
+   {
+    "name": "com.atlasclose/demo",
+    "remote": [
+     "https://demo.atlasclose.com/mcp"
+    ],
+    "repo": "",
+    "desc": "Experimental AtlasClose governance demo. Authority checks, labeled evidence, receipts, ref"
+   }
+  ]
+ },
+ {
+  "id": 9,
+  "name": "Copper",
+  "cands": [
+   {
+    "name": "io.github.copperline-labs/rendex-mcp",
+    "remote": [
+     "https://mcp.rendex.dev/mcp"
+    ],
+    "repo": "https://github.com/copperline-labs/rendex-mcp",
+    "desc": "Render HTML, Markdown, or URLs to images, PDF, or branded artifacts; extract and watch pag"
+   }
+  ]
+ },
+ {
+  "id": 10,
+  "name": "DealCloud",
+  "cands": []
+ },
+ {
+  "id": 11,
+  "name": "Zendesk",
+  "cands": []
+ },
+ {
+  "id": 12,
+  "name": "Intercom",
+  "cands": []
+ },
+ {
+  "id": 13,
+  "name": "Freshdesk",
+  "cands": []
+ },
+ {
+  "id": 14,
+  "name": "Front",
+  "cands": [
+   {
+    "name": "ai.frontierdesk/desk",
+    "remote": [
+     "https://www.frontierdesk.ai/mcp"
+    ],
+    "repo": "",
+    "desc": "Read Frontier Desk's AI-data buyer index, notes, markets and guides. Read-only, no key."
+   },
+   {
+    "name": "ai.frontmost/frontmost-ai",
+    "remote": [
+     "https://app.frontmost.ai/mcp"
+    ],
+    "repo": "https://github.com/frontmost-ai/mcp",
+    "desc": "Track your brand's AI visibility. Find opportunities to reach more buyers through AI."
+   },
+   {
+    "name": "ai.servicefront/front-desk",
+    "remote": [
+     "https://servicefront.ai/api/mcp/read"
+    ],
+    "repo": "",
+    "desc": "Ask about a local service business on ServiceFront: hours, service area, owner-confirmed p"
+   }
+  ]
+ },
+ {
+  "id": 15,
+  "name": "Pylon",
+  "cands": [
+   {
+    "name": "io.pylonseo/pylon-seo",
+    "remote": [
+     "https://api.pylonseo.io/mcp"
+    ],
+    "repo": "",
+    "desc": "Audit, rank-track and analyze SEO for sites via an authenticated MCP server."
+   }
+  ]
+ },
+ {
+  "id": 16,
+  "name": "LiveAgent",
+  "cands": []
+ },
+ {
+  "id": 17,
+  "name": "Plain",
+  "cands": [
+   {
+    "name": "ai.plainvoice/mcp",
+    "remote": [
+     "https://plainvoice.ai/mcp"
+    ],
+    "repo": "",
+    "desc": "Rewrite AI drafts so they sound like you, while the names and numbers you lock stay as wri"
+   },
+   {
+    "name": "app.vercel.automaton-tx-explainer/base-tools",
+    "remote": [
+     "https://automaton-tx-explainer.vercel.app/mcp"
+    ],
+    "repo": "",
+    "desc": "Paid x402 crypto safety tools (Base/ETH/BSC): tx, approvals, contract risk, token deep sca"
+   },
+   {
+    "name": "com.keepplain/keepplain",
+    "remote": [
+     "https://keepplain.com/mcp"
+    ],
+    "repo": "https://github.com/keepplain/keepplain-plugin",
+    "desc": "Your coding agents' past sessions as memory: search them, open the turn, see where agents "
+   }
+  ]
+ },
+ {
+  "id": 18,
+  "name": "Help Scout",
+  "cands": []
+ },
+ {
+  "id": 19,
+  "name": "Gorgias",
+  "cands": []
+ },
+ {
+  "id": 20,
+  "name": "Gladly",
+  "cands": []
+ },
+ {
+  "id": 21,
+  "name": "Slack",
+  "cands": [
+   {
+    "name": "io.github.Th3Slack3r/slacking-biz",
+    "remote": [
+     "https://slacking.biz/mcp"
+    ],
+    "repo": "",
+    "desc": "75 MCP tools: SEC financials, FRED economics, IRS 990, FDA, FX, UK Companies House."
+   },
+   {
+    "name": "io.github.Th3Slack3r/urflrealtor-mcp",
+    "remote": [],
+    "repo": "",
+    "desc": "Florida Real Estate API \u2014 agent verification, property data, market trends, comps, lead to"
+   }
+  ]
+ },
+ {
+  "id": 22,
+  "name": "Twilio",
+  "cands": []
+ },
+ {
+  "id": 23,
+  "name": "Zoho Cliq",
+  "cands": []
+ },
+ {
+  "id": 24,
+  "name": "Lark (Larksuite)",
+  "cands": [
+   {
+    "name": "ai.meetlark/mcp-server",
+    "remote": [
+     "https://meetlark.ai/mcp"
+    ],
+    "repo": "",
+    "desc": "Agent-first meeting schedule polls for humans and agents. Create polls, vote, find times."
+   },
+   {
+    "name": "com.cuelark/tools",
+    "remote": [
+     "https://tools.cuelark.com/mcp"
+    ],
+    "repo": "",
+    "desc": "Exact tools for agents: US tax, routing/EIN checks, business days, JSON, links, packages, "
+   },
+   {
+    "name": "com.larkella/larkella",
+    "remote": [
+     "https://larkella.com/mcp"
+    ],
+    "repo": "",
+    "desc": "Facts about Larkella, the AI receptionist and assistant for small business. Read-only."
+   }
+  ]
+ },
+ {
+  "id": 25,
+  "name": "Pumble",
+  "cands": []
+ },
+ {
+  "id": 26,
+  "name": "Discord",
+  "cands": [
+   {
+    "name": "com.discordservers/search",
+    "remote": [
+     "https://mcp.discordservers.com/mcp"
+    ],
+    "repo": "https://github.com/discordservers/monorepo",
+    "desc": "Search Discord server listings, and manage your own servers once you sign in."
+   },
+   {
+    "name": "com.discordtimestampgen/discord-timestamp",
+    "remote": [
+     "https://discordtimestampgen.com/mcp"
+    ],
+    "repo": "https://github.com/fazal-bhinder/openclaw-discord-timestamp",
+    "desc": "Make Discord <t:unix:F> timestamp codes from any date and timezone; decode Discord snowfla"
+   },
+   {
+    "name": "io.github.DockerDiscordControl/timergy",
+    "remote": [],
+    "repo": "https://github.com/timergy-app/timergy",
+    "desc": "Create scheduling polls, vote, and finalize times from AI agents."
+   }
+  ]
+ },
+ {
+  "id": 27,
+  "name": "Telegram",
+  "cands": [
+   {
+    "name": "com.telegramtometatrader/ttmt",
+    "remote": [
+     "https://app.telegramtometatrader.com/api/mcp/mcp"
+    ],
+    "repo": "",
+    "desc": "Read-only access to your own TTMT trading data: trades, signals, channels, performance and"
+   }
+  ]
+ },
+ {
+  "id": 28,
+  "name": "WhatsApp Business",
+  "cands": []
+ },
+ {
+  "id": 29,
+  "name": "Aircall",
+  "cands": []
+ },
+ {
+  "id": 30,
+  "name": "Vonage",
+  "cands": [
+   {
+    "name": "io.github.Vonage/vonage-documentation-mcp",
+    "remote": [
+     "https://documentation-mcp.vonage.dev/mcp"
+    ],
+    "repo": "https://github.com/vonage/vonage-mcp-server-documentation",
+    "desc": "MCP server for Vonage API documentation, code snippets, tutorials, and troubleshooting."
+   }
+  ]
+ },
+ {
+  "id": 31,
+  "name": "Google Ads",
+  "cands": []
+ },
+ {
+  "id": 32,
+  "name": "Meta Ads",
+  "cands": []
+ },
+ {
+  "id": 33,
+  "name": "LinkedIn Ads",
+  "cands": []
+ },
+ {
+  "id": 34,
+  "name": "GoHighLevel",
+  "cands": []
+ },
+ {
+  "id": 35,
+  "name": "Mailchimp",
+  "cands": []
+ },
+ {
+  "id": 36,
+  "name": "Klaviyo",
+  "cands": []
+ },
+ {
+  "id": 37,
+  "name": "systeme.io",
+  "cands": []
+ },
+ {
+  "id": 38,
+  "name": "Pinterest",
+  "cands": [
+   {
+    "name": "com.365pinterest/365-pinterest",
+    "remote": [
+     "https://365pinterest.com/mcp"
+    ],
+    "repo": "",
+    "desc": "Pinterest automation: schedule pins, manage boards, write AI blogs and auto-pin them."
+   },
+   {
+    "name": "com.pinpinterest/keywords",
+    "remote": [
+     "https://api.pinpinterest.com/mcp"
+    ],
+    "repo": "",
+    "desc": "Pinterest keyword research from our own crawl: saves, competition, related terms, trends, "
+   }
+  ]
+ },
+ {
+  "id": 39,
+  "name": "Threads (Meta)",
+  "cands": [
+   {
+    "name": "app.threads-mcp/threads",
+    "remote": [
+     "https://threads-mcp.app/mcp"
+    ],
+    "repo": "",
+    "desc": "Publish, reply, moderate, search and read insights on your Threads (threads.com) account."
+   },
+   {
+    "name": "com.redthreadsec/redthread",
+    "remote": [
+     "https://app.redthreadsec.com/mcp"
+    ],
+    "repo": "",
+    "desc": "Attack paths, scan findings and shadow AI for AI-native apps and their clouds; vet MCP ser"
+   },
+   {
+    "name": "io.github.Digital-Threads/token-pilot",
+    "remote": [],
+    "repo": "https://github.com/digital-threads/token-pilot",
+    "desc": "Save up to 80% tokens when AI reads code via AST-aware structural reading"
+   }
+  ]
+ },
+ {
+  "id": 40,
+  "name": "SendGrid",
+  "cands": []
+ },
+ {
+  "id": 41,
+  "name": "Shopify",
+  "cands": []
+ },
+ {
+  "id": 42,
+  "name": "WooCommerce",
+  "cands": [
+   {
+    "name": "io.github.AmitGurbani/mcp-server-woocommerce",
+    "remote": [],
+    "repo": "https://github.com/amitgurbani/mcp-server-woocommerce",
+    "desc": "101 tools for WooCommerce store management with field filtering and guided prompts."
+   },
+   {
+    "name": "io.github.fxjima/shopify-woocommerce-store-intelligence",
+    "remote": [
+     "https://mcp.apify.com/?tools=fxjima/shopify-woocommerce-store-intelligence"
+    ],
+    "repo": "",
+    "desc": "Profile Shopify and WooCommerce stores by domain: theme, catalog, prices, apps, business c"
+   },
+   {
+    "name": "io.github.pipeworx-io/woocommerce",
+    "remote": [
+     "https://gateway.pipeworx.io/woocommerce/mcp"
+    ],
+    "repo": "https://github.com/pipeworx-io/mcp-woocommerce",
+    "desc": "Unofficial WooCommerce MCP Pack \u2014 wraps the WooCommerce REST API v3"
+   }
+  ]
+ },
+ {
+  "id": 43,
+  "name": "BigCommerce",
+  "cands": []
+ },
+ {
+  "id": 44,
+  "name": "Salesforce Commerce Cloud",
+  "cands": []
+ },
+ {
+  "id": 45,
+  "name": "Magento (Adobe Commerce)",
+  "cands": [
+   {
+    "name": "watch.magento/magento-watch",
+    "remote": [
+     "https://magento.watch/mcp/api"
+    ],
+    "repo": "",
+    "desc": "Magento Open Source, Adobe Commerce and Mage-OS releases, EOL, requirements, CVEs and patc"
+   }
+  ]
+ },
+ {
+  "id": 46,
+  "name": "Squarespace",
+  "cands": []
+ },
+ {
+  "id": 47,
+  "name": "Ecwid",
+  "cands": []
+ },
+ {
+  "id": 48,
+  "name": "Gumroad",
+  "cands": []
+ },
+ {
+  "id": 49,
+  "name": "Amazon Selling Partner",
+  "cands": []
+ },
+ {
+  "id": 50,
+  "name": "fanbasis",
+  "cands": []
+ },
+ {
+  "id": 51,
+  "name": "DataForSEO",
+  "cands": []
+ },
+ {
+  "id": 52,
+  "name": "SE Ranking",
+  "cands": []
+ },
+ {
+  "id": 53,
+  "name": "Ahrefs",
+  "cands": [
+   {
+    "name": "com.ahrefs/mcp",
+    "remote": [
+     "https://api.ahrefs.com/mcp/mcp"
+    ],
+    "repo": "",
+    "desc": "Official Ahrefs MCP server. Access SEO data, including backlinks, keywords, and competitor"
+   }
+  ]
+ },
+ {
+  "id": 54,
+  "name": "MrScraper",
+  "cands": [
+   {
+    "name": "io.github.mrscraper-com/mrscraper-mcp",
+    "remote": [
+     "https://mcp.mrscraper.com/mcp"
+    ],
+    "repo": "https://github.com/mrscraper-com/mrscraper-mcp",
+    "desc": "Seven services: account, HTML, Markdown, screenshots, brand, JSON extraction, and web sear"
+   }
+  ]
+ },
+ {
+  "id": 55,
+  "name": "Apify",
+  "cands": [
+   {
+    "name": "com.apify/apify-mcp-server",
+    "remote": [
+     "https://mcp.apify.com/"
+    ],
+    "repo": "https://github.com/apify/apify-mcp-server",
+    "desc": "Extract data from any website with thousands of scrapers, crawlers, and automations on Api"
+   }
+  ]
+ },
+ {
+  "id": 56,
+  "name": "Firecrawl",
+  "cands": [
+   {
+    "name": "io.github.firecrawl/firecrawl-mcp-server",
+    "remote": [
+     "https://mcp.firecrawl.dev/v2/mcp"
+    ],
+    "repo": "https://github.com/firecrawl/firecrawl-mcp-server.git",
+    "desc": "MCP server for Firecrawl \u2014 web search, scraping, and biomedical/arXiv paper search."
+   }
+  ]
+ },
+ {
+  "id": 57,
+  "name": "Bright Data",
+  "cands": []
+ },
+ {
+  "id": 58,
+  "name": "Sherlock",
+  "cands": [
+   {
+    "name": "com.hostsherlock/mcp",
+    "remote": [
+     "https://mcp.hostsherlock.com/v1/mcp"
+    ],
+    "repo": "https://github.com/emailsherlock1/hostsherlock-mcp",
+    "desc": "Check SPF, DKIM, DMARC and MX of any domain, and read the DMARC reports of domains you mon"
+   },
+   {
+    "name": "io.github.FGC-Shreyansh-Chachaundiya/codesherlock-mcp-server",
+    "remote": [],
+    "repo": "https://github.com/fgc-shreyansh-chachaundiya/codesherlock-mcp-server",
+    "desc": "AI-powered static and contextual code analysis MCP server"
+   },
+   {
+    "name": "io.github.jcucci/dotnet-sherlock-mcp",
+    "remote": [],
+    "repo": "https://github.com/jcucci/dotnet-sherlock-mcp",
+    "desc": ".NET assembly introspection MCP server with advanced reflection and type analysis capabili"
+   }
+  ]
+ },
+ {
+  "id": 59,
+  "name": "Waterfall.io",
+  "cands": []
+ },
+ {
+  "id": 60,
+  "name": "Clay",
+  "cands": [
+   {
+    "name": "app.clayware/clayware",
+    "remote": [
+     "https://clayware.app/mcp"
+    ],
+    "repo": "https://github.com/noajp/clayware",
+    "desc": "Clayware: AI agents do the work, people make the judgments. Connect your AI to your board."
+   },
+   {
+    "name": "io.github.clay-swartz/pennyrail",
+    "remote": [
+     "https://pennyrail.vercel.app/api/mcp"
+    ],
+    "repo": "https://github.com/clay-swartz/pennyrail",
+    "desc": "Find and quote agent capabilities, then pay only the selected x402 execution URL."
+   },
+   {
+    "name": "io.github.claymore666/ccu-mcp",
+    "remote": [],
+    "repo": "https://github.com/claymore666/ccu-mcp",
+    "desc": "MCP server for controlling HomeMatic smart home devices via the CCU JSON-RPC API"
+   }
+  ]
+ },
+ {
+  "id": 61,
+  "name": "GitHub",
+  "cands": [
+   {
+    "name": "com.githubcard/mcp",
+    "remote": [
+     "https://githubcard.com/mcp"
+    ],
+    "repo": "https://github.com/ghcardhq/githubcard-mcp",
+    "desc": "Create GitHub profile and repository cards for READMEs, link previews and social posts."
+   },
+   {
+    "name": "com.usegithubthing/ugt",
+    "remote": [
+     "https://mcp.usegithubthing.com/mcp"
+    ],
+    "repo": "https://github.com/auscaster/ugt",
+    "desc": "Get GitHub projects running on your computer, with your AI app"
+   }
+  ]
+ },
+ {
+  "id": 62,
+  "name": "Vercel",
+  "cands": [
+   {
+    "name": "app.vercel.agent-permissions-index/agent-permissions-index",
+    "remote": [
+     "https://agent-permissions-index.vercel.app/mcp"
+    ],
+    "repo": "",
+    "desc": "Grade Claude Code, Gemini CLI and Cursor configs for risky permissions; get public config "
+   },
+   {
+    "name": "app.vercel.agent-shopping-tracker/feed",
+    "remote": [
+     "https://agent-shopping-tracker.vercel.app/api/mcp"
+    ],
+    "repo": "",
+    "desc": "Which stores let AI agents buy. Free, read-only, no key."
+   },
+   {
+    "name": "app.vercel.agent-svg-registry/mcp",
+    "remote": [
+     "https://agent-svg-registry.vercel.app/api/mcp"
+    ],
+    "repo": "",
+    "desc": "Search SVG metadata and buy licensed commercial SVG exports for coding agents."
+   }
+  ]
+ },
+ {
+  "id": 63,
+  "name": "Netlify",
+  "cands": [
+   {
+    "name": "app.netlify.acenes-of-sparta-the-dragon-slayer/epic-fantasy-101-booklist",
+    "remote": [
+     "https://acenes-of-sparta-the-dragon-slayer.netlify.app/mcp"
+    ],
+    "repo": "https://github.com/manolistsongas/epic-fantasy-101-booklist-mcp",
+    "desc": "Fantasy book recommendations: ranked reading list of 101 epic fantasy books like the ones "
+   },
+   {
+    "name": "app.netlify.agent-kb-y83q/kb",
+    "remote": [
+     "https://agent-kb-y83q.netlify.app/mcp"
+    ],
+    "repo": "",
+    "desc": "Search short math and how-to answers, and submit feedback to improve this knowledge base."
+   },
+   {
+    "name": "app.netlify.agent-rescue-desk/production-triage",
+    "remote": [
+     "https://agent-rescue-desk.netlify.app/mcp"
+    ],
+    "repo": "",
+    "desc": "Read-only triage for n8n, MCP, webhook, and AI agent workflow production failures."
+   }
+  ]
+ },
+ {
+  "id": 64,
+  "name": "Cloudflare",
+  "cands": [
+   {
+    "name": "com.cloudflare.mcp/mcp",
+    "remote": [
+     "https://docs.mcp.cloudflare.com/mcp"
+    ],
+    "repo": "https://github.com/cloudflare/mcp-server-cloudflare",
+    "desc": "Cloudflare MCP servers"
+   },
+   {
+    "name": "com.trycloudflare.annotated-lot-operational-tourism/kai-agi",
+    "remote": [
+     "https://annotated-lot-operational-tourism.trycloudflare.com/mcp"
+    ],
+    "repo": "",
+    "desc": "AI predictions, model comparison, research briefs and web search from an autonomous AI"
+   },
+   {
+    "name": "com.trycloudflare.barrier-sought-lbs-reader/quotes",
+    "remote": [
+     "https://barrier-sought-lbs-reader.trycloudflare.com/mcp"
+    ],
+    "repo": "",
+    "desc": "Live BTC/ETH/SOL quotes and Fear-Greed index over x402 micropayments on Base."
+   }
+  ]
+ },
+ {
+  "id": 65,
+  "name": "Supabase",
+  "cands": [
+   {
+    "name": "com.supabase/mcp",
+    "remote": [
+     "https://mcp.supabase.com/mcp"
+    ],
+    "repo": "https://github.com/supabase/mcp",
+    "desc": "MCP server for interacting with the Supabase platform"
+   }
+  ]
+ },
+ {
+  "id": 66,
+  "name": "Neo4j",
+  "cands": [
+   {
+    "name": "io.github.neo4j-contrib/gds-agent",
+    "remote": [],
+    "repo": "https://github.com/neo4j-contrib/gds-agent",
+    "desc": "Neo4j Graph Data Science MCP server"
+   },
+   {
+    "name": "io.github.neo4j-contrib/mcp-neo4j-aura-manager",
+    "remote": [],
+    "repo": "https://github.com/neo4j-contrib/mcp-neo4j",
+    "desc": "MCP server for Neo4j Aura Database Instance Manager."
+   },
+   {
+    "name": "io.github.neo4j-contrib/mcp-neo4j-cypher",
+    "remote": [],
+    "repo": "https://github.com/neo4j-contrib/mcp-neo4j",
+    "desc": "A simple Neo4j MCP server that allows you to run Cypher queries against a Neo4j database."
+   }
+  ]
+ },
+ {
+  "id": 67,
+  "name": "Snowflake",
+  "cands": [
+   {
+    "name": "io.github.Snowflake-Labs/mcp",
+    "remote": [],
+    "repo": "https://github.com/snowflake-labs/mcp",
+    "desc": "MCP Server for Snowflake from Snowflake Labs"
+   }
+  ]
+ },
+ {
+  "id": 68,
+  "name": "MongoDB Atlas",
+  "cands": []
+ },
+ {
+  "id": 69,
+  "name": "Datadog",
+  "cands": []
+ },
+ {
+  "id": 70,
+  "name": "Sentry",
+  "cands": [
+   {
+    "name": "com.0xpi.sdsentry/sds-lookup",
+    "remote": [
+     "https://sdsentry.0xpi.com/mcp-sds"
+    ],
+    "repo": "",
+    "desc": "SDS lookup, GHS pictograms, HazCom dates; customers: list my chemicals, sheets due, PPE, h"
+   },
+   {
+    "name": "com.regsentry/tracking-inspector",
+    "remote": [
+     "https://regsentry.com/mcp"
+    ],
+    "repo": "",
+    "desc": "Inspect authorized website tracking, compare consent observations, and get remediation gui"
+   },
+   {
+    "name": "io.github.bricksentry/bricksentry",
+    "remote": [],
+    "repo": "https://github.com/bricksentry/bricksentry",
+    "desc": "Safety check for AI agent and pipeline writes to Databricks tables, before they reach prod"
+   }
+  ]
+ },
+ {
+  "id": 71,
+  "name": "Notion",
+  "cands": [
+   {
+    "name": "com.notion/mcp",
+    "remote": [
+     "https://mcp.notion.com/mcp"
+    ],
+    "repo": "",
+    "desc": "Official Notion MCP server"
+   }
+  ]
+ },
+ {
+  "id": 72,
+  "name": "Airtable",
+  "cands": [
+   {
+    "name": "com.airtable/mcp",
+    "remote": [
+     "https://mcp.airtable.com/mcp"
+    ],
+    "repo": "",
+    "desc": "Official Airtable MCP server \u2014 database and operations layer for agents."
+   }
+  ]
+ },
+ {
+  "id": 73,
+  "name": "Linear",
+  "cands": [
+   {
+    "name": "app.linear/linear",
+    "remote": [
+     "https://mcp.linear.app/mcp"
+    ],
+    "repo": "",
+    "desc": "Find and manage issues, projects, and documents in your Linear workspace."
+   }
+  ]
+ },
+ {
+  "id": 74,
+  "name": "Jira",
+  "cands": [
+   {
+    "name": "io.github.Kujirafu/agentlore",
+    "remote": [
+     "https://agentlore.vercel.app/api/mcp/stream"
+    ],
+    "repo": "https://github.com/kujirafu/agentlore",
+    "desc": "AI-verified knowledge base with trust scoring, temporal facts, and skill cards."
+   }
+  ]
+ },
+ {
+  "id": 75,
+  "name": "Asana",
+  "cands": [
+   {
+    "name": "com.supersaasanalytics/analytics",
+    "remote": [
+     "https://supersaasanalytics.com/mcp"
+    ],
+    "repo": "https://github.com/hafizjavaid/supersaas-analytics-core",
+    "desc": "Read-only, cookieless web analytics: traffic, sources, pages, Goals, Funnels and revenue p"
+   },
+   {
+    "name": "io.github.asanabrial/estigia",
+    "remote": [],
+    "repo": "https://github.com/asanabrial/estigia",
+    "desc": "Guardrails for AI coding agents: verified claims, reviews bound to exact commits, gated me"
+   },
+   {
+    "name": "io.github.asanabrial/leteo",
+    "remote": [],
+    "repo": "https://github.com/asanabrial/leteo",
+    "desc": "Persistent memory for AI coding agents: one Rust binary, one local SQLite database."
+   }
+  ]
+ },
+ {
+  "id": 76,
+  "name": "Monday.com",
+  "cands": [
+   {
+    "name": "com.monday/monday.com",
+    "remote": [
+     "https://mcp.monday.com/mcp"
+    ],
+    "repo": "https://github.com/mondaycom/mcp",
+    "desc": "MCP server for monday.com integration."
+   }
+  ]
+ },
+ {
+  "id": 77,
+  "name": "ClickUp",
+  "cands": []
+ },
+ {
+  "id": 78,
+  "name": "Coda",
+  "cands": [
+   {
+    "name": "app.codaphone/mcp",
+    "remote": [
+     "https://mcp.codaphone.app"
+    ],
+    "repo": "",
+    "desc": "Business texting for AI agents: send texts, read threads, manage contacts and run campaign"
+   },
+   {
+    "name": "com.codaurl/mcp",
+    "remote": [
+     "https://mcp.codaurl.com/mcp"
+    ],
+    "repo": "",
+    "desc": "URL monitoring for AI agents: manage monitors and read status and incidents. Free or Pro a"
+   },
+   {
+    "name": "com.iterruptivo.ecodashboard/ecoplaza-mcp",
+    "remote": [
+     "https://ecodashboard.iterruptivo.com/api/mcp"
+    ],
+    "repo": "",
+    "desc": "Read-only MCP for EcoPlaza, Peruvian commercial real estate: projects, units, advisor cont"
+   }
+  ]
+ },
+ {
+  "id": 79,
+  "name": "Smartsheet",
+  "cands": []
+ },
+ {
+  "id": 80,
+  "name": "Harvest",
+  "cands": [
+   {
+    "name": "com.mapsharvest/maps-harvest",
+    "remote": [
+     "https://www.mapsharvest.com/mcp"
+    ],
+    "repo": "",
+    "desc": "Local business data from Google Maps: ratings, reviews, businesses without a website."
+   },
+   {
+    "name": "com.pixharvest/esp32-control",
+    "remote": [],
+    "repo": "https://github.com/contentforge-press/esp32-mcp",
+    "desc": "Control ESP32 IoT devices from AI agents: status, GPIO, ADC, reboot."
+   },
+   {
+    "name": "com.pixharvest/gov-contract-radar",
+    "remote": [
+     "https://gov.pixharvest.com/mcp"
+    ],
+    "repo": "https://github.com/contentforge-press/us-tariff-data",
+    "desc": "US federal contracts: solicitations, set-asides, deadlines, awards, contractor profiles. F"
+   }
+  ]
+ },
+ {
+  "id": 81,
+  "name": "Stripe",
+  "cands": [
+   {
+    "name": "app.vercel.stripecheckup/stripecheckup",
+    "remote": [
+     "https://stripecheckup.vercel.app/api/mcp"
+    ],
+    "repo": "",
+    "desc": "Scan pasted Stripe webhook/checkout code for common integration bugs."
+   },
+   {
+    "name": "com.stripe/mcp",
+    "remote": [
+     "https://mcp.stripe.com"
+    ],
+    "repo": "https://github.com/stripe/agent-toolkit",
+    "desc": "MCP server integrating with Stripe - tools for customers, products, payments, and more."
+   }
+  ]
+ },
+ {
+  "id": 82,
+  "name": "Plaid",
+  "cands": []
+ },
+ {
+  "id": 83,
+  "name": "Binance",
+  "cands": [
+   {
+    "name": "io.github.Alejandrehl/kainext-binance-mcp",
+    "remote": [],
+    "repo": "",
+    "desc": "Security-first Binance Spot MCP + honest crypto analyst. 25 tools, 5 prompts, human-gated "
+   },
+   {
+    "name": "io.github.Evozim/binance-orderbook-mcp",
+    "remote": [
+     "https://api.m2mcent.com/binance-orderbook-mcp/sse"
+    ],
+    "repo": "",
+    "desc": "Premium agentic endpoint for binance-orderbook-mcp."
+   },
+   {
+    "name": "io.github.KumailQazi/krmaazha-binance-mcp",
+    "remote": [],
+    "repo": "",
+    "desc": "Security-first Binance MCP. 26 tools, human-confirmed spot trades, offline quant research."
+   }
+  ]
+ },
+ {
+  "id": 84,
+  "name": "Paygent Connect",
+  "cands": []
+ },
+ {
+  "id": 85,
+  "name": "iPayX",
+  "cands": [
+   {
+    "name": "io.github.Ipayx-stellar/fx-audit",
+    "remote": [
+     "https://wild-bird-a412.ybolduc.workers.dev/mcp"
+    ],
+    "repo": "",
+    "desc": "Forensic FX audit. Detects hidden bank markups in real time. Returns spread bps + audit sc"
+   },
+   {
+    "name": "io.github.iPAYX-Technologies/mcp-fx-audit",
+    "remote": [
+     "https://mcp.ipayx.ai/mcp"
+    ],
+    "repo": "https://github.com/ipayx-technologies/mcp-fx-audit",
+    "desc": "Forensic FX audit MCP. Live mid-market rates, spread scoring and hidden bank fee detection"
+   }
+  ]
+ },
+ {
+  "id": 86,
+  "name": "QuickBooks",
+  "cands": []
+ },
+ {
+  "id": 87,
+  "name": "Xero",
+  "cands": [
+   {
+    "name": "io.github.Xerolo44/rpgmaker-mv-mcp",
+    "remote": [],
+    "repo": "https://github.com/xerolo44/rpg-maker-mv-mcp",
+    "desc": "MCP server for reading, editing, and playtesting RPG Maker MV projects"
+   }
+  ]
+ },
+ {
+  "id": 88,
+  "name": "Brex",
+  "cands": [
+   {
+    "name": "io.github.PalabreX/runpay",
+    "remote": [
+     "https://runpay-backend-visibility-production.up.railway.app/mcp"
+    ],
+    "repo": "https://github.com/palabrex/runpay-mcp",
+    "desc": "Stripe-native marketplace where AI agents discover and pay per call for API services."
+   }
+  ]
+ },
+ {
+  "id": 89,
+  "name": "Ramp",
+  "cands": [
+   {
+    "name": "ai.adramp/google-ads",
+    "remote": [
+     "https://mcp.adramp.ai"
+    ],
+    "repo": "",
+    "desc": "Google Ads MCP server \u2014 manage campaigns, keywords, and metrics."
+   },
+   {
+    "name": "com.ontoramp/decision-intelligence",
+    "remote": [
+     "https://ontoramp-decision-intelligence.fly.dev/mcp"
+    ],
+    "repo": "https://github.com/matthewdavisaiarchitect/ontoramp-decision-intelligence",
+    "desc": "Log, evaluate, and ground AI decisions against authority context. Returns PASS, WARN, or B"
+   },
+   {
+    "name": "com.ontoramp/governance-assessment",
+    "remote": [
+     "https://mcp.ontoramp.com/mcp"
+    ],
+    "repo": "",
+    "desc": "Governance maturity assessment, compliance gap analysis, and evidence-linked briefs for AI"
+   }
+  ]
+ },
+ {
+  "id": 90,
+  "name": "PitchBook",
+  "cands": []
+ },
+ {
+  "id": 91,
+  "name": "NotebookLM",
+  "cands": []
+ },
+ {
+  "id": 92,
+  "name": "Otter AI",
+  "cands": []
+ },
+ {
+  "id": 93,
+  "name": "Fathom",
+  "cands": [
+   {
+    "name": "ai.fathom.api/mcp",
+    "remote": [
+     "https://api.fathom.ai/mcp"
+    ],
+    "repo": "",
+    "desc": "Give your AI assistant real meeting context via Fathom so every output grounded in your wo"
+   },
+   {
+    "name": "dev.fly.fathom-lab-door/fathom",
+    "remote": [
+     "https://fathom-lab-door.fly.dev/mcp"
+    ],
+    "repo": "",
+    "desc": "Find places and groups around an interest in a town, each with a source; propose what is m"
+   },
+   {
+    "name": "io.github.fathomise/mailfathom",
+    "remote": [
+     "https://{mailfathom_host}/mcp"
+    ],
+    "repo": "https://github.com/fathomise/mailfathom",
+    "desc": "Security-first, self-hosted email archive with search, cited answers, and sending for AI a"
+   }
+  ]
+ },
+ {
+  "id": 94,
+  "name": "Consensus",
+  "cands": [
+   {
+    "name": "com.consensus-analytics/mcp",
+    "remote": [
+     "https://ai.consensus-analytics.com/mcp"
+    ],
+    "repo": "",
+    "desc": "Read-only financial facts from SEC/EU/KR filings: tickers, periods, report lines, =CaData("
+   }
+  ]
+ },
+ {
+  "id": 95,
+  "name": "Reducto",
+  "cands": []
+ },
+ {
+  "id": 96,
+  "name": "Devin",
+  "cands": [
+   {
+    "name": "io.devinbox/devinbox",
+    "remote": [
+     "https://mcp.devinbox.io"
+    ],
+    "repo": "https://github.com/adospace/dev-inbox",
+    "desc": "Real email inboxes for AI agents: create inboxes, catch verification codes, extract OTPs, "
+   },
+   {
+    "name": "io.github.DevInder1/tridentchain-security",
+    "remote": [],
+    "repo": "https://github.com/devinder1/supply-chain-scanner-public",
+    "desc": "Local supply-chain CVE scanner via OSV/NVD. Scans deps and IDE extensions. No upload."
+   },
+   {
+    "name": "io.github.DevinoSolutions/upapi-mcp",
+    "remote": [
+     "https://app.upapi.io/api/mcp"
+    ],
+    "repo": "https://github.com/devinosolutions/upapi-mcp",
+    "desc": "All public upAPI operations as MCP tools: web scraping, search, screenshots, PDF, OCR and "
+   }
+  ]
+ },
+ {
+  "id": 97,
+  "name": "higgsfield",
+  "cands": [
+   {
+    "name": "app.higgsfield.agentwares/marketplace",
+    "remote": [
+     "https://agentwares.higgsfield.app/mcp"
+    ],
+    "repo": "",
+    "desc": "Marketplace where AI agents buy and sell workflows, prompt packs and MCP configs."
+   },
+   {
+    "name": "app.higgsfield.mizan-bazar/mizan",
+    "remote": [
+     "https://mizan-bazar.higgsfield.app/mcp"
+    ],
+    "repo": "",
+    "desc": "Check an x402 endpoint before your agent pays it: avoid / caution / ok, proven on-chain."
+   }
+  ]
+ },
+ {
+  "id": 98,
+  "name": "Mermaid CLI",
+  "cands": []
+ },
+ {
+  "id": 99,
+  "name": "YouTube Transcript",
+  "cands": []
+ },
+ {
+  "id": 100,
+  "name": "Grain",
+  "cands": [
+   {
+    "name": "com.grain64.billtrim/billtrim",
+    "remote": [
+     "https://billtrim.grain64.com/mcp"
+    ],
+    "repo": "",
+    "desc": "Ranked AWS bill savings from a Cost Explorer or CUR export, with dollar impact and CLI ste"
+   },
+   {
+    "name": "com.grain64.clearbar/verdicts",
+    "remote": [
+     "https://clearbar.grain64.com/mcp"
+    ],
+    "repo": "",
+    "desc": "Cheapest LLM that passes each task: cost per successful task and pass rate on public datas"
+   },
+   {
+    "name": "com.grain64.deskhand/deskhand",
+    "remote": [
+     "https://deskhand.grain64.com/api/mcp"
+    ],
+    "repo": "",
+    "desc": "Deskhand CRM for AI agents: key per agent, undo a run, email drafts. Start with one POST."
+   }
+  ]
+ }
+]

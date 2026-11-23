@@ -1,0 +1,185 @@
+URL: https://marketplace.gohighlevel.com/docs/llms.txt
+FINAL: https://marketplace.gohighlevel.com/docs/llms.txt
+STATUS: 200
+# HighLevel API
+> HighLevel API is the REST API of the HighLevel platform (ad-publishing, affiliate-manager, agent-studio, associations, blogs, brand-boards, businesses, calendars, campaigns, chat-widget, clientportal-ai, companies, ...). This is an LLM-friendly index of its reference documentation, generated from the OpenAPI specs at build time.
+- Base URL: https://services.leadconnectorhq.com (append the endpoint path).
+- Every request must send a `Version` header whose value is the API version name, e.g. `Version: v3`. Published versions: v3 (latest), 2023-02-21, 2021-07-28, 2021-04-15.
+- Every authenticated request sends `Authorization: Bearer `.
+## Authentication
+- OAuth 2.0 access token: issued to an app through the authorization-code flow ([POST /oauth/token](https://marketplace.gohighlevel.com/docs/ghl/oauth/get-access-token.md) exchanges the code or a refresh token). A token is issued either for a Sub-Account (location) or for an Agency (company).
+- Private Integration Token (PIT): a static token created in the Sub-Account or Agency settings with a chosen set of scopes; it is sent exactly like an access token. Endpoints marked "OAuth access token only" reject PITs.
+- Sub-Account vs Agency: every endpoint states which token type it accepts. An Agency access token can be exchanged for a Sub-Account token with [POST /oauth/location-token](https://marketplace.gohighlevel.com/docs/ghl/oauth/get-location-access-token.md).
+- Scopes: every endpoint lists the scopes it requires; the token must carry all of them (requested during OAuth authorization, or selected when the PIT is created).
+## Instructions for LLMs
+- Default to the latest version, v3, unless the user names another version.
+- Always send `Version: ` with the version whose documentation you used (`Version: v3` for the latest). Never mix endpoints or schemas from different versions in one integration.
+- Call https://services.leadconnectorhq.com followed by the endpoint path; replace `{param}` placeholders with path parameter values.
+- Pick the token type, OAuth/PIT method and scopes from the endpoint's Auth line.
+- Find endpoints in the version's llms.txt, then read the service `.md` file or the endpoint `.md` file for the full request and response schema.
+## API versions
+- [v3 (latest) index](https://marketplace.gohighlevel.com/docs/llms/v3/llms.txt): services and endpoints of version v3 with links (841 endpoints, ~53k tokens)
+- [v3 (latest) full reference](https://marketplace.gohighlevel.com/docs/llms/v3/llms-full.txt): every endpoint of version v3 in one compact file, ~909k tokens
+- [2023-02-21 index](https://marketplace.gohighlevel.com/docs/llms/2023-02-21/llms.txt): services and endpoints of version 2023-02-21 with links (739 endpoints, ~47k tokens)
+- [2023-02-21 full reference](https://marketplace.gohighlevel.com/docs/llms/2023-02-21/llms-full.txt): every endpoint of version 2023-02-21 in one compact file, ~798k tokens
+- [2021-07-28 index](https://marketplace.gohighlevel.com/docs/llms/2021-07-28/llms.txt): services and endpoints of version 2021-07-28 with links (739 endpoints, ~47k tokens)
+- [2021-07-28 full reference](https://marketplace.gohighlevel.com/docs/llms/2021-07-28/llms-full.txt): every endpoint of version 2021-07-28 in one compact file, ~798k tokens
+- [2021-04-15 index](https://marketplace.gohighlevel.com/docs/llms/2021-04-15/llms.txt): services and endpoints of version 2021-04-15 with links (739 endpoints, ~47k tokens)
+- [2021-04-15 full reference](https://marketplace.gohighlevel.com/docs/llms/2021-04-15/llms-full.txt): every endpoint of version 2021-04-15 in one compact file, ~798k tokens
+- 2023-02-21, 2021-07-28, 2021-04-15 expose the same endpoints, parameters and schemas; they differ only in the `Version` header value.
+## Guides
+- [Guides](https://marketplace.gohighlevel.com/docs/llms/guides.txt): every guide page in one file: authorization, OAuth apps, scopes, webhooks and event payloads, SDKs, marketplace modules and policies, ~176k tokens
+- [Authorization](https://marketplace.gohighlevel.com/docs/llms/guides/Authorization.md): all 7 pages of this section in one file, ~12k tokens
+- [OAuth 2.0 / Marketplace apps](https://marketplace.gohighlevel.com/docs/llms/guides/oauth.md): all 22 pages of this section in one file, ~28k tokens
+- [Webhooks](https://marketplace.gohighlevel.com/docs/llms/guides/webhook.md): all 79 pages of this section in one file, ~70k tokens
+- [SDKs](https://marketplace.gohighlevel.com/docs/llms/guides/sdk.md): all 6 pages of this section in one file, ~17k tokens
+- [Marketplace Modules](https://marketplace.gohighlevel.com/docs/llms/guides/marketplace-modules.md): all 13 pages of this section in one file, ~24k tokens
+- [Marketplace Policies](https://marketplace.gohighlevel.com/docs/llms/guides/MarketplacePolicies.md): all 3 pages of this section in one file, ~5k tokens
+- [Other](https://marketplace.gohighlevel.com/docs/llms/guides/other.md): all 4 pages of this section in one file, ~13k tokens
+- [app-studio](https://marketplace.gohighlevel.com/docs/llms/guides/app-studio.md): all 6 pages of this section in one file, ~7k tokens
+## Guide pages
+- [Introduction](https://marketplace.gohighlevel.com/docs/intro.md)
+- [API Versioning](https://marketplace.gohighlevel.com/docs/Versioning.md)
+- [Access Token Generation: Agency vs. Sub-Account Scenarios](https://marketplace.gohighlevel.com/docs/Authorization/AccessTokenUseCase.md)
+- [Authorization](https://marketplace.gohighlevel.com/docs/Authorization/authorization_doc.md)
+- [Developer's Glossary of Terms](https://marketplace.gohighlevel.com/docs/Authorization/DeveloperGlossary.md)
+- [OAuth 2.0](https://marketplace.gohighlevel.com/docs/Authorization/OAuth2.0.md)
+- [Private Integrations](https://marketplace.gohighlevel.com/docs/Authorization/PrivateIntegrationsToken.md)
+- [Handling Access Tokens for Apps with Target User: Agency](https://marketplace.gohighlevel.com/docs/Authorization/TargetUserAgency.md)
+- [Handling Access Tokens for Apps with Target User: Sub-Account](https://marketplace.gohighlevel.com/docs/Authorization/TargetUserSubAccount.md)
+- [Understanding HighLevel’s Go-To-Market Model](https://marketplace.gohighlevel.com/docs/oauth/AgencyVsSubAccount.md)
+- [App Creation Guide](https://marketplace.gohighlevel.com/docs/oauth/AppCreationGuide.md)
+- [Marketplace App Distribution Model](https://marketplace.gohighlevel.com/docs/oauth/AppDistribution.md)
+- [Publishing your App to HighLevel Marketplace](https://marketplace.gohighlevel.com/docs/oauth/AppReviewGuidelines.md)
+- [App Testing Guide](https://marketplace.gohighlevel.com/docs/oauth/AppTestingGuide.md)
+- [Billing Webhook](https://marketplace.gohighlevel.com/docs/oauth/Billing.md)
+- [Step 1: Create a Developer Account](https://marketplace.gohighlevel.com/docs/oauth/CreateDeveloperAccount.md)
+- [Step 2: Create a Marketplace App](https://marketplace.gohighlevel.com/docs/oauth/CreateMarketplaceApp.md)
+- [API Key / Basic Auth](https://marketplace.gohighlevel.com/docs/oauth/external-auth/BasicAuth.md)
+- [Code Mode](https://marketplace.gohighlevel.com/docs/oauth/external-auth/CodeMode.md)
+- [Configure Your Fields](https://marketplace.gohighlevel.com/docs/oauth/external-auth/ConfigureYourFields.md)
+- [Multi-Account Support & User Info](https://marketplace.gohighlevel.com/docs/oauth/external-auth/MultiAccountSupport.md)
+- [OAuth 2.0](https://marketplace.gohighlevel.com/docs/oauth/external-auth/OAuth2.md)
+- [External Authentication](https://marketplace.gohighlevel.com/docs/oauth/ExternalAuthentication.md)
+- [FAQs](https://marketplace.gohighlevel.com/docs/oauth/Faqs.md)
+- [Getting Started](https://marketplace.gohighlevel.com/docs/oauth/GettingStarted.md)
+- [How to Update Your App](https://marketplace.gohighlevel.com/docs/oauth/HowToUpdateYourAPP.md)
+- [How to Update Your Pricing](https://marketplace.gohighlevel.com/docs/oauth/HowToUpdateYourPricing.md)
+- [Key Concepts](https://marketplace.gohighlevel.com/docs/oauth/KeyConcepts.md)
+- [GHL Marketplace Sandbox Accounts: Setup and Usage Guide](https://marketplace.gohighlevel.com/docs/oauth/SandboxAccount.md)
+- [Private Integration Tokens (PIT) for Sandbox Accounts](https://marketplace.gohighlevel.com/docs/oauth/SandboxPIT.md)
+- [Step 4: Installing and Testing a Marketplace App](https://marketplace.gohighlevel.com/docs/oauth/TestingApp.md)
+- [App](https://marketplace.gohighlevel.com/docs/webhook/AppInstall.md)
+- [Appointment](https://marketplace.gohighlevel.com/docs/webhook/AppointmentCreate.md)
+- [Appointment](https://marketplace.gohighlevel.com/docs/webhook/AppointmentDelete.md)
+- [Appointment](https://marketplace.gohighlevel.com/docs/webhook/AppointmentUpdate.md)
+- [App Payment Status](https://marketplace.gohighlevel.com/docs/webhook/AppPaymentStatus.md)
+- [App](https://marketplace.gohighlevel.com/docs/webhook/AppUninstall.md)
+- [App](https://marketplace.gohighlevel.com/docs/webhook/AppUpdate.md)
+- [Association Created](https://marketplace.gohighlevel.com/docs/webhook/AssociationCreate.md)
+- [Association Deleted](https://marketplace.gohighlevel.com/docs/webhook/AssociationDelete.md)
+- [Association Updated](https://marketplace.gohighlevel.com/docs/webhook/AssociationUpdate.md)
+- [Campaign](https://marketplace.gohighlevel.com/docs/webhook/CampaignStatusUpdate.md)
+- [Contact](https://marketplace.gohighlevel.com/docs/webhook/ContactCreate.md)
+- [Contact](https://marketplace.gohighlevel.com/docs/webhook/ContactDelete.md)
+- [Contact](https://marketplace.gohighlevel.com/docs/webhook/ContactDndUpdate.md)
+- [Contact](https://marketplace.gohighlevel.com/docs/webhook/ContactTagUpdate.md)
+- [Contact](https://marketplace.gohighlevel.com/docs/webhook/ContactUpdate.md)
+- [Conversation](https://marketplace.gohighlevel.com/docs/webhook/ConversationUnreadWebhook.md)
+- [ConversationUpdate](https://marketplace.gohighlevel.com/docs/webhook/ConversationUpdate.md)
+- [EXTERNAL_AUTH_CONNECTED](https://marketplace.gohighlevel.com/docs/webhook/ExternalAuthConnected.md)
+- [InboundMessage](https://marketplace.gohighlevel.com/docs/webhook/InboundMessage.md)
+- [Invoice](https://marketplace.gohighlevel.com/docs/webhook/InvoiceCreate.md)
+- [Invoice](https://marketplace.gohighlevel.com/docs/webhook/InvoiceDelete.md)
+- [Invoice](https://marketplace.gohighlevel.com/docs/webhook/InvoicePaid.md)
+- [Invoice](https://marketplace.gohighlevel.com/docs/webhook/InvoicePartiallyPaid.md)
+- [Invoice](https://marketplace.gohighlevel.com/docs/webhook/InvoiceSent.md)
+- [Invoice](https://marketplace.gohighlevel.com/docs/webhook/InvoiceUpdate.md)
+- [Invoice](https://marketplace.gohighlevel.com/docs/webhook/InvoiceVoid.md)
+- [Knowledge Base](https://marketplace.gohighlevel.com/docs/webhook/KnowledgeBaseCreate.md)
+- [Knowledge Base](https://marketplace.gohighlevel.com/docs/webhook/KnowledgeBaseDelete.md)
+- [Knowledge Base Asset](https://marketplace.gohighlevel.com/docs/webhook/KnowledgeBaseFaqChange.md)
+- [Knowledge Base Asset](https://marketplace.gohighlevel.com/docs/webhook/KnowledgeBaseFileChange.md)
+- [Knowledge Base Asset](https://marketplace.gohighlevel.com/docs/webhook/KnowledgeBaseRichTextChange.md)
+- [Knowledge Base Asset](https://marketplace.gohighlevel.com/docs/webhook/KnowledgeBaseTableFileChange.md)
+- [Knowledge Base Asset](https://marketplace.gohighlevel.com/docs/webhook/KnowledgeBaseTrainedUrlChange.md)
+- [Knowledge Base](https://marketplace.gohighlevel.com/docs/webhook/KnowledgeBaseUpdate.md)
+- [LC Email](https://marketplace.gohighlevel.com/docs/webhook/LCEmailStats.md)
+- [Location](https://marketplace.gohighlevel.com/docs/webhook/LocationCreate.md)
+- [Location](https://marketplace.gohighlevel.com/docs/webhook/LocationUpdate.md)
+- [Note](https://marketplace.gohighlevel.com/docs/webhook/NoteCreate.md)
+- [Note](https://marketplace.gohighlevel.com/docs/webhook/NoteDelete.md)
+- [Note](https://marketplace.gohighlevel.com/docs/webhook/NoteUpdate.md)
+- [Object Schema Create](https://marketplace.gohighlevel.com/docs/webhook/ObjectSchemaCreate.md)
+- [Update Custom Object](https://marketplace.gohighlevel.com/docs/webhook/ObjectSchemaUpdate.md)
+- [Opportunity](https://marketplace.gohighlevel.com/docs/webhook/OpportunityAssignedToUpdate.md)
+- [Opportunity](https://marketplace.gohighlevel.com/docs/webhook/OpportunityCreate.md)
+- [Opportunity](https://marketplace.gohighlevel.com/docs/webhook/OpportunityDelete.md)
+- [Opportunity](https://marketplace.gohighlevel.com/docs/webhook/OpportunityMonetaryValueUpdate.md)
+- [Opportunity](https://marketplace.gohighlevel.com/docs/webhook/OpportunityStageUpdate.md)
+- [Opportunity](https://marketplace.gohighlevel.com/docs/webhook/OpportunityStatusUpdate.md)
+- [Opportunity](https://marketplace.gohighlevel.com/docs/webhook/OpportunityUpdate.md)
+- [Order](https://marketplace.gohighlevel.com/docs/webhook/OrderCreate.md)
+- [Order](https://marketplace.gohighlevel.com/docs/webhook/OrderStatusUpdate.md)
+- [OutboundMessage](https://marketplace.gohighlevel.com/docs/webhook/OutboundMessage.md)
+- [Plan Change](https://marketplace.gohighlevel.com/docs/webhook/PlanChange.md)
+- [Price](https://marketplace.gohighlevel.com/docs/webhook/PriceCreate.md)
+- [Price](https://marketplace.gohighlevel.com/docs/webhook/PriceDelete.md)
+- [Price](https://marketplace.gohighlevel.com/docs/webhook/PriceUpdate.md)
+- [Product](https://marketplace.gohighlevel.com/docs/webhook/ProductCreate.md)
+- [Product](https://marketplace.gohighlevel.com/docs/webhook/ProductDelete.md)
+- [Product](https://marketplace.gohighlevel.com/docs/webhook/ProductUpdate.md)
+- [Conversation Provider - Outbound Message](https://marketplace.gohighlevel.com/docs/webhook/ProviderOutboundMessage.md)
+- [Record Create](https://marketplace.gohighlevel.com/docs/webhook/RecordCreate.md)
+- [Delete Record](https://marketplace.gohighlevel.com/docs/webhook/RecordDelete.md)
+- [Record Update](https://marketplace.gohighlevel.com/docs/webhook/RecordUpdate.md)
+- [Relation Create](https://marketplace.gohighlevel.com/docs/webhook/RelationCreate.md)
+- [Relation Delete](https://marketplace.gohighlevel.com/docs/webhook/RelationDelete.md)
+- [SaaS Plan Created](https://marketplace.gohighlevel.com/docs/webhook/SaaSPlanCreate.md)
+- [Support Ticket Create](https://marketplace.gohighlevel.com/docs/webhook/SupportTicketCreate.md)
+- [Support Ticket Delete](https://marketplace.gohighlevel.com/docs/webhook/SupportTicketDelete.md)
+- [Support Ticket Update](https://marketplace.gohighlevel.com/docs/webhook/SupportTicketUpdate.md)
+- [Task](https://marketplace.gohighlevel.com/docs/webhook/TaskComplete.md)
+- [Task](https://marketplace.gohighlevel.com/docs/webhook/TaskCreate.md)
+- [Task](https://marketplace.gohighlevel.com/docs/webhook/TaskDelete.md)
+- [User](https://marketplace.gohighlevel.com/docs/webhook/UserCreate.md)
+- [User](https://marketplace.gohighlevel.com/docs/webhook/UserDelete.md)
+- [User](https://marketplace.gohighlevel.com/docs/webhook/UserUpdate.md)
+- [VoiceAiCallEnd](https://marketplace.gohighlevel.com/docs/webhook/VoiceAiCallEnd.md)
+- [Webhook Integration Guide](https://marketplace.gohighlevel.com/docs/webhook/WebhookIntegrationGuide.md)
+- [Webhook Logs Dashboard](https://marketplace.gohighlevel.com/docs/webhook/WebhookLogsDashboard.md)
+- [Getting Started with HighLevel SDKs](https://marketplace.gohighlevel.com/docs/sdk/GettingStartedSDK.md)
+- [HighLevel Marketplace CLI](https://marketplace.gohighlevel.com/docs/sdk/marketplace-cli.md)
+- [Marketplace Developer MCP Server](https://marketplace.gohighlevel.com/docs/sdk/marketplace-cli/mcp.md)
+- [HighLevel Node.js SDK](https://marketplace.gohighlevel.com/docs/sdk/node.md)
+- [HighLevel PHP SDK](https://marketplace.gohighlevel.com/docs/sdk/php.md)
+- [HighLevel Python SDK](https://marketplace.gohighlevel.com/docs/sdk/python.md)
+- [Conversation Providers](https://marketplace.gohighlevel.com/docs/marketplace-modules/ConversationProviders.md)
+- [Conversation AI & Voice AI](https://marketplace.gohighlevel.com/docs/marketplace-modules/ConversationsAIandVoiceAI.md)
+- [CustomJS](https://marketplace.gohighlevel.com/docs/marketplace-modules/custom-js.md)
+- [Creating a Marketplace Workflow Action](https://marketplace.gohighlevel.com/docs/marketplace-modules/CustomActions.md)
+- [Custom Pages](https://marketplace.gohighlevel.com/docs/marketplace-modules/CustomPages.md)
+- [Sell AI Employee and Add-ons from a Custom Page](https://marketplace.gohighlevel.com/docs/marketplace-modules/CustomPagesReselling.md)
+- [Creating a Marketplace Workflow Trigger](https://marketplace.gohighlevel.com/docs/marketplace-modules/CustomTriggers.md)
+- [Building a Custom Payments Integration on the HighLevel Platform](https://marketplace.gohighlevel.com/docs/marketplace-modules/Payments.md)
+- [Selling Snapshots on the HighLevel App Marketplace](https://marketplace.gohighlevel.com/docs/marketplace-modules/Snapshots.md)
+- [Template Library](https://marketplace.gohighlevel.com/docs/marketplace-modules/TemplateLibrary.md)
+- [Vue 3 Store Events Migration Guide](https://marketplace.gohighlevel.com/docs/marketplace-modules/vue3-store-events.md)
+- [Web Widgets](https://marketplace.gohighlevel.com/docs/marketplace-modules/Widgets.md)
+- [HighLevel Marketplace Workflow Triggers & Actions](https://marketplace.gohighlevel.com/docs/marketplace-modules/WorkflowActionsAndTriggers.md)
+- [Developer Policy: Private App Distribution Limit (with Security Review Path)](https://marketplace.gohighlevel.com/docs/MarketplacePolicies/PrivateAppInstallLimits.md)
+- [HighLevel App Marketplace Refund Policy](https://marketplace.gohighlevel.com/docs/MarketplacePolicies/RefundPolicy.md)
+- [Sandbox Account – Fair Use Policy](https://marketplace.gohighlevel.com/docs/MarketplacePolicies/SandBoxFUP.md)
+- [Country List](https://marketplace.gohighlevel.com/docs/other/country.md)
+- [mcp](https://marketplace.gohighlevel.com/docs/other/mcp.md)
+- [Rate Limits](https://marketplace.gohighlevel.com/docs/other/rate-limits.md)
+- [User Context in Marketplace Apps](https://marketplace.gohighlevel.com/docs/other/user-context-marketplace-apps.md)
+- [Build Your First App](https://marketplace.gohighlevel.com/docs/app-studio/BuildYourFirstApp.md)
+- [Limits and FAQ](https://marketplace.gohighlevel.com/docs/app-studio/LimitsAndFAQ.md)
+- [App Studio](https://marketplace.gohighlevel.com/docs/app-studio/Overview.md)
+- [Prompting Best Practices](https://marketplace.gohighlevel.com/docs/app-studio/PromptingBestPractices.md)
+- [Publish and Share](https://marketplace.gohighlevel.com/docs/app-studio/PublishAndShare.md)
+- [Try Your App in HighLevel](https://marketplace.gohighlevel.com/docs/app-studio/TestInHighLevel.md)
+## Optional
+- [Full reference of the latest version](https://marketplace.gohighlevel.com/docs/llms-full.txt): same content as the v3 full reference
+- [Changelog](https://marketplace.gohighlevel.com/docs/Changelog.md): API change history

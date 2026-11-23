@@ -1,0 +1,16 @@
+URL: https://mailchimp.com/developer/marketing/build/get-started/generate-your-api-key
+FINAL: https://mailchimp.com/developer/marketing/build/get-started/generate-your-api-key
+STATUS: 200
+ Generate your API key | Mailchimp | Developer 
+ For AI agents: a documentation index is available at the root level at /llms.txt. Append /llms.txt to any URL for a page-level index, or .md for the markdown version of any page. Mailchimp Marketing API Mailchimp Marketing API Power timely, relevant marketing campaigns with custom data pulled directly from your app. Search / Tools Release Notes Sign Up Overview Mailchimp core concepts API core concepts Building with Mailchimp API Reference Skip to navigation On this page Next steps Scroll to top Get started Generate your API key Copy page This page is for Mailchimp Marketing API. An API key authenticates requests against your own Mailchimp account. Here’s how
+to create one: 
+ Navigate to the API Keys section of your Mailchimp account. 
+ Click Create New Key and give it a descriptive name that tells you which application it’s used for. 
+ Copy the generated key immediately and store it in a secure location. You won’t be able to see or copy the key once you finish generating it. 
+ Note : An API key grants full access to your account. Keep it as secure as
+you would a password, and don’t use one in a browser or a mobile app; see
+ API keys for why. 
+ Next steps 
+ Send your first API request 
+ Set up an OAuth app , if your application needs to access other users’ accounts 
+ Was this page helpful? Yes No Edit this page Previous Create an account Next Import and export contacts Built with DesktopMenu) --> Overview Mailchimp core concepts API core concepts Building with Mailchimp API Reference Get started Create an account Generate your API key Quickstarts Start developing Build with AI tools Create an account Generate your API key Import and export contacts Organize contacts with tags Client libraries and SDKs Send your first API request CLI Set up an OAuth app Build with AI tools MCP server Agent skills llms.txt Mailchimp Marketing API Mailchimp Transactional Tools Release Notes Blog Integration Partner Program Products Mailchimp Marketing API Mailchimp Transactional Resources Tools Release Notes API Status Partnerships Contact Us Join Mailchimp Explore how Mailchimp can bring together your customer data, marketing channels, and audience insights in a single platform. Create Account Visit Mailchimp Careers Privacy & Terms Help © 2001 – 2026 All Rights Reserved. Mailchimp® is a registered trademark of The Rocket Science Group. 

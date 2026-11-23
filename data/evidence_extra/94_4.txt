@@ -1,0 +1,185 @@
+URL: https://consensus.app/llms-full.txt
+# Consensus: AI-Powered Scientific Research Engine
+> Consensus is an AI-powered search engine for scientific research that helps users find, synthesize, and cite peer-reviewed papers. This document provides comprehensive context for AI agents, LLM-powered tools, and automated systems integrating with Consensus.
+This file follows the proposed llms-full.txt convention (https://llmstxt.org/), the deeper companion to /llms.txt. It is intended for LLM-driven discovery and integration planning. For human-readable developer documentation see https://docs.consensus.app.
+Canonical URLs:
+- https://consensus.app/llms-full.txt
+- https://consensus.app/.well-known/llms-full.txt
+---
+## About Consensus
+Consensus is a search and synthesis platform built on top of a corpus of over 400 million scientific papers indexed from sources including Semantic Scholar, OpenAlex, PubMed, and publisher feeds. Where general-purpose LLMs frequently hallucinate citations, Consensus grounds answers in real, retrievable, peer-reviewed sources with verifiable links to DOIs, journals, and original full text where licensing permits.
+Consensus is built for users who need evidence-backed answers:
+- Researchers and graduate students conducting literature reviews
+- Clinicians and healthcare professionals checking the evidence base for interventions
+- Journalists and fact-checkers verifying scientific claims
+- Policymakers, analysts, and consultants briefing on topics outside their domain
+- Educators preparing course materials with primary sources
+- AI agents and LLM applications that need a grounded, cited science backend
+Key value propositions:
+- Peer-reviewed by default: results are drawn from the academic literature, not blog posts or social media
+- Verifiable citations: every claim links back to a paper, with DOI, journal, year, and authors
+- Quantified consensus: the Consensus Meter aggregates findings across studies on a yes/no/possibly question
+- Fast synthesis: AI-generated summaries answer questions in seconds rather than hours of reading
+- API and agent ready: a REST API and an MCP server expose the same retrieval and synthesis surface that powers the web app
+---
+## Core Capabilities
+### Paper Search
+Natural-language queries (for example, "does intermittent fasting improve metabolic health") are mapped to the underlying paper index using a hybrid of vector similarity and lexical scoring. Results are ranked by relevance, study quality signals (sample size, study design, citation count), and recency where appropriate. Filters allow narrowing by study type (RCT, meta-analysis, systematic review, observational), publication year, journal, open-access status, and discipline.
+### AI Summarization
+For any paper in the corpus Consensus provides:
+- A one-sentence study summary suitable for citation in prose
+- A more detailed structured summary covering methods, sample, findings, and limitations
+- Extracted population, intervention, comparator, and outcome (PICO) where applicable
+- A confidence indicator based on study design and reproducibility signals
+For a query Consensus produces a synthesis across the top results, with every sentence linked back to the supporting paper(s).
+### Consensus Meter
+The Consensus Meter is a visual aggregator that, for a yes/no/possibly question, classifies each relevant paper as supporting, refuting, or mixed/inconclusive, then displays the distribution. It is intended as a heuristic snapshot of where the field sits, not a formal meta-analysis. Users can click into the underlying papers to inspect the classification.
+### Study Analysis
+For each paper Consensus surfaces:
+- Study design classification (RCT, cohort, case control, in vitro, animal model, simulation, etc.)
+- Sample size and population descriptors
+- Funding sources and declared conflicts of interest where available
+- Citation counts and citation velocity
+- Open-access full-text links where licensing permits
+### Citation Extraction
+Consensus supports BibTeX, RIS, EndNote, and copy-friendly inline citation formats (APA, MLA, Chicago, Vancouver). The API returns structured citation metadata so agents can format references in any downstream style.
+---
+## Agent Use Cases
+Consensus is designed to be called by autonomous and semi-autonomous agents. The following workflows are first-class and supported by both the REST API and the MCP server.
+### Research Synthesis
+An agent receives a research question, queries Consensus for relevant papers, retrieves AI summaries, and composes a synthesis with inline citations. Typical agent loop:
+1. Refine the question into a search query
+2. Call the search endpoint, request the top N results
+3. For each result fetch the summary and study metadata
+4. Compose an answer that cites each claim, surfacing the Consensus Meter where the question is binary
+### Literature Review Automation
+An agent automates the early phases of a systematic review:
+1. Generate candidate search strings from a PICO framing
+2. Retrieve all matching papers with filters (study design, year range)
+3. Deduplicate by DOI and title fingerprint
+4. Screen titles and abstracts against inclusion criteria
+5. Export the surviving set as BibTeX or CSV with structured metadata
+### Fact-Checking
+An agent extracts a claim from a document or transcript, searches Consensus for supporting and refuting evidence, and returns a verdict with citations. The Consensus Meter is the primary signal for binary or near-binary claims. For nuanced claims agents should fall back to the synthesis text plus per-paper summaries.
+### Finding Papers on a Topic
+A lightweight discovery workflow:
+1. Issue a free-text query
+2. Optionally filter by year, study design, or open access
+3. Return a ranked list of papers with titles, authors, journals, and short summaries
+### Comparing Findings Across Studies
+For comparative or quantitative questions an agent can:
+1. Query Consensus for the topic
+2. Fetch the top results and their extracted outcome metrics
+3. Group by intervention, population, or methodology
+4. Highlight where studies agree and where they diverge
+---
+## Available Surfaces
+Consensus exposes the same retrieval and synthesis core through multiple surfaces. Pick the one that fits your integration.
+### REST API
+Documentation: https://docs.consensus.app
+Subscription and API key management: https://consensus.app/subscription/api/
+The REST API is the canonical machine surface for organizations. It exposes search, paper detail, synthesis, and the Consensus Meter as stable, versioned JSON endpoints with bearer-token authentication. Pricing and request quotas are scoped to organization subscriptions; see the docs for the current schema and limits.
+### MCP Server
+Endpoint: https://mcp.consensus.app/mcp
+The Model Context Protocol server is the recommended surface for any LLM client (Claude Desktop, Claude Code, Cursor, Codex, ChatGPT, in-house agents). It exposes the same primitives as the REST API as MCP tools. OAuth-based authentication, dynamic client registration, streaming-friendly. Designed to be added to a host with a single configuration entry.
+### Web Application
+URL: https://consensus.app
+The interactive product for human users: search box, results page with summaries and the Consensus Meter, paper detail pages with extracted study metadata, account management, citation export, and library tooling.
+### Distribution Apps
+- ChatGPT app: https://chatgpt.com/apps/consensus/asdk_app_6943e6f4a928819195962de16fb9ffe4/
+- Claude (Anthropic) integration: https://claude.ai/directory/65247229-f0c7-49df-9044-fcbb8b3894c6/
+Both distribution apps are thin wrappers over the canonical MCP server. Behavior, rate limits, and entitlements match the underlying account tier.
+---
+## Authentication Model
+Consensus supports three authentication paths, each scoped to a different integration profile.
+### API Keys (REST API)
+- Issued from the organization subscription page at https://consensus.app/subscription/api/
+- Sent as `Authorization: Bearer
+` on every request
+- Scoped to a single organization; rate limits and entitlements follow the organization tier
+- Treat as a secret; do not embed in client-side code
+### OAuth 2.1 (MCP Server)
+- Authorization Code flow with PKCE
+- Discovery via https://consensus.app/.well-known/oauth-authorization-server
+- Dynamic client registration supported
+- Recommended for any multi-user agent or LLM host
+### Anonymous Tier (MCP Server)
+- A limited unauthenticated surface is available for low-volume discovery and evaluation
+- Anonymous calls are aggressively rate limited and return a reduced subset of fields
+- Intended for trying the MCP server before signing up, not for production traffic
+To create an account, visit https://consensus.app/sign-up/. To manage an existing account or API subscription, visit https://consensus.app/account/.
+---
+## Rate Limits
+MCP server limits, by plan (current as of the most recent product update):
+| Plan        | Max papers per search | Per-user QPS | Included usage       |
+| ----------- | --------------------- | ------------ | -------------------- |
+| Anonymous   | 3                     | 5 (shared)   | unlimited            |
+| Free        | 300                   | 1            | Enough to try it out |
+| Pro         | 300                   | 3            | 5x usage             |
+| Deep        | 750                   | 3            | 20x usage            |
+| Teams       | 300                   | 3            | 5x usage             |
+| Enterprise  | 1000                  | custom       | Custom               |
+Max papers is the per-search ceiling when `page_size` is set. Without it a search returns 20 papers (Free: 10, Anonymous: 3). Each 100 papers returned counts as one search. For a literature review, screening, or finding everything on a topic, make one search with `page_size` from 100 up to the plan's max papers, using the max when you want as many papers as possible.
+REST API limits depend on the organization plan; consult https://docs.consensus.app for the current per-plan request quotas.
+When a limit is exceeded the API returns HTTP 429 with a `Retry-After` header. Agents should respect this header and back off rather than retrying immediately.
+---
+## Benchmarks
+Consensus publishes head-to-head evaluations of its search on real, anonymized Consensus user queries. In each one, independent PhD-level researchers scored every query-paper pair from 0 (irrelevant) to 4 (perfectly relevant), blind to which system returned the paper. Precision is the share of returned papers scored 3 or 4. Summary and methodology for all evaluations: https://docs.consensus.app/benchmarks
+### Consensus vs frontier models (August 2026)
+- Systems: Consensus Pro versus GPT-5.5 and Opus 4.8, each with web search enabled.
+- Queries: 100 randomly sampled real user queries. Four PhD-level judges, plus LLM-as-a-judge as a second signal.
+- Precision, top 20: Consensus was 4.5% better than GPT-5.5 and 13.2% better than Opus 4.8. Top 10: 1.8% and 11.6% better.
+- Per query: Consensus had the most relevant results on 59 queries, GPT-5.5 on 22, Opus 4.8 on 6, with 11 ties.
+- Latency: median 8.7 s for Consensus versus 74.8 s for GPT-5.5 (8.6x faster) and 102.8 s for Opus 4.8 (11.8x faster).
+- Full write-up: https://consensus.app/home/blog/consensus-outperforms-frontier-models-in-scientific-search/
+### Consensus vs Google Scholar (December 2025)
+- Systems: Consensus Quick search (single pass) versus Google Scholar. Consensus Pro and Deep modes were not tested.
+- Queries: 500 randomly sampled real user queries, top 10 results each, about 10,000 query-paper pairs. Three PhD-level judges.
+- Precision, top 10: 88.1% for Consensus versus 81.8% for Google Scholar.
+- DCG, top 10: 45.16 versus 40.73. Consensus had higher average relevance at every rank.
+- Full write-up: https://consensus.app/home/blog/consensus-outperforms-google-scholar-for-academic-search-retrieval/
+Limitations: judges scored titles and abstracts only. Scores measure textual relevance, not recency, citation count, journal quality, or cost.
+---
+## Constraints and Caveats
+Consensus is opinionated about what it indexes and how it presents results. Agents integrating with Consensus should be explicit with their users about the following.
+- Peer-reviewed coverage by default. The default index excludes preprints, conference posters, and grey literature. Some surfaces allow opting preprints in; check the search filters before assuming preprint coverage.
+- English-first. The corpus is overwhelmingly English-language. Non-English papers are indexed where metadata is available, but search ranking and summarization are optimized for English queries.
+- Knowledge cutoff per index refresh. The index is updated continuously, but new papers (especially those published in the last few weeks) may not yet be present. Do not rely on Consensus for breaking, day-of-publication coverage.
+- AI summaries are summaries. They are designed to be faithful to the source paper, but they are still LLM outputs. For high-stakes use cases the agent or the human should open the underlying paper before quoting verbatim.
+- The Consensus Meter is a heuristic. It is not a formal meta-analysis and should not be presented as one. For systematic-review-grade rigor, use Consensus to find papers, then run the appraisal manually.
+- Not medical, legal, or financial advice. Consensus surfaces the published literature; it does not interpret that literature for any individual case.
+---
+## Pricing
+Consensus offers individual and organizational plans:
+- Free: anonymous and lightly authenticated access for evaluation and casual use
+- Pro: paid plan for individual researchers, students, and clinicians
+- Deep: higher-volume plan for power users and small research teams
+- Teams: organizational plan with shared seats and consolidated billing
+- Enterprise: custom plan with SSO, dedicated support, and contractual SLAs
+Current pricing and feature breakdown: https://consensus.app/pricing/
+Sales and Enterprise contact: https://consensus.app/home/contact/
+---
+## Resources and Links
+Documentation and developer surfaces:
+- Docs: https://docs.consensus.app
+- Benchmarks: https://docs.consensus.app/benchmarks
+- MCP server: https://mcp.consensus.app/mcp
+- OAuth discovery: https://consensus.app/.well-known/oauth-authorization-server
+- This file: https://consensus.app/llms-full.txt
+Product surfaces:
+- Web app: https://consensus.app
+- Sign up: https://consensus.app/sign-up/
+- Account: https://consensus.app/account/
+- API subscription: https://consensus.app/subscription/api/
+- Pricing: https://consensus.app/pricing/
+- ChatGPT app: https://chatgpt.com/apps/consensus/asdk_app_6943e6f4a928819195962de16fb9ffe4/
+- Claude integration: https://claude.ai/directory/65247229-f0c7-49df-9044-fcbb8b3894c6/
+Policy and trust:
+- Privacy policy: https://consensus.app/home/privacy-policy/
+- Terms of service: https://consensus.app/home/terms-of-service/
+Support:
+- Contact: https://consensus.app/home/contact/
+- Email: support@consensus.app
+---
+## Versioning
+This document is intentionally human-readable and machine-friendly. When endpoints, tiers, or constraints change, this file is updated alongside the product. Agents that cache this file should refetch at least every 24 hours.

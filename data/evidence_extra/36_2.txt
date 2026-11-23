@@ -1,0 +1,4 @@
+URL: https://developers.klaviyo.com/.well-known/mcp/server-card.json
+FINAL: https://developers.klaviyo.com/.well-known/mcp/server-card.json
+STATUS: 200
+{"$schema":"https://static.modelcontextprotocol.io/schemas/v1/server-card.schema.json","name":"com.klaviyo/mcp","version":"1.0.0","title":"Klaviyo MCP server","description":"Work with the data in a Klaviyo account from an AI assistant or agent. Signs in with OAuth.","websiteUrl":"https://developers.klaviyo.com/en/docs/connect_to_the_klaviyo_mcp_server","remotes":[{"url":"https://mcp.klaviyo.com/mcp","type":"streamable-http"}]}

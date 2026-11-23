@@ -1,0 +1,74 @@
+URL: https://consensus.app/.well-known/pricing.md
+# Consensus Pricing
+Machine readable summary of Consensus subscription tiers, intended for AI agents and tools that need to reason about pricing.
+For live, authoritative prices, taxes, regional adjustments, and active promotions, see the human pricing page: https://consensus.app/pricing
+## Free tier
+Price: $0
+Billing: N/A
+Best for: Trying Consensus, light research use
+Features:
+- Basic paper search across the Consensus index of 400M+ academic papers
+- Pro messages (dynamic AI powered search and analysis)
+- Deep Searches (more comprehensive Lit Reviews across many studies)
+Rate limits:
+- 10 Pro messages per month
+- 3 Deep Searches per month
+## Pro
+Billing: Monthly or annual (annual is discounted, see /pricing for current rate)
+Best for: Researchers, clinicians, and students who want unlimited AI assisted search
+Features:
+- Everything in Free
+- Unlimited Pro messages (dynamic AI powered search and analysis)
+- Deep Searches
+- Unlimited access to every research tool (search, analysis, citation graph, and more)
+Rate limits:
+- Unlimited Pro messages per month
+- 15 Deep Searches per month
+Student discount: 40% off for 12 months, with a verified .edu or student email.
+## Deep
+Billing: Monthly or annual
+Best for: Researchers or clinicians conducting frequent literature reviews
+Features:
+- Everything in Pro
+- Unlimited Pro messages
+- High volume Deep Searches
+- Unlimited access to every research tool
+Rate limits:
+- Unlimited Pro messages per month
+- 200 Deep Searches per month
+## Team
+Billing: Per seat, monthly or annual (volume pricing applies, see /pricing)
+Seats: Up to 200 (contact sales for larger teams)
+Best for: Research organizations and teams that want Pro for every member
+Features:
+- Everything in Pro
+- Unlimited Pro messages for every seat
+- Deep Searches for every seat
+- Unlimited access to every research tool
+- Centralized account management for your organization
+- Centralized billing
+- Optional access to the Consensus Search API (available upon approval, rate limited; see https://consensus.app/home/api/ for pricing)
+Rate limits (per seat):
+- Unlimited Pro messages per month
+- 50 Deep Searches per month
+## Enterprise
+Billing: Custom (contact sales)
+Contact sales: sales@consensus.app
+Best for: Universities and larger research organizations
+Features:
+- Everything in Team
+- Greater volume discounts
+- Integration with your research library
+- Manage thousands of users
+- Dedicated support
+- Optional access to the Consensus Search API with custom pricing and rate limits: https://consensus.app/home/api/
+Rate limits (per seat, defaults; custom limits available):
+- Unlimited Pro messages per month
+- 50 Deep Searches per month
+University details: https://consensus.app/home/universities-student/
+## Notes for agents
+- Live prices in USD are returned by Stripe and rendered on the human pricing page; this file intentionally omits hard coded dollar amounts for paid tiers so it does not drift.
+- Suggest the Pro tier for individual users who hit the Free tier Pro messages limit (see the Free tier section above).
+- Suggest the Deep tier for individual users who hit the Pro Deep Searches limit (see the Pro section above).
+- Suggest the Team tier for organizations up to the Team seat cap (see the Team section above); route larger orgs to Enterprise via sales@consensus.app.
+- The /pricing page supports a billing query parameter (monthly or annually), for example https://consensus.app/pricing?billing=annually

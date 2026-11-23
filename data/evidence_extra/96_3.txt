@@ -1,0 +1,84 @@
+URL: https://docs.devin.ai/api-reference/getting-started/teams-quickstart.md
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.devin.ai/llms.txt
+> Use this file to discover all available pages before exploring further.
+# Quick start: Teams
+> Set up Devin API access for a teams or standard organization: provision a service user, copy the API key, and create your first session.
+This guide walks you through setting up API access for **teams and standard organizations** (non-enterprise). You'll create a service user, get your credentials, and make your first API call in minutes.
+> [!NOTE]
+>
+> If you're part of an enterprise with multiple organizations or custom roles, see the [Enterprise quick start](https://docs.devin.ai/api-reference/getting-started/enterprise-quickstart.md) instead.
+## Step 1: Create a service user
+1. Go to **Settings > Devin API** in your organization and open the **Service users** tab
+2. Click **Provision service user**
+3. Choose a descriptive display name (e.g., "CI Pipeline", "Monitoring Bot")
+4. Select a role in the **Organization role** dropdown. The form has no individual permission checkboxes: a service user gets its permissions from the role you pick.
+* **Admin** — full access, including organization settings and membership
+* **Member** — can create and manage Devin sessions and most organization resources, but not organization settings or membership
+5. Choose an **Expiration**. It defaults to **30 days**; the other options are 7 days, 90 days, and, where your account allows it, **Never**. After the expiration date the service user's API key stops working, so provision a replacement before then. A shorter expiration limits how long a leaked key can be used.
+> [!TIP]
+>
+> Use the **Member** role for most automation. Only use **Admin** if your integration needs to manage org settings or other users.
+## Step 2: Copy your API key
+1. After you provision the service user, its API key is shown in a dialog
+2. Copy the key immediately — it starts with `cog_` and won't be shown again
+3. Store it securely as an environment variable:
+```bash theme={null}
+export DEVIN_API_KEY="cog_your_key_here"
+```
+## Step 3: Make your first API call
+Create a Devin session:
+```bash theme={null}
+export DEVIN_ORG_ID="your_org_id"
+curl -X POST "https://api.devin.ai/v3/organizations/$DEVIN_ORG_ID/sessions" \
+-H "Authorization: Bearer $DEVIN_API_KEY" \
+-H "Content-Type: application/json" \
+-d '{"prompt": "Create a simple Python script that prints Hello World"}'
+```
+> [!TIP]
+>
+> Find your organization ID at the top of the **Settings → Devin API** page.
+> [!NOTE]
+>
+> **Want sessions attributed to your user?** By default, sessions are attributed to the service user. To create sessions on behalf of a specific user (so they appear in that user's session list), add `"create_as_user_id": "user_abc123"` to the request body. This requires the **Admin** role (which includes the `ImpersonateOrgSessions` permission). See [Session attribution](https://docs.devin.ai/api-reference/overview.md#session-attribution) for details.
+## Step 4: Common operations
+### List your sessions
+```bash theme={null}
+curl "https://api.devin.ai/v3/organizations/$DEVIN_ORG_ID/sessions" \
+-H "Authorization: Bearer $DEVIN_API_KEY"
+```
+### Send a message to a running session
+```bash theme={null}
+export SESSION_ID="your_session_id"
+curl -X POST "https://api.devin.ai/v3/organizations/$DEVIN_ORG_ID/sessions/$SESSION_ID/messages" \
+-H "Authorization: Bearer $DEVIN_API_KEY" \
+-H "Content-Type: application/json" \
+-d '{"message": "Please also add unit tests"}'
+```
+### Manage knowledge
+```bash theme={null}
+# List knowledge entries
+curl "https://api.devin.ai/v3/organizations/$DEVIN_ORG_ID/knowledge/notes" \
+-H "Authorization: Bearer $DEVIN_API_KEY"
+# Create a knowledge entry
+curl -X POST "https://api.devin.ai/v3/organizations/$DEVIN_ORG_ID/knowledge/notes" \
+-H "Authorization: Bearer $DEVIN_API_KEY" \
+-H "Content-Type: application/json" \
+-d '{"name": "Coding standards", "trigger": "When writing code", "body": "Use TypeScript strict mode..."}'
+```
+## Permissions for teams users
+Teams organizations have a simple permission model:
+| Role | Can create sessions | Can manage resources | Can manage settings |
+| - | - | - | - |
+| **Member** | Yes | Yes (knowledge, playbooks, secrets) | No |
+| **Admin** | Yes | Yes | Yes |
+> [!NOTE]
+>
+> Playbooks are moving to [Skills](https://docs.devin.ai/product-guides/skills.md). In a teams account that has moved, `/playbooks` writes go to the playbook's skill. An account created on or after October 24, 2026 with no playbooks gets `410` from the `/playbooks` endpoints.
+For fine-grained role-based access control (RBAC), see the [Enterprise quick start](https://docs.devin.ai/api-reference/getting-started/enterprise-quickstart.md).
+## Next steps
+* Browse the **Organization API** endpoints in the sidebar
+* See [common flows](https://docs.devin.ai/api-reference/common-flows.md) for common integration patterns
+* Learn about [authentication](https://docs.devin.ai/api-reference/authentication.md) in depth
+* Set up [scheduled automations](https://docs.devin.ai/api-reference/v3/automations/post-organizations-automations.md) for recurring tasks
+This documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.

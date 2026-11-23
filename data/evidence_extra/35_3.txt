@@ -1,0 +1,52 @@
+URL: https://mailchimp.com/developer/marketing/build/start-developing/set-up-an-oauth-app
+FINAL: https://mailchimp.com/developer/marketing/build/start-developing/set-up-an-oauth-app
+STATUS: 200
+ Set up an OAuth app | Mailchimp | Developer 
+ For AI agents: a documentation index is available at the root level at /llms.txt. Append /llms.txt to any URL for a page-level index, or .md for the markdown version of any page. Mailchimp Marketing API Mailchimp Marketing API Power timely, relevant marketing campaigns with custom data pulled directly from your app. Search / Tools Release Notes Sign Up Overview Mailchimp core concepts API core concepts Building with Mailchimp API Reference Skip to navigation On this page What you’ll need Register your application Implement the flow on your server Rotate a client secret Next steps Scroll to top Start developing Set up an OAuth app Copy page This page is for Mailchimp Marketing API. This page walks through implementing OAuth 2 so your application can access the
+Marketing API on behalf of other Mailchimp users. For how the flow works and why
+it has the steps it does, see
+ OAuth 2 . 
+ What you’ll need 
+ A Mailchimp account 
+ An API key ,
+if you want to test against your own account first 
+ A redirect URI for your application, the URL Mailchimp sends users back
+to after they authorize your application. It must be reachable by the user’s
+browser, but for local development http://127.0.0.1:3000/... is fine. 
+ Register your application 
+ Registering gives you the client_id and client_secret your server needs. 
+ Navigate to the Registered Apps page in your Mailchimp account 
+ Click Register An App 
+ Fill out the Register An App form 
+ Click Create 
+ You’ll see the client_id and client_secret at the bottom of the page. 
+ This is the only time you’ll be able to see client_secret , so you’ll need to
+copy it and store it securely. 
+ Implement the flow on your server 
+ The sample below handles the whole flow: authenticating the user, exchanging the
+code for an access token, then making a first authenticated request on their
+behalf. Pick your language. 
+ TypeScript PHP Ruby Python const express = require ( " express " ) ; const querystring = require ( " querystring " ) ; const bodyParser = require ( " body-parser " ) ; const fetch = require ( " node-fetch " ) ; const { URLSearchParams } = require ( " url " ) ; const { MailchimpClient } = require ( " @mailchimp/mailchimp-marketing " ) ; // Basic express app setup const app = express () ; app . use ( bodyParser . json ()) ; app . use ( bodyParser . urlencoded ( { extended : true } ) ) ; // You should always store your client id and secret in environment variables for security — the exception: sample code. const MAILCHIMP_CLIENT_ID = " YOUR_CLIENT_ID " ; const MAILCHIMP_CLIENT_SECRET = " YOUR_CLIENT_SECRET " ; const BASE_URL = " http://127.0.0.1:3000 " ; const OAUTH_CALLBACK = ` ${ BASE_URL } /oauth/mailchimp/callback ` ; // 1. Navigate to http://127.0.0.1:3000 and click Login app . get ( " / " , function ( req , res ) { res . send ( ' <p>Welcome to the sample Mailchimp OAuth app! Click <a href="/auth/mailchimp">here</a> to log in</p> ' ) ; } ) ; // 2. The login link above will direct the user here, which will redirect // to Mailchimp's OAuth login page. app . get ( " /auth/mailchimp " , ( req , res ) => { res . redirect ( ` https://login.mailchimp.com/oauth2/authorize? ${ querystring . stringify ( { response_type : " code " , client_id : MAILCHIMP_CLIENT_ID , redirect_uri : OAUTH_CALLBACK } ) } ` ) ; } ) ; // 3. Once // 3. Once the user authorizes your app, Mailchimp will redirect the user to // this endpoint, along with a code you can use to exchange for the user's // access token. app . get ( " /oauth/mailchimp/callback " , async ( req , res ) => { const { query : { code } } = req ; // Here we're exchanging the temporary code for the user's access token. const tokenResponse = await fetch ( " https://login.mailchimp.com/oauth2/token " , { method : " POST " , body : new URLSearchParams ( { grant_type : " authorization_code " , client_id : MAILCHIMP_CLIENT_ID , client_secret : MAILCHIMP_CLIENT_SECRET , redirect_uri : OAUTH_CALLBACK , code } ) } ) ; const { access_token } = await tokenResponse . json () ; console . log ( access_token ) ; // Below, we're using the access token to make an authenticated request on // behalf of the user who just granted OAuth access. You wouldn't keep this // in your production code, but it's here to demonstrate how the call is // made. const mailchimp = new MailchimpClient ( { token : access_token } ) ; const response = await mailchimp . ping . list () ; console . log ( response ) ; res . send ( ` <p>This user's access token is ${ access_token } .</p> <p>When pinging the Mailchimp Marketing API's ping endpoint, the server responded:<p> <code> ${ response } </code> ` ) ; // In reality, you'd want to store the access token somewhere in your // application. // fakeDB.getCurrentUser(); // fakeDB.storeMailchimpCredsForUser(user, { // access_token // }); } ) ; app . listen ( 3000 , " 127.0.0.1 " , function () { console . log ( " Server running on port 3000; visit http://127.0.0.1:3000 " ) ; } ) ; 
+ The code above completes the flow and produces an access token, then uses it to
+call the Ping endpoint , a trivial request that confirms the
+token works. It doesn’t persist anything; in a real application you’d store the
+access token against your own user record. 
+ The two URLs involved, if you’re implementing this without the sample: 
+ Redirect the user to https://login.mailchimp.com/oauth2/authorize?response_type=code&client_id=YOUR_CLIENT_ID&redirect_uri=YOUR_REDIRECT_URI 
+ Exchange the returned code with a POST to https://login.mailchimp.com/oauth2/token 
+ Rotate a client secret 
+ If your client_secret is exposed, rotate it: 
+ Navigate to the Registered Apps page in your Mailchimp account. 
+ Click Edit for the registered app you need to update. 
+ In the Client secret field, click Rotate . 
+ On the pop-up modal, type ROTATE and click Rotate Client Secret . 
+ You’ll see a modal with the client_id and the updated client_secret . Update
+your application with the new secret; once rotation completes, requests signed
+with the old one fail with a 401 . 
+ This is the only time you’ll be able to see the updated client_secret , so
+you’ll need to copy it and store it securely. 
+ Next steps 
+ API structure — conventions you’ll hit across the API 
+ Batch operations — syncing contacts in bulk once you have a token 
+ Webhooks — keeping your platform in step with changes made in Mailchimp 
+ Was this page helpful? Yes No Edit this page Previous CLI Next Overview Built with DesktopMenu) --> Overview Mailchimp core concepts API core concepts Building with Mailchimp API Reference Get started Quickstarts Start developing Client libraries and SDKs Send your first API request CLI Set up an OAuth app Build with AI tools Create an account Generate your API key Import and export contacts Organize contacts with tags Client libraries and SDKs Send your first API request CLI Set up an OAuth app Build with AI tools MCP server Agent skills llms.txt Mailchimp Marketing API Mailchimp Transactional Tools Release Notes Blog Integration Partner Program Products Mailchimp Marketing API Mailchimp Transactional Resources Tools Release Notes API Status Partnerships Contact Us Join Mailchimp Explore how Mailchimp can bring together your customer data, marketing channels, and audience insights in a single platform. Create Account Visit Mailchimp Careers Privacy & Terms Help © 2001 – 2026 All Rights Reserved. Mailchimp® is a registered trademark of The Rocket Science Group. 
