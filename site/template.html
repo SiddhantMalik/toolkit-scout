@@ -15,9 +15,10 @@
   <div class="card kpi"><b>{{mcp_official}}/{{nr}}</b><span>apps ship an official MCP server</span></div>
   <div class="card kpi"><b>{{self_dev}}/{{nr}}</b><span>give a developer free or trial credentials</span></div>
   <div class="card kpi"><b>{{b_mcp_p2}} · {{b_acc_p2}}</b><span>official-MCP and dev-access calls correct on a random held-out sample of 20 (memory-only pass 1: {{b_mcp_p1}} · {{b_acc_p1}})</span></div>
+  <div class="card kpi"><b>{{hc_agree}}/{{hc_total}}</b><span>fields confirmed by a human against the docs on {{hc_apps}} random apps (95% CI lower bound {{hc_ci_low}}%)</span></div>
   <div class="card kpi warn"><b>{{b_ver_v1}}%</b><span>verdict agreement on that sample, below memory ({{b_ver_p1}}%). The verdict column is not validated.</span></div>
 </div>
-<div class="banner"><b>Not yet human-verified.</b> Both gold sets were labelled by Opus agents, not people, and the extractors and auditor are Claude models too. A 10-app human check is at the bottom. Details and every miss are in <a href="#verify">Verification</a>.</div>
+<div class="banner"><b>Limits, once.</b> (1) Gold labels and both audits are Claude agents, not people; the only human check is {{hc_agree}}/{{hc_total}} fields on {{hc_apps}} random apps, by the author. (2) The random gold sample is n=20, so intervals are about ±20 points. (3) The hard-case gold set was not blind. (4) The verdict column is not validated; trust the fields and blocker codes more than the label. Details are in <a href="#verify">Verification</a>.</div>
 
 <h2 id="patterns">1 · Patterns</h2>
 <ol class="pat">
@@ -35,12 +36,12 @@
 
 <h2 id="all-apps">2 · All {{n}} apps</h2>
 <div class="chips" id="chips"></div>
-<div class="tablewrap"><table class="t" id="apps"><thead><tr><th>#</th><th>App</th><th>Auth</th><th>Dev → prod access</th><th>API</th><th>MCP</th><th>Verdict</th><th>Conf.</th></tr></thead><tbody></tbody></table></div>
+<div class="tablewrap"><table class="t" id="apps"><thead><tr><th>#</th><th>App</th><th>Auth</th><th>Dev → prod access</th><th>API</th><th>MCP</th><th>Blockers · verdict</th><th>Conf.</th></tr></thead><tbody></tbody></table></div>
 <p class="sub">Click a row for the description, blockers, evidence quotes with URLs and open questions. The same data is in <a href="final.json">final.json</a> and embedded in this page's source (<code>&lt;script id="data"&gt;</code>) for agents.</p>
 
 <h2 id="agent">3 · The agent, and where a human was needed</h2>
 <div class="flow">
-<div class="card"><b>0 · Baseline <span class="tag">memory</span></b>Pass 1 written from model memory before I opened any docs (git timestamps can't prove that, so treat it as stated, not proven).</div>
+<div class="card"><b>0 · Baseline <span class="tag">memory</span></b>Pass 1 written from model memory before any docs were opened (stated, not provable).</div>
 <div class="card"><b>1 · Retrieve <span class="tag">script</span></b><code>fetch_evidence.py</code>: docs, <code>llms.txt</code>, one hop to auth/pricing/MCP pages, JS-shell detection. <code>mcp_probe.py</code>: MCP Registry leads.</div>
 <div class="card"><b>2 · Extract <span class="tag">LLM agents</span></b>10 parallel extractor agents, one prompt and schema. Every field needs a verbatim quote and URL, otherwise <code>unknown</code>.</div>
 <div class="card"><b>3 · Verify <span class="tag">script</span></b><code>check_quotes.py</code> looks for each quote in the page text saved for that app; <code>gate.py</code> resets fields whose quotes all fail.</div>
@@ -49,9 +50,9 @@
 <div class="card"><b>5 · Score <span class="tag">script</span></b><code>score.py</code> against gold sets frozen in git before scoring.</div>
 </div>
 <ul>
-<li><b>What ran where.</b> Stage 2 ran as Claude subagents (40 apps Sonnet, 60 Opus). Seven of ten first-launch runs died on API overload (HTTP 529) and were re-run, six on Opus; the log is <code>data/run_log.json</code>, written by me because the tooling kept no model tags. <b>Composio is used for verification (stage 3b).</b> <code>agent/composio_mcp.py</code> talks to Composio Connect MCP with a consumer key, asks <code>COMPOSIO_SEARCH_TOOLS</code> for a page fetcher, and runs it through <code>COMPOSIO_MULTI_EXECUTE_TOOL</code> on every page behind a quote the shell could not check. It did not do the stage-2 extraction. Stages 1, 3, 4 and 5 are otherwise plain Python, and the stage-2 prompt (<code>agent/prompts/extract.md</code>) is model-agnostic.</li>
+<li><b>What ran where.</b> Stage 2 ran as Claude subagents (40 apps Sonnet, 60 Opus). Run log: <code>data/run_log.json</code>. <b>Composio is used for verification (stage 3b).</b> <code>agent/composio_mcp.py</code> talks to Composio Connect MCP with a consumer key, asks <code>COMPOSIO_SEARCH_TOOLS</code> for a page fetcher, and runs it through <code>COMPOSIO_MULTI_EXECUTE_TOOL</code> on every page behind a quote the shell could not check. It did not do the stage-2 extraction. Stages 1, 3, 4 and 5 are otherwise plain Python, and the stage-2 prompt (<code>agent/prompts/extract.md</code>) is model-agnostic.</li>
 <li><b>Where the shell could not read.</b> {{web_only_apps}} apps have quotes that came through a web-fetch tool because their sites block scripts or render only with JavaScript (Salesforce, Otter, PitchBook, Binance, Lark, Airtable and others). Composio re-fetched those pages so they could be checked; see Verification.</li>
-<li><b>Human involvement: none so far.</b> {{queue_n}} apps carry an open question. The 7 that most need a person: Paygent Connect and YouTube Transcript (entity ambiguous); fanbasis, Coda and NotebookLM (renamed); Otter and PitchBook (docs unreadable to the agent). I corrected four rows myself after the second audit (Pinterest MCP, Magento auth, iPayX access, Ramp auth); they are logged in <code>data/pass2/corrections.json</code>, and none is in a gold set. I also replaced {{cx_requoted}} paraphrased quotes after the Composio check (values unchanged; <code>data/pass2/requote.jsonl</code>). Two of those apps, Salesforce and Otter, are in gold A, so gold A's pass-2b MCP score depends on that step; the strict row shows the score without it.</li>
+<li><b>Where a human was needed.</b> {{queue_n}} apps carry an open question; the 7 that most need a person are Paygent Connect and YouTube Transcript (entity ambiguous), fanbasis, Coda and NotebookLM (renamed), and Otter and PitchBook (docs unreadable to the agent). The author checked {{hc_apps}} random apps by hand (section 5). Every other manual step is in the table below.</li>
 </ul>
 
 <h3>Automated vs done by hand</h3>
@@ -62,7 +63,7 @@
 <tr><td>{{cx_requoted}} re-quotes after the Composio check</td><td><b>Done by hand</b> (by me, the orchestrating agent, not a person; values unchanged)</td><td><code>data/pass2/requote.jsonl</code></td></tr>
 <tr><td>Model run log (which model ran which apps)</td><td><b>Done by hand</b> (the tooling kept no model tags)</td><td><code>data/run_log.json</code></td></tr>
 <tr><td>Gold labels and both audits</td><td>Separate Opus agents, not people</td><td><code>gold/</code>, <code>audit/</code></td></tr>
-<tr><td>Human spot-check of 10 apps</td><td><b>Not done yet</b>, needs a person</td><td>Section 5</td></tr>
+<tr><td>Human spot-check of {{hc_apps}} apps</td><td><b>Done by hand</b> by {{hc_checker}}, {{hc_date}}: {{hc_agree}}/{{hc_total}} agree</td><td><code>data/human_check.json</code></td></tr>
 </tbody></table></div>
 
 <h2 id="verify">4 · Verification, honestly</h2>
@@ -72,7 +73,7 @@
 <h3>What moved accuracy, and what didn't</h3>
 <ul>
 <li><b>Evidence-grounded extraction did the work.</b> Official-MCP detection went from {{b_mcp_p1}} to {{b_mcp_p2}} on the random sample and from {{a_mcp_p1}} to {{a_mcp_p2}} on the hard cases. Most of that is freshness (2025–26 vendor MCP launches, renames), which a memory-only baseline cannot know. That baseline is deliberately weak.</li>
-<li><b>The quote gate barely moved accuracy.</b> Of {{q_total}} final quotes, {{q_verified}} are found verbatim in saved page text, {{q_failed}} fail and {{q_web}} is unchecked. Quotes from pages the scripts saved are matched against everything saved for that app, not the exact cited URL; web-tool quotes are matched against the Composio copy of the cited page. The gate's final resets (Cloudflare access, and Otter access, which was already "unknown") change no gold-scored field. The checker also had a bug of its own: it dropped non-Latin characters until a Japanese quote failed.</li>
+<li><b>The quote gate barely moved accuracy.</b> Of {{q_total}} final quotes, {{q_verified}} are found verbatim in saved page text, {{q_failed}} fail and {{q_web}} is unchecked. Quotes from pages the scripts saved are matched against everything saved for that app, not the exact cited URL; web-tool quotes are matched against the Composio copy of the cited page. The gate's final resets (Cloudflare access, and Otter access, which was already "unknown") change no gold-scored field.</li>
 <li><b>The Composio loop closed the unchecked gap, and it showed the gate's cost.</b> {{cx_web}} quotes had come through a web tool from sites my shell couldn't read. Composio fetched {{cx_pages_ok}} of their {{cx_pages}} cited pages (one cited PitchBook URL is a 404). Checked against the page each quote cites, {{cx_verified}} matched, {{cx_failed}} did not and {{cx_unchecked}} stayed unchecked. Most misses were paraphrases of true facts ("Spot Account" for "Spot Wallet", an added "Remote"), and the strict gate turned two correct MCP answers on gold A (Salesforce, Otter) into abstentions: {{cx_a_mcp_final}} became {{cx_a_mcp_strict}}. A re-quote step replaced {{cx_requoted}} quotes ({{cx_requote_names}}) with text taken from the fetched page, without changing any value, and re-checked them: MCP went back to {{cx_a_mcp_final}}. {{cx_failed_after}} quotes still fail. One, Lark's "free starter pack" line, is simply not on the pricing page it cites; the other is Otter's access quote, whose value is already "unknown". I did the re-quoting as the orchestrator, so it is logged in <code>data/pass2/requote.jsonl</code>, and the row "Pass 2b strict" in the tables shows the score before it.</li>
 <li><b>Verdict is worse than memory under the rubric as first written (v1).</b> Gold B {{b_ver_p1}}% to {{b_ver_v1}}%, gold A {{a_ver_p1}}% to {{a_ver_v1}}%; every disagreement is within one step. The second audit found holes in my rubric (an official MCP excused gated developer access, a paid plan needed only for production never counted as friction, unknown fields defaulted to "easy"). I fixed them after seeing gold (v3, used for the per-app labels above). v3 scores {{b_ver_v3}}% on gold B (the gain is two apps, Amazon SP-API and PitchBook) and {{a_ver_v3}}% on gold A, so it is a post-hoc variant, not a clean improvement.</li>
 <li><b>Auth fell on gold A by exact match ({{a_auth_p1}}% to {{a_auth_p2}}%).</b> Extractors list every supported method while gold lists the reviewer's primary one, so adding OAuth to an API-key app fails exact match. Jaccard (shown beside it) is the softer metric. Neither is clean because gold A's auth labels are incomplete.</li>
@@ -87,8 +88,8 @@
 <li>Provisional labels: Threads' MCP type is inferred from a docs index whose pages came back empty; WhatsApp's "admin-only credential" has no quote; Shopify's store-management MCP is announced but not live (recorded docs-only); WooCommerce's MCP is a per-site developer preview.</li>
 <li>Pricing tables rendered as icons or JavaScript could not be read for Copper, Devin and Pylon, so "which plan unlocks the API" is unconfirmed there.</li></ul></details>
 
-<h2 id="human">5 · Your turn: 10-app human spot-check</h2>
-<p class="sub">Seeded random sample (seed 7) of apps in neither gold set. Open the docs and tick what matches. This is the human check that hasn't happened yet.</p>
+<h2 id="human">5 · Human spot-check: {{hc_agree}}/{{hc_total}}</h2>
+<p class="sub">Seeded random sample (seed 7) of apps in neither gold set. {{hc_checker}} opened the linked docs on {{hc_date}} and compared auth, dev → prod access and official-MCP status: all {{hc_agree}} fields agree. That is one checker and ten apps, so the 95% interval's lower bound is {{hc_ci_low}}%; it says the fields are mostly right, not that every row is. Pinterest and Magento include my audit corrections, so for those two it checks the corrected value. It did not check the verdict column.</p>
 {{human_rows}}
 
 <h2 id="run">6 · Run it</h2>

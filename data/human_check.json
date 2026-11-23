@@ -1,0 +1,195 @@
+{
+ "checker": "Siddhant Malik (repo author), not an independent reviewer",
+ "date": "2026-11-23",
+ "method": "Opened the linked docs for each app and compared auth, dev->prod access and official-MCP status with the page's values.",
+ "fields": [
+  "auth",
+  "access",
+  "mcp"
+ ],
+ "note": "Pinterest (38) and Magento (45) values include orchestrator corrections logged in data/pass2/corrections.json, so for those two the check covers the corrected value, not raw extractor output.",
+ "results": [
+  {
+   "id": 5,
+   "name": "Twenty",
+   "auth": "agree",
+   "access": "agree",
+   "mcp": "agree",
+   "values_checked": {
+    "auth": [
+     "oauth2",
+     "api_key",
+     "bearer_token"
+    ],
+    "access": [
+     "self_free",
+     "same_as_dev"
+    ],
+    "mcp": "official_remote"
+   }
+  },
+  {
+   "id": 7,
+   "name": "Zoho CRM",
+   "auth": "agree",
+   "access": "agree",
+   "mcp": "agree",
+   "values_checked": {
+    "auth": [
+     "oauth2"
+    ],
+    "access": [
+     "self_free",
+     "same_as_dev"
+    ],
+    "mcp": "official_remote"
+   }
+  },
+  {
+   "id": 13,
+   "name": "Freshdesk",
+   "auth": "agree",
+   "access": "agree",
+   "mcp": "agree",
+   "values_checked": {
+    "auth": [
+     "api_key",
+     "basic",
+     "oauth2"
+    ],
+    "access": [
+     "self_trial",
+     "same_as_dev"
+    ],
+    "mcp": "official_remote"
+   }
+  },
+  {
+   "id": 17,
+   "name": "Plain",
+   "auth": "agree",
+   "access": "agree",
+   "mcp": "agree",
+   "values_checked": {
+    "auth": [
+     "api_key",
+     "oauth2",
+     "bearer_token"
+    ],
+    "access": [
+     "self_trial",
+     "same_as_dev"
+    ],
+    "mcp": "official_remote"
+   }
+  },
+  {
+   "id": 38,
+   "name": "Pinterest",
+   "auth": "agree",
+   "access": "agree",
+   "mcp": "agree",
+   "values_checked": {
+    "auth": [
+     "oauth2"
+    ],
+    "access": [
+     "partner_review",
+     "app_review"
+    ],
+    "mcp": "none"
+   }
+  },
+  {
+   "id": 41,
+   "name": "Shopify",
+   "auth": "agree",
+   "access": "agree",
+   "mcp": "agree",
+   "values_checked": {
+    "auth": [
+     "oauth2",
+     "bearer_token"
+    ],
+    "access": [
+     "self_free",
+     "app_review"
+    ],
+    "mcp": "docs_only"
+   }
+  },
+  {
+   "id": 45,
+   "name": "Magento (Adobe Commerce)",
+   "auth": "agree",
+   "access": "agree",
+   "mcp": "agree",
+   "values_checked": {
+    "auth": [
+     "bearer_token",
+     "other"
+    ],
+    "access": [
+     "self_free",
+     "same_as_dev"
+    ],
+    "mcp": "docs_only"
+   }
+  },
+  {
+   "id": 67,
+   "name": "Snowflake",
+   "auth": "agree",
+   "access": "agree",
+   "mcp": "agree",
+   "values_checked": {
+    "auth": [
+     "oauth2",
+     "jwt",
+     "other"
+    ],
+    "access": [
+     "self_trial",
+     "customer_only"
+    ],
+    "mcp": "official_remote"
+   }
+  },
+  {
+   "id": 71,
+   "name": "Notion",
+   "auth": "agree",
+   "access": "agree",
+   "mcp": "agree",
+   "values_checked": {
+    "auth": [
+     "oauth2",
+     "bearer_token"
+    ],
+    "access": [
+     "self_free",
+     "self_free"
+    ],
+    "mcp": "official_remote"
+   }
+  },
+  {
+   "id": 76,
+   "name": "Monday.com",
+   "auth": "agree",
+   "access": "agree",
+   "mcp": "agree",
+   "values_checked": {
+    "auth": [
+     "oauth2",
+     "api_key"
+    ],
+    "access": [
+     "self_free",
+     "self_free"
+    ],
+    "mcp": "official_remote"
+   }
+  }
+ ]
+}

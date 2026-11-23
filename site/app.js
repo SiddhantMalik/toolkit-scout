@@ -33,7 +33,7 @@ function rowFor(a) {
   const tr = el('tr', '', `<td>${a.id}</td><td><b>${esc(a.name)}</b><br><small>${esc(a.category)}</small></td>
     <td>${esc(list(a.auth).join(', '))}</td><td>${esc(a.access_dev)} → ${esc(a.access_prod)}</td>
     <td>${esc(list(a.api_styles).join(', '))}<br><small>${esc(a.api_breadth)}</small></td><td>${esc(a.mcp_type)}</td>
-    <td><span class="pill v-${a.verdict}">${a.verdict}</span><br><small>${esc(list(a.blockers).join(', '))}</small></td><td>${esc(a.confidence)}</td>`);
+    <td>${esc(list(a.blockers).join(', ')) || '<small>none</small>'}<br><span class="pill v-${a.verdict}">${a.verdict}</span></td><td>${esc(a.confidence)}</td>`);
   const quotes = list(a.evidence).map(e =>
     `<li><b>${esc(e.field)}</b>: “${esc(e.quote)}” <a href="${esc(e.url)}" target="_blank" rel="noopener">${shortUrl(e.url)}</a></li>`).join('');
   const detail = el('tr', 'det', `<td></td><td colspan="7">${esc(a.description)}<br>

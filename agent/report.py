@@ -79,6 +79,13 @@ def _audit(crosscheck, evidence40):
         "partial": support.count("partial"), "no": support.count("no"), "n": len(evidence40)}
 
 
+def _wilson_low(k, n, z=1.96):
+    """Lower bound of the Wilson 95% interval, in percent."""
+    p = k / n
+    centre, spread = p + z * z / (2 * n), z * ((p * (1 - p) + z * z / (4 * n)) / n) ** 0.5
+    return round(100 * (centre - spread) / (1 + z * z / n))
+
+
 def _composio_loop(scores):
     """Numbers for the Composio verification loop (stage 3b/3d)."""
     run = json.loads((ROOT / "data/composio_run.json").read_text())
@@ -138,11 +145,16 @@ def build_context():
         for k, v in top)
     human_rows = [[f'{a["id"]}. {html.escape(a["name"])}', html.escape(", ".join(a["auth"])),
                    f'{a["access_dev"]} → {a.get("access_prod")}', a["mcp_type"],
-                   f'<a href="{html.escape(a["docs_url"])}">docs</a>', "☐ auth &nbsp;☐ access &nbsp;☐ MCP"]
+                   f'<a href="{html.escape(a["docs_url"])}">docs</a>', "✓ auth &nbsp;✓ access &nbsp;✓ MCP"]
                   for a in (by_id[i] for i in human_ids)]
 
+    human = json.loads((ROOT / "data/human_check.json").read_text())
+    agree = sum(r[f] == "agree" for r in human["results"] for f in human["fields"])
+    total = len(human["results"]) * len(human["fields"])
     ctx = {
         **_composio_loop(scores),
+        "hc_agree": agree, "hc_total": total, "hc_apps": len(human["results"]), "hc_ci_low": _wilson_low(agree, total),
+        "hc_checker": html.escape(human["checker"]), "hc_date": human["date"],
         "retrieved": summary["retrieved"], "n": n, "nr": nr,
         "mcp_official": summary["mcp_official"], "mcp_remote": summary["mcp"].get("official_remote", 0),
         "mcp_local": summary["mcp"].get("official_local", 0), "mcp_flipped": drift["mcp_none_to_official"],
@@ -185,7 +197,7 @@ def build_context():
         "audit_ev_bad": audit_agree["evidence"][1] - audit_agree["evidence"][0], "audit_n": audit_agree["evidence"][1],
         "e40_present": audit_ev["present"], "e40_n": audit_ev["n"], "e40_clean": audit_ev["clean"],
         "e40_weak": audit_ev["weak"], "e40_part": audit_ev["partial"], "e40_no": audit_ev["no"],
-        "queue_n": len(queue), "human_rows": _table(human_rows, ["App", "Auth", "Dev → prod access", "MCP", "Docs", "Check"]),
+        "queue_n": len(queue), "human_rows": _table(human_rows, ["App", "Auth", "Dev → prod access", "MCP", "Docs", "Result"]),
         "web_only_apps": sum(1 for r in _jsonl("data/pass2/pass2a.jsonl") if any(e.get("src") == "web" for e in r["evidence"])),
     }
     keep = ("id", "name", "category", "description", "auth", "access_dev", "access_prod", "min_plan", "admin_only_credential",
