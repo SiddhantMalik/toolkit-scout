@@ -54,6 +54,17 @@
 <li><b>Human involvement: none so far.</b> {{queue_n}} apps carry an open question. The 7 that most need a person: Paygent Connect and YouTube Transcript (entity ambiguous); fanbasis, Coda and NotebookLM (renamed); Otter and PitchBook (docs unreadable to the agent). I corrected four rows myself after the second audit (Pinterest MCP, Magento auth, iPayX access, Ramp auth); they are logged in <code>data/pass2/corrections.json</code>, and none is in a gold set. I also replaced {{cx_requoted}} paraphrased quotes after the Composio check (values unchanged; <code>data/pass2/requote.jsonl</code>). Two of those apps, Salesforce and Otter, are in gold A, so gold A's pass-2b MCP score depends on that step; the strict row shows the score without it.</li>
 </ul>
 
+<h3>Automated vs done by hand</h3>
+<div class="scroll"><table class="t"><thead><tr><th>Step</th><th>How</th><th>Log</th></tr></thead><tbody>
+<tr><td>Fetch docs, extract fields, check quotes, gate, verdict, score, build page</td><td>Automated (scripts and extractor agents)</td><td><code>agent/</code>, <code>data/pass2/raw_*.jsonl</code></td></tr>
+<tr><td>Re-fetch web-only pages through Composio MCP</td><td>Automated (<code>composio_fetch.py</code>)</td><td><code>data/composio_run.json</code></td></tr>
+<tr><td>Four row corrections after the second audit</td><td><b>Done by hand</b> (by me, the orchestrating agent, not a person)</td><td><code>data/pass2/corrections.json</code></td></tr>
+<tr><td>{{cx_requoted}} re-quotes after the Composio check</td><td><b>Done by hand</b> (by me, the orchestrating agent, not a person; values unchanged)</td><td><code>data/pass2/requote.jsonl</code></td></tr>
+<tr><td>Model run log (which model ran which apps)</td><td><b>Done by hand</b> (the tooling kept no model tags)</td><td><code>data/run_log.json</code></td></tr>
+<tr><td>Gold labels and both audits</td><td>Separate Opus agents, not people</td><td><code>gold/</code>, <code>audit/</code></td></tr>
+<tr><td>Human spot-check of 10 apps</td><td><b>Not done yet</b>, needs a person</td><td>Section 5</td></tr>
+</tbody></table></div>
+
 <h2 id="verify">4 · Verification, honestly</h2>
 <div class="banner"><b>Read first.</b> Gold B (20 apps, seeded random, 2 per category, labelled blind before any pass-2 output existed) is the fair estimate, but at n=20 the 95% intervals are about ±20 points. Gold A (27 apps picked by a reviewer to be suspicious) exaggerates pass-1 error and is <b>not blind</b>: I had read its answers before launching the extractors, and extractors were only told not to open gold files. Treat gold A's pass-2 numbers as contaminated.</div>
 <h3>Gold B: random held-out sample (n=20)</h3>{{score_table_b}}
