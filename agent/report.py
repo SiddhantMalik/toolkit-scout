@@ -154,6 +154,11 @@ def build_context():
     ctx = {
         **_composio_loop(scores),
         "hc_agree": agree, "hc_total": total, "hc_apps": len(human["results"]), "hc_ci_low": _wilson_low(agree, total),
+        "n_excluded": n - nr,
+        "hc_apps_ok": sum(all(r[f] == "agree" for f in human["fields"]) for r in human["results"]),
+        "hc_app_ci_low": _wilson_low(sum(all(r[f] == "agree" for f in human["fields"]) for r in human["results"]), len(human["results"])),
+        "excluded_names": ", ".join(f'{a["name"]} ({"product unclear" if a.get("entity_status") == "ambiguous" else "low confidence"})'
+                                    for a in apps if not (a.get("entity_status") in ("resolved", "renamed") and a.get("confidence") in ("high", "medium"))),
         "hc_checker": html.escape(human["checker"]), "hc_date": human["date"],
         "retrieved": summary["retrieved"], "n": n, "nr": nr,
         "mcp_official": summary["mcp_official"], "mcp_remote": summary["mcp"].get("official_remote", 0),

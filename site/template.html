@@ -15,10 +15,11 @@
   <div class="card kpi"><b>{{mcp_official}}/{{nr}}</b><span>apps ship an official MCP server</span></div>
   <div class="card kpi"><b>{{self_dev}}/{{nr}}</b><span>give a developer free or trial credentials</span></div>
   <div class="card kpi"><b>{{b_mcp_p2}} · {{b_acc_p2}}</b><span>official-MCP and dev-access calls correct on a random held-out sample of 20 (memory-only pass 1: {{b_mcp_p1}} · {{b_acc_p1}})</span></div>
-  <div class="card kpi"><b>{{hc_agree}}/{{hc_total}}</b><span>fields confirmed by a human against the docs on {{hc_apps}} random apps (95% CI lower bound {{hc_ci_low}}%)</span></div>
+  <div class="card kpi"><b>{{hc_apps_ok}}/{{hc_apps}} apps</b><span>fully confirmed by a human against the docs (auth, access, MCP: {{hc_agree}}/{{hc_total}} fields). Only 10 apps, so it supports "at least ~{{hc_app_ci_low}}% of apps fully right" (95% CI)</span></div>
   <div class="card kpi warn"><b>{{b_ver_v1}}%</b><span>verdict agreement on that sample, below memory ({{b_ver_p1}}%). The verdict column is not validated.</span></div>
 </div>
-<div class="banner"><b>Limits, once.</b> (1) Gold labels and both audits are Claude agents, not people; the only human check is {{hc_agree}}/{{hc_total}} fields on {{hc_apps}} random apps, by the author. (2) The random gold sample is n=20, so intervals are about ±20 points. (3) The hard-case gold set was not blind. (4) The verdict column is not validated; trust the fields and blocker codes more than the label. Details are in <a href="#verify">Verification</a>.</div>
+<p class="sub">Why {{nr}}, not {{n}}: the counts above and in the patterns use the {{nr}} apps where the agent identified the product with medium or high confidence. The other {{n_excluded}} are {{excluded_names}}. All {{n}} rows are in the table.</p>
+<div class="banner"><b>Limits, once.</b> (1) Gold labels and both audits are Claude agents, not people; the only human check is {{hc_apps}} random apps (all fully correct), by the author. (2) The random gold sample is n=20, so intervals are about ±20 points. (3) The hard-case gold set was not blind. (4) The verdict column is not validated; trust the fields and blocker codes more than the label. Details are in <a href="#verify">Verification</a>.</div>
 
 <h2 id="patterns">1 · Patterns</h2>
 <ol class="pat">
@@ -89,7 +90,7 @@
 <li>Pricing tables rendered as icons or JavaScript could not be read for Copper, Devin and Pylon, so "which plan unlocks the API" is unconfirmed there.</li></ul></details>
 
 <h2 id="human">5 · Human spot-check: {{hc_agree}}/{{hc_total}}</h2>
-<p class="sub">Seeded random sample (seed 7) of apps in neither gold set. {{hc_checker}} opened the linked docs on {{hc_date}} and compared auth, dev → prod access and official-MCP status: all {{hc_agree}} fields agree. That is one checker and ten apps, so the 95% interval's lower bound is {{hc_ci_low}}%; it says the fields are mostly right, not that every row is. Pinterest and Magento include my audit corrections, so for those two it checks the corrected value. It did not check the verdict column.</p>
+<p class="sub">Seeded random sample (seed 7) of apps in neither gold set. {{hc_checker}} opened the linked docs on {{hc_date}} and compared auth, dev → prod access and official-MCP status: all {{hc_agree}} fields agree. That is one checker and ten apps, and fields within an app tend to be right or wrong together, so count it as 10 of 10 apps: the 95% interval's lower bound is about {{hc_app_ci_low}}% of apps fully right. It says the rows are mostly right, not that every row is. Pinterest and Magento include my audit corrections, so for those two it checks the corrected value. It did not check the verdict column.</p>
 {{human_rows}}
 
 <h2 id="run">6 · Run it</h2>
