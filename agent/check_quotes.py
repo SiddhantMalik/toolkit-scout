@@ -3,7 +3,8 @@
 Compares whitespace/case/punctuation-normalised text of each quote with data/evidence/<id>.txt and
 data/evidence_extra/<id>_*.txt. This checks the quote against everything saved for the app; it does NOT
 check that the text came from the cited URL. Quotes tagged src="web" came through a web-fetch tool with no saved
-copy, so they are reported as "unchecked_web" rather than verified.
+copy, so they are reported as "unchecked_web" rather than verified, unless stage 3b (composio_fetch.py) saved
+a copy of the cited URL in data/evidence_composio/; then the quote is checked against that page alone.
 
 Usage:  python agent/check_quotes.py data/pass2/pass2a.jsonl > data/pass2/quote_check.json
 """
@@ -34,13 +35,30 @@ def saved_text(app_id):
     return norm(" ".join(chunks))
 
 
+def composio_pages():
+    """{cited url: normalised text} for pages re-fetched through Composio (stage 3b)."""
+    pages = {}
+    for path in glob.glob(str(ROOT / "data/evidence_composio/*.txt")):
+        first, _, body = open(path, errors="ignore").read().partition("\n")
+        pages[first.removeprefix("SOURCE_URL: ").strip()] = norm(body)
+    return pages
+
+
+COMPOSIO_PAGES = composio_pages()
+
+
 def quote_status(evidence, corpus):
     quote = norm(evidence.get("quote", ""))
     if len(quote) < MIN_QUOTE_CHARS:
         return "unverified"
     if quote in corpus:
         return "verified"
-    return "unchecked_web" if evidence.get("src") == "web" else "unverified"
+    if evidence.get("src") == "web":
+        cited_copy = COMPOSIO_PAGES.get(evidence.get("url"))
+        if cited_copy is None:
+            return "unchecked_web"
+        return "verified" if quote in cited_copy else "unverified"
+    return "unverified"
 
 
 def check_file(path):

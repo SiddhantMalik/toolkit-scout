@@ -1,0 +1,307 @@
+SOURCE_URL: https://help.superhuman.com/hc/en-us/articles/46210076980365-Connect-to-the-Coda-MCP
+**Thank you!** Your feedback helps us improve.
+
+✕
+
+# Connect to the Superhuman Docs MCP
+
+The Superhuman Docs MCP (Model Context Protocol) is a connection layer that lets AI clients, such as Cursor and Claude, read and write to your Docs using plain-language prompts instead of clicking through the Docs UI: you describe what you want in the chat window of your chosen client, and the AI carries it out directly in your doc, acting on your behalf with the same access to your Superhuman Docs workspace that you have. This article walks you through connecting your preferred AI tool to the Superhuman Docs MCP; once you’ve connected, see [Using the Superhuman Docs MCP](https://help.superhuman.com/hc/en-us/articles/46210102879629) for guidance and examples.
+
+**Note:** If you already connected to the Coda MCP before the launch of Superhuman Docs MCP, your existing connections will continue to work for the time being. However, we encourage you to connect to the Superhuman Docs MCP as soon as you’re able. All new features will be introduced to the Docs MCP only, and the Coda MCP will eventually be deprecated.
+
+---
+
+## **Supported clients**
+
+The table below lists the clients for which Superhuman Docs MCP is currently well supported. We’ve also included the method of authentication available for each client. To learn more about these different authentication methods, see [Security recommendations for the Docs MCP](https://help.superhuman.com/hc/en-us/articles/46210118248205).
+
+| Supported client | Method of authentication |
+|---|---|
+| [ChatGPT](https://chatgpt.com/) | OAuth 2 |
+| [Claude](https://claude.com/product/overview) (including Claude Code, Claude Cowork, and Claude Chat) | OAuth 2 |
+| [CoPilot Studio](https://www.microsoft.com/en-us/microsoft-365-copilot/microsoft-copilot-studio) | Personal Access Tokens |
+| [Cursor](https://cursor.com/) | OAuth 2 |
+| [OpenAI Codex](https://chatgpt.com/features/codex?utm_source=google&utm_medium=paidsearch_competitor&utm_campaign=GOOG_M_SEM_GCP_Codex_TEM_BAU_ACQ_PER_MIX_ALL_NAMER_US_EN_111325&utm_term=claude%20code&utm_content=188016694053&utm_ad=782421044810&utm_match=e&gad_source=1&gad_campaignid=23230295416&gbraid=0AAAAA-I0E5eib9gQukcFjdFJYUXelt0w7&gclid=Cj0KCQiAi9rJBhCYARIsALyPDtsMOU40vNOzNbBrz0-I_ahSG6No5lE9V_3UlxIYplc433yta0PUxqUaAr_uEALw_wcB) | OAuth 2 |
+| [Google Antigravity](https://antigravity.google/) | Personal Access Tokens |
+
+You can find specific instructions for connecting to each of these clients in the subsequent sections.
+
+## **Connect ChatGPT with Docs MCP**
+
+Follow the steps below to connect ChatGPT with Docs MCP:
+
+1. Within ChatGPT, click into the **Plugins** tab of the left panel.
+2. Enter “Superhuman Docs” in the search bar.
+3. Select **Superhuman Docs** from the search results, then click **Install plugin**.
+   - *Note: If you see **Disabled by admin** instead of **Connect**, this likely indicates that the admin of your account has disabled connecting to new apps. We suggest contacting your admin and requesting they enable the Coda app for you or your org. To learn more, see* [*OpenAI’s documentation on apps in ChatGPT*](https://help.openai.com/en/articles/11487775-apps-in-chatgpt?utm_source=chatgpt.com#app-directory)*.*
+4. A new tab will open to complete the authentication process. If prompted, sign in to Superhuman Docs.
+5. Choose whether to grant this connection **Full access** or **Limited access** to your docs, folders, and workspaces. If you choose **Limited access**, select the workspaces, folders, and/or docs that this connection will have access to. You can filter by workspace or find shared content in the **Shared with you** tab. Once you’ve made your selections, click **Save selection**.
+6. Finally, click **Accept** to complete the authentication.
+7. Once authentication has been completed, you’ll be redirected back to ChatGPT and should see a **Superhuman Docs is installed** confirmation.
+
+You should now be successfully connected to the Docs MCP and can start using it to work with Superhuman Docs within your chats.
+
+## **Connect Claude Chat & Cowork with Docs MCP**
+
+**Note:** Superhuman Docs MCP is now available as a native connector in Claude, allowing for an even easier connection. Check out the instructions below.
+
+To connect Claude Chat or Cowork to the Superhuman Docs MCP:
+
+1. Ensure you are logged in to Claude.
+2. Go to the [native Superhuman Docs connector in Claude](https://claude.ai/directory/connectors/superhuman-docs).
+3. Click the **Connect** button.
+   - *If the **Connect** button is not available, this most likely means that your Claude account is part of a Team or Enterprise plan, and your admin has not yet enabled this connector for your organization. In this case, we suggest reaching out to your admin to request access to this connector, then resuming the connection process as described here. See the FAQs below for more info on this.*
+4. A new tab will open to complete the authentication process. If prompted, sign in to Superhuman Docs.
+5. Choose whether to grant this connection **Full access** or **Limited access** to your docs, folders, and workspaces. If you choose **Limited access**, select the workspaces, folders, and/or docs that this connection will have access to. You can filter by workspace or find shared content in the **Shared with you** tab. Once you’ve made your selections, click **Save selection**.
+6. Finally, click **Accept** to complete the authentication.
+7. Once authorized, you’re all set. You can start taking actions in Docs with Claude!
+
+## **Connect Claude Code with Docs MCP**
+
+To connect Claude Code to the Superhuman Docs MCP, follow these steps:
+
+1. To start, open a fresh terminal window and run the following block:
+
+```auto
+claude mcp add --transport http SuperhumanDocs https://docs.superhuman.com/apis/mcp
+```
+
+1. Once the above has run, type `Claude` into your terminal and hit **Enter**.
+2. Then type `/mcp` into the terminal and hit **Enter** again.
+3. You should now see a notice that Superhuman Docs MCP needs authentication. Click **Enter** and select **Authenticate**.
+4. This will open a browser window to complete authentication. If prompted, sign in to your Superhuman Docs account.
+   - *Note: You’ll also see that the redirect URL is* `localhost`*, which is expected based on how Claude handles OAuth.*
+5. Choose whether to grant this connection **Full access** or **Limited access** to your docs, folders, and workspaces. If you choose **Limited access**, select the workspaces, folders, and/or docs that this connection will have access to. You can filter by workspace or find shared content in the **Shared with you** tab. Once you’ve made your selections, click **Save selection**.
+6. Hit **Accept**. You should then see an **Authentication Successful** confirmation.
+7. To confirm connection to the Docs MCP, return to your terminal window and enter the following:
+
+```auto
+Are you connected to the Superhuman Docs MCP?
+```
+
+If successful, you’ll see a success message with Docs MCP tools. You can now start building in Docs using Claude Code!
+
+**Tip:**
+
+- If you have already used another MCP that accesses Coda: Use `claude mcp remove <mcp-name>` in this case.
+- If you have directories named “Coda” in your filepath: Change the directory and try again.
+
+Find more details in [Claude’s MCP documentation](https://code.claude.com/docs/en/mcp).
+
+## **Connect Copilot Studio with Docs MCP**
+
+To connect Copilot Studio with the Superhuman Docs MCP, you will need to authenticate via Personal Access Tokens from your Superhuman Docs account. Follow the steps below to learn more:
+
+1. First, you’ll need to generate a Personal Access Token from your Superhuman Docs account page. Open your [account’s API settings](https://docs.superhuman.com/account#apiSettings), or scroll to the **API settings** section of your account page.
+2. Click **Generate API token**.
+3. Give your token a memorable name and choose the type of access.
+4. Ensure that the **MCP** option is selected.
+5. Click the **Generate API token** button to create the token.
+6. Once created, click the **Copy** button to copy it to your clipboard.
+   - *Learn more in* [*Generate API tokens for Docs*](https://help.superhuman.com/hc/en-us/articles/46210310809613)*.*
+
+![Generate API token button on the API connections page of Superhuman Docs account settings](https://help.superhuman.com/hc/article_attachments/49824757289613)
+
+1. Next, within Copilot Studio, open the agent you want to connect to the MCP.
+2. From the menu across the top of the agent page, select **Tools**, then click the **+ Add a tool** button.
+3. Within the **Create new** options, select **Model Context Protocol**.
+4. Enter the following info:
+   - **Server name** and **Server Description**: fill these in as you see fit (for instance, “Superhuman Docs MCP” and “Superhuman Docs MCP to read and write to docs”)
+   - **Server URL**: `https://docs.superhuman.com/apis/mcp`
+   - **Authorization**: Select the **API Key** option. Then for the **Type** choose **Header**, and for the **Header name** enter `Authorization`
+5. Once all the above info has been entered, hit **Create**.
+6. You’ll then see the newly added tool, but you’ll notice it’s not yet connected. Click on **Not connected** and select **Create new connection**.
+7. In the hidden field, enter the following string: `Bearer Your-Docs-Auth-Token` - making sure to replace **Your-Docs-Auth-Token** with the token you generated and copied above.
+   - For instance, `Bearer 1bxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx`
+8. Hit the **Create** button to finalize the connection.
+
+## **Connect Cursor with Docs MCP**
+
+To connect Cursor with Superhuman Docs MCP, follow these steps:
+
+1. Within your Cursor app, open **Cursor Settings** → **Tools & MCP**.
+2. Click **New MCP Server**. This will open a new mcp.json file.
+   - *Tip: Only enable the MCPs you are currently working with to save context and improve agent accuracy*
+3. Inside your mcp.json file in Cursor, insert the following code:
+
+```auto
+{
+  "mcpServers": {
+    "SuperhumanDocs": {
+      "url": "https://docs.superhuman.com/apis/mcp"
+    }
+  }
+}
+```
+
+1. Once you’ve made the above edits, the file should be saved automatically, and you should now be connected to the Superhuman Docs MCP. You can verify by checking the tools list (under **Tools & MCP**) or asking Cursor about your tools in Docs.
+   - *Tip: If you don’t see your MCP show up at this stage, restart Cursor.*
+
+You can now use the Cursor agent to put the Docs MCP to work.
+
+## **Connect OpenAI Codex CLI with Docs MCP**
+
+OpenAI Codex can now connect with Superhuman Docs MCP via OAuth. To connect, follow these steps:
+
+1. Open your terminal and paste the following code:
+
+```auto
+codex mcp add SuperhumanDocs --url https://docs.superhuman.com/apis/mcp
+```
+
+1. Start Codex by typing `codex`.
+
+Once you’re connected, you can [start using the Docs MCP](https://help.superhuman.com/hc/en-us/articles/46210102879629).
+
+## **Connect Google Antigravity with Docs MCP**
+
+To connect Google Antigravity with Superhuman Docs MCP, you will need to use Personal Access Tokens from your Superhuman Docs account page. Follow the steps below to learn more.
+
+To connect Google Antigravity with Superhuman Docs MCP, follow these steps:
+
+1. First, you’ll need to generate a Personal Access Token from your Superhuman Docs account page. Open your [account’s API settings](https://docs.superhuman.com/account#apiSettings), or scroll to the **API settings** section of your account page.
+2. Click **Generate API token**.
+3. Give your token a memorable name and choose the type of access.
+4. Ensure that the **MCP** option is selected.
+5. Click the **Generate API token** button to create the token.
+6. Once created, click the **Copy** button to copy it to your clipboard.
+   - *Learn more in* [*Generate API tokens for Docs*](https://help.superhuman.com/hc/en-us/articles/46210310809613)*.*
+
+![Generate API token button on the API connections page of Superhuman Docs account settings](https://help.superhuman.com/hc/article_attachments/49824757289613)
+
+1. Open Google Antigravity.
+2. Click the horizontal **three-dot menu** in the upper-right corner of the agent panel.
+3. Select **MCP Servers**.
+
+![Agent panel menu open with MCP Servers option highlighted](https://help.superhuman.com/hc/article_attachments/47224304244621)
+
+1. Click **Manage MCP Servers**.
+2. Click **View raw config**.
+3. Enter the following details, replacing `Bearer Your-Docs-MCP-Auth-Token` with the token you generated and copied earlier:
+
+```auto
+{
+  "mcpServers": {
+    "SuperhumanDocs": {
+      "serverUrl": "https://docs.superhuman.com/apis/mcp",
+      "headers": {
+        "Authorization": "Bearer Your-Docs-MCP-Auth-Token"
+      }
+    }
+  }
+}
+```
+
+1. Save the file and refresh the MCP server list. The Superhuman Docs MCP should now appear as connected.
+
+## **FAQs**
+
+**If I already connected to the Coda MCP before launch, do I need to switch to the new Superhuman Docs MCP?**
+
+While your existing Coda MCP connections will continue to work for now, we encourage you to connect to the Superhuman Docs MCP as soon as you’re able. We are frequently rolling out new features and improvements to the Docs MCP only, and the Coda MCP will eventually be deprecated.
+
+**Can I connect Docs MCP to other AI tools not listed in this article?**
+
+You should be able to connect the Superhuman Docs MCP to any AI client that supports creating custom MCP connections. In most cases, you will need to use personal authentication tokens to complete the connection.
+
+To get a token, open your [account’s API settings](https://coda.io/account?openDialog=CREATE_API_TOKEN&scopeType=mcp#apiSettings), or scroll to the **API settings** section of your account page and click **Generate API token**. Give your token a memorable name, make sure the restriction type is **MCP**, and choose the type of access. Then click **Generate API token** to create it, and click **Copy token** to copy it to your clipboard.
+
+**Do I have to be a Doc Maker to connect to the Docs MCP?**
+
+No. Anyone can connect to the Superhuman Docs MCP, but what you can do from there depends on your role in Docs. [Doc Makers](https://help.coda.io/hc/en-us/articles/39556004184077-Roles-in-Coda-Doc-Makers-Admins-and-Editors#h_a482e8f612) on **paid** Superhuman Docs plans have the full Docs MCP experience, including all of the [available tools and endpoints](https://coda.io/resources/mcp/tools-and-endpoints).
+
+Doc Makers on **free** plans can use a “free taste” of the Docs MCP (30 requests per week, with a max of 60 requests per month). During this “free taste,” you can use all of the tools of the MCP.
+
+Editors also have access to a “free taste” of the Docs MCP (30 requests per week, with a max of 60 requests per month). As an editor, you can use the MCP to take any [editor actions](https://help.superhuman.com/hc/en-us/articles/46210078082701-Roles-in-Superhuman-Docs-Doc-Makers-Admins-and-Editors#h_078ca9fe74), including reading content, adding and deleting tables, adding page content, and modifying existing content.
+
+**How do I enable the Superhuman Docs connector in Claude, so the rest of my organization can easily connect?**
+
+If you are an admin or owner on a **Team** or **Enterprise** plan in Claude, you need to enable the Superhuman Docs connector for org members before they can connect. To do so, follow these steps:
+
+1. Click **Browse connectors** at the bottom of the page.
+2. Search for the **Superhuman Docs** connector, and click **Add to your team**.
+
+Users in your org can now connect to the Docs MCP by following the steps in Connect Claude Chat & Cowork with Docs MCP. To learn more about enabling and managing connectors in Claude, see [Claude’s documentation on connectors](https://support.claude.com/en/articles/11176164-use-connectors-to-extend-claude-s-capabilities#h_b6f69dbd72).
+
+**Why am I getting a 401 error when trying to use my auth token to connect?**
+
+You may see this error when the auth token has the incorrect restriction type. To resolve it, [create a new auth token](https://coda.io/account?openDialog=CREATE_API_TOKEN&scopeType=mcp#apiSettings) in your Superhuman Docs account settings, and select **MCP** for the restriction type. Then attempt the connection again with the new token.
+
+**What auth scopes are used when I connect to the Docs MCP?**
+
+When you connect the Docs MCP via OAuth 2 (as with ChatGPT, Claude, and Cursor), the auth scope is automatically set to **read and write**. When you connect via Personal Access Tokens (as described for Google Antigravity), you choose between three scopes: **read only**, **write only**, or **read and write**. To limit the scope to **read only** or **write only**, connect via personal access tokens instead of OAuth 2.
+
+**How do I submit bugs or feedback for the MCP?**
+
+Please submit any bugs or feedback through the [Docs MCP feedback form](https://coda.io/form/Coda-MCP-Beta-Feedback-Form_doDSfpTpgAj). Thank you in advance!
+
+**Can I connect the Docs MCP to Claude Code using Personal Access Tokens, rather than OAuth?**
+
+Yes. This article describes connecting the MCP to Claude Code via **OAuth**, but you can also connect using **Personal Access Tokens** by following these steps:
+
+1. Open your [account’s API settings](https://docs.superhuman.com/account#apiSettings), or scroll to the **API settings** section of your account page, and click **Generate API token**. Give your token a memorable name, choose the type of access, and make sure the **MCP** option is selected. Then click **Generate API token** to create it, and click **Copy token** to copy it to your clipboard.
+   - *Learn more in* [*Generate API tokens for Docs*](https://help.superhuman.com/hc/en-us/articles/46210310809613)*.*
+2. Next, open a fresh terminal window and paste in the following block, replacing **Your-Docs-Auth-Token** with the auth token you generated and copied in the previous step.
+
+```auto
+claude mcp add --transport http SuperhumanDocs
+https://docs.superhuman.com/apis/mcp --header
+"Authorization: Bearer Your-Docs-Auth-Token"
+```
+
+1. Confirm that your MCP was added correctly by pasting the following command into the terminal:
+
+```auto
+claude mcp list
+```
+
+1. Start Claude Code by typing `claude .` into your terminal and ask it to connect to the Docs MCP:
+
+```auto
+Connect to the Superhuman Docs MCP
+```
+
+If successful, you’ll see a success message with Docs MCP tools. You can now start building in Docs using Claude Code!
+
+**Can I connect to Cursor using personal access tokens, rather than OAuth?**
+
+Yes. This article describes connecting the MCP to Cursor via **OAuth**, but you can also connect using **Personal Access Tokens** by following these steps:
+
+1. Within your Cursor app, open **Cursor Settings** → **Tools & MCP**.
+2. Click **New MCP Server**. This will open a new mcp.json file.
+   - *Tip: Only enable the MCPs you are currently working with to save context and improve agent accuracy*
+3. Next, open your [account’s API settings](https://docs.superhuman.com/account#apiSettings), or scroll to the **API settings** section of your account page, and click **Generate API token**. Give your token a memorable name, choose the type of access, and make sure the **MCP** option is selected. Then click **Generate API token** to create it, and click **Copy token** to copy it to your clipboard.
+   - *Learn more in* [*Generate API tokens for Docs*](https://help.superhuman.com/hc/en-us/articles/46210310809613)*.*
+4. Now, inside your mcp.json file in Cursor, insert the following code, replacing **Your-Docs-Auth-Token** with the auth token you generated and copied in the previous step.
+
+```auto
+{
+  "mcpServers": {
+    "SuperhumanDocs": {
+      "url": "https://docs.superhuman.com/apis/mcp",
+      "headers": {
+        "Authorization": "Bearer Your-Docs-Auth-Token"
+      }
+    }
+  }
+}
+```
+
+1. Once you’ve made the above edits, the file should be saved automatically, and you should now be connected to the Docs MCP. You can verify by checking the tools list (under **Tools & MCP**) or asking Cursor about your tools in Superhuman Docs.
+   - *Tip: If you don’t see your MCP show up at this stage, restart Cursor.*
+
+**Why do I see a message that my admin has limited MCP access?**
+
+If your organization is on Superhuman Docs Enterprise, your admin can block the Docs MCP from accessing certain workspaces or folders. When this applies to you, you will see a notice about the restriction towards the top of the authentication window when connecting.
+
+This means the MCP can’t reach the blocked workspaces or folders, regardless of whether you choose **Full access** or **Limited access** when you connect. Any connections you’ve already made keep working for everything that isn’t blocked.
+
+If you need the MCP to work with a blocked workspace or folder, contact your org admin. Admins can learn how to manage these restrictions in [Manage AI and MCP controls for your Docs org](https://help.superhuman.com/hc/en-us/articles/46702031846029-Manage-AI-and-MCP-controls-for-your-Docs-org).
+
+---
+
+#### Was this article helpful?
+
+ Tell us what you think. We promise to act on your feedback to make Grammarly's support pages even more helpful.
+
+Have more questions? [Submit a request](https://help.superhuman.com/hc/en-us/requests/new)

@@ -335,9 +335,9 @@
    }
   ],
   "quotes": {
-   "verified": 540,
-   "web_only": 31,
-   "failed": 4
+   "verified": 568,
+   "web_only": 1,
+   "failed": 6
   },
   "conf": {
    "medium": 39,
@@ -379,8 +379,9 @@
     {
      "field": "mcp",
      "url": "https://developer.salesforce.com/blogs/2026/04/salesforce-hosted-mcp-servers-are-now-generally-available",
-     "quote": "Salesforce Hosted MCP Servers are now generally available (GA).",
-     "src": "web"
+     "quote": "Today, Salesforce hosted MCP servers are generally available",
+     "src": "web",
+     "requoted_from": "Salesforce Hosted MCP Servers are now generally available (GA)."
     },
     {
      "field": "access",
@@ -409,8 +410,8 @@
    "blockers": [
     "PER_TENANT_HOST"
    ],
-   "quotes_verified": 0,
-   "quotes_web_only": 4,
+   "quotes_verified": 4,
+   "quotes_web_only": 0,
    "quotes_failed": 0,
    "pass1": {
     "id": 1,
@@ -2380,8 +2381,8 @@
     "PER_REGION_HOST"
    ],
    "quotes_verified": 6,
-   "quotes_web_only": 1,
-   "quotes_failed": 0,
+   "quotes_web_only": 0,
+   "quotes_failed": 1,
    "pass1": {
     "id": 24,
     "name": "Lark (Larksuite)",
@@ -3192,8 +3193,8 @@
    "blockers": [
     "PARTNER_PROGRAM"
    ],
-   "quotes_verified": 4,
-   "quotes_web_only": 1,
+   "quotes_verified": 5,
+   "quotes_web_only": 0,
    "quotes_failed": 0,
    "pass1": {
     "id": 33,
@@ -4219,8 +4220,8 @@
    "blockers": [
     "CUSTOMER_ONLY"
    ],
-   "quotes_verified": 3,
-   "quotes_web_only": 3,
+   "quotes_verified": 6,
+   "quotes_web_only": 0,
    "quotes_failed": 0,
    "pass1": {
     "id": 44,
@@ -5415,8 +5416,8 @@
    "blockers": [
     "NO_API"
    ],
-   "quotes_verified": 2,
-   "quotes_web_only": 1,
+   "quotes_verified": 3,
+   "quotes_web_only": 0,
    "quotes_failed": 0,
    "pass1": {
     "id": 58,
@@ -6580,8 +6581,8 @@
    "blockers": [
     "NONE"
    ],
-   "quotes_verified": 3,
-   "quotes_web_only": 3,
+   "quotes_verified": 6,
+   "quotes_web_only": 0,
    "quotes_failed": 0,
    "pass1": {
     "id": 72,
@@ -7144,8 +7145,8 @@
    "blockers": [
     "NONE"
    ],
-   "quotes_verified": 6,
-   "quotes_web_only": 1,
+   "quotes_verified": 7,
+   "quotes_web_only": 0,
    "quotes_failed": 0,
    "pass1": {
     "id": 78,
@@ -7336,8 +7337,8 @@
    "blockers": [
     "NONE"
    ],
-   "quotes_verified": 5,
-   "quotes_web_only": 2,
+   "quotes_verified": 7,
+   "quotes_web_only": 0,
    "quotes_failed": 0,
    "pass1": {
     "id": 80,
@@ -7587,8 +7588,9 @@
     {
      "field": "access",
      "url": "https://www.binance.com/en/support/faq/360002502072",
-     "quote": "Make a deposit of any amount to your Spot Account to activate your account.",
-     "src": "web"
+     "quote": "before creating an API Key, you need to make a deposit of any amount to your Spot Wallet to activate your account",
+     "src": "web",
+     "requoted_from": "Make a deposit of any amount to your Spot Account to activate your account."
     },
     {
      "field": "mcp",
@@ -7611,8 +7613,8 @@
    "blockers": [
     "KYC_OR_BUSINESS_VERIFICATION"
    ],
-   "quotes_verified": 2,
-   "quotes_web_only": 4,
+   "quotes_verified": 6,
+   "quotes_web_only": 0,
    "quotes_failed": 0,
    "pass1": {
     "id": 83,
@@ -8231,8 +8233,8 @@
    "blockers": [
     "ENTERPRISE_ONLY"
    ],
-   "quotes_verified": 0,
-   "quotes_web_only": 5,
+   "quotes_verified": 4,
+   "quotes_web_only": 1,
    "quotes_failed": 0,
    "pass1": {
     "id": 90,
@@ -8334,8 +8336,8 @@
     "NARROW_SURFACE",
     "BETA_OR_UNSTABLE"
    ],
-   "quotes_verified": 7,
-   "quotes_web_only": 1,
+   "quotes_verified": 8,
+   "quotes_web_only": 0,
    "quotes_failed": 0,
    "pass1": {
     "id": 91,
@@ -8386,8 +8388,9 @@
     {
      "field": "mcp",
      "url": "https://help.otter.ai/hc/en-us/articles/35287607569687-Otter-MCP-Server",
-     "quote": "Remote MCP server URL: https://mcp.otter.ai/mcp",
-     "src": "web"
+     "quote": "MCP server URL: `https://mcp.otter.ai/mcp`",
+     "src": "web",
+     "requoted_from": "Remote MCP server URL: https://mcp.otter.ai/mcp"
     },
     {
      "field": "auth",
@@ -8410,9 +8413,9 @@
    "blockers": [
     "DOCS_NOT_PUBLIC"
    ],
-   "quotes_verified": 0,
-   "quotes_web_only": 4,
-   "quotes_failed": 0,
+   "quotes_verified": 3,
+   "quotes_web_only": 0,
+   "quotes_failed": 1,
    "pass1": {
     "id": 92,
     "name": "Otter AI",
@@ -8966,8 +8969,8 @@
    "blockers": [
     "NO_API"
    ],
-   "quotes_verified": 3,
-   "quotes_web_only": 1,
+   "quotes_verified": 4,
+   "quotes_web_only": 0,
    "quotes_failed": 0,
    "pass1": {
     "id": 98,

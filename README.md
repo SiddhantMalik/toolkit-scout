@@ -11,6 +11,8 @@ Researches 100 apps (auth, self-serve vs gated, API surface, MCP, buildability v
 | `agent/prompts/extract.md` | Stage 2: the extraction prompt/schema. Every field needs a verbatim quote + URL, else `unknown` |
 | `data/pass2/raw_*.jsonl` | Stage 2 output (10 extractor agents; 40 apps Sonnet, 60 Opus) |
 | `agent/check_quotes.py`, `agent/gate.py` | Stage 3: verify each quote appears in saved page text; reset fields whose quotes all fail |
+| `agent/composio_mcp.py`, `agent/composio_fetch.py` | Stage 3b: a small Composio Connect MCP client; asks `COMPOSIO_SEARCH_TOOLS` for a page fetcher and re-fetches, via `COMPOSIO_MULTI_EXECUTE_TOOL`, every cited page behind a quote the shell could not check. Saves to `data/evidence_composio/`, logs `data/composio_run.json` |
+| `data/pass2/requote.jsonl` | Stage 3d: paraphrased quotes replaced with text from the fetched page (values unchanged), then re-checked. Done by the orchestrating agent, logged |
 | `agent/verdict.py` | Deterministic buildability rubric (v1 original; v3 = post-hoc fix via `fixed=True`, see page) |
 | `gold/gold_A.jsonl`, `gold/gold_B.jsonl` | Frozen gold: A = 27 hard cases (reviewer-picked), B = 20 seeded-random apps, blind labels. Labelled by Opus agents, **not humans** |
 | `agent/score.py` | Per-field accuracy, Wilson 95% CI, Jaccard (auth), within-one (verdict) |
@@ -31,7 +33,16 @@ python agent/run_all.py --research        # stage 1 (network) then the offline s
 # have it append one JSON line per app to data/pass2/raw_<k>.jsonl
 python agent/gate.py                                              # stage 3
 ```
-Stage 2 here ran as Claude subagents; Composio was only tried briefly (see `data/composio_attempt.json`): its free fetch tool was rate-limited and returned nothing usable, the key got a 401 from the Python SDK's REST endpoint, and no repo script calls Composio. Treat the Composio step as not done. The prompt is model-agnostic and can be driven through Composio tools (search + fetch) instead.
+Stage 2 here ran as Claude subagents. Composio is used in stage 3b (see below).
+
+## Composio stage (3b)
+```bash
+export COMPOSIO_CONSUMER_KEY=ck_...      # Composio Connect consumer key (x-consumer-api-key); never written to disk
+python agent/composio_fetch.py            # default fetcher: KEENABLE_FETCH_URL_PUBLIC (free, shared hourly quota)
+python agent/composio_fetch.py --tool TAVILY_EXTRACT   # metered alternative (renders JavaScript)
+python agent/run_all.py                   # re-check quotes against the fetched pages and rebuild
+```
+Result on this run: 20 of 21 cited pages fetched; 33 web-tool quotes checked against the page they cite: 27 match, 5 did not (mostly paraphrases), 1 cited URL is a 404. The strict gate turned two correct gold-A MCP answers into abstentions (22/24 to 20/24); re-quoting 3 quotes from the fetched pages restored 22/24. Both stages are scored (`pass2b_strict`, `pass2b`).
 
 ## Known limits
-No human has reviewed the rows yet (10-app checklist is on the page). Gold sets are model-labelled; gold B is n=20 (CI roughly ±20 pts). Some pages were unreadable by script (JS-only or bot-blocked); 31 quotes are web-fetch only and cannot be machine-checked. Facts are dated 2026-11-23.
+No human has reviewed the rows yet (10-app checklist is on the page). Gold sets are model-labelled; gold B is n=20 (CI roughly ±20 pts). Some pages were unreadable by script (JS-only or bot-blocked); their pages were re-fetched through Composio, and 1 web-tool quote (a 404 PitchBook URL) is still unchecked. Quotes from script-saved pages are matched against all text saved for the app, not the exact cited URL. Facts are dated 2026-11-23.

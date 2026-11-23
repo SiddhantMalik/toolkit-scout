@@ -1,0 +1,12 @@
+SOURCE_URL: https://developer.salesforce.com/docs/platform/connect-rest-api/guide/quickstart_dev_org
+# Step One: Sign up for Salesforce Developer Edition
+
+Developer Edition provides a free and easy solution so that you can use Salesforce for testing and development.
+
+To sign up for a Developer Edition account, go to [developer.salesforce.com/signup](https://developer.salesforce.com/signup).
+
+The Developer Edition data storage maximum is 5 MB. This limit doesn’t prevent you from working with these examples.
+
+If you have a development sandbox, you can use it with these examples.
+
+Before you begin, verify that your user profile has the API Enabled permission by following the instructions in [User Permissions](https://help.salesforce.com/articleView?id=platform.admin_userperms.htm&type=5) in *Salesforce Help*.

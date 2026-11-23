@@ -1,8 +1,35 @@
 {
+ "resets_by_strict_gate": [
+  {
+   "id": 1,
+   "name": "Salesforce",
+   "field": "mcp"
+  },
+  {
+   "id": 64,
+   "name": "Cloudflare",
+   "field": "access"
+  },
+  {
+   "id": 92,
+   "name": "Otter AI",
+   "field": "access"
+  },
+  {
+   "id": 92,
+   "name": "Otter AI",
+   "field": "mcp"
+  }
+ ],
  "resets_by_gate": [
   {
    "id": 64,
    "name": "Cloudflare",
+   "field": "access"
+  },
+  {
+   "id": 92,
+   "name": "Otter AI",
    "field": "access"
   }
  ],

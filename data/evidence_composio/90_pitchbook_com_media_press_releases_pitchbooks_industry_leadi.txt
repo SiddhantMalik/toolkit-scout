@@ -1,0 +1,25 @@
+SOURCE_URL: https://pitchbook.com/media/press-releases/pitchbooks-industry-leading-private-capital-market-intelligence-is-now-accessible-in-claude
+*PitchBook Licensed Users Can Now Access Its Trusted Data in Leading Enterprise AI Environment, Accelerating Research and Decision-Making for Financial Professionals*
+
+**SEATTLE – October 28, 2025 – PitchBook**, the leading private capital market intelligence provider, today announced the general availability of PitchBook’s private capital market data directly within Claude – Anthropic’s leading LLM. The integration allows customers to access PitchBook’s proprietary data through secure, conversational prompts inside Claude, one of the industry’s most trusted enterprise AI assistants. This launch builds on the previously launched Claude integration with Morningstar, PitchBook’s parent company. Together, PitchBook and Morningstar are further expanding access to high-quality, trusted financial intelligence across both public and private markets.
+
+“AI is only as good as the data that powers it,” said Thomas Van Buskirk, Executive Vice President of Technology and Engineering at PitchBook. “Our proprietary data operations approach combines advanced AI and machine learning with expert human analysis, making PitchBook the most trusted source for private capital data. Partners like Anthropic recognize the power of combining their AI models with our best-in-class data. By integrating PitchBook’s leading private market data into Claude, we’re enabling professionals to access insights they can trust and setting a new standard for data quality in financial AI.”
+
+Within Claude, PitchBook subscribers can now query proprietary data directly using natural-language prompts, generating intelligent outputs tailored to their needs while maintaining the highest standards of data security, accuracy and compliance. For financial institutions, this integration transforms how analysts, bankers, and investors access and apply private market intelligence, streamlining complex workflows such as deal sourcing, due diligence, market mapping, and valuation analysis. The launch also builds on PitchBook’s growing network of strategic partnerships with leading enterprise LLMs and AI-powered tools, including Perplexity, Rogo, Hebbia, Finster, Model ML, and Farsight.
+
+“As we evaluated integration partners for Claude for Financial Services, PitchBook was an obvious choice due to their authority on private capital market intelligence,” said Nicholas Lin, Head of Product, Financial Services at Anthropic. “By integrating PitchBook’s trusted data into Claude, we’re giving financial professionals the ability to combine intelligence with data you can trust.”
+
+PitchBook’s larger AI-powered experience strategy is to empower users to make faster, more confident decisions, with every insight grounded in high-fidelity data. Its roadmap prioritizes precision, responsibility, and purpose and focuses on three investment areas:
+
+- Data Collection Technology: Scaling AI+HI (Artificial Intelligence plus Human Insight) powered ingestion and verification engines to expand data coverage, enhance quality and speed.
+- In-Platform Experiences: Embedding AI into PitchBook’s own tools, including Profile, Transcript and Research Summaries and VC Exit Predictor, to accelerate research workflows.
+- Strategic Partnerships: Collaborating with leading enterprise LLM and enterprise tools to bring PitchBook’s trusted data wherever professionals work, ensuring that generative AI experiences are built on verified, high-quality intelligence.
+
+Together, these initiatives position PitchBook as the pulse of the private capital markets, powering a new era of trusted, AI-driven intelligence built on the strongest foundation of data quality in the industry.
+
+PitchBook is now available to Claude users with enterprise access. For more information about PitchBook’s AI capabilities, click [here](https://pitchbook.com/products/pitchbooks-ai-capabilities).
+
+**About PitchBook, a Morningstar company**
+As the pulse of private capital markets, PitchBook delivers trusted, real-time data, research, and technology to help investors, dealmakers, and innovators make decisions with confidence. Its products provide comprehensive information on companies, investors, funds, deals, and people, along with tools that help professionals analyze market activity and make informed decisions. Founded in 2007, PitchBook today serves more than 100,000 clients worldwide and is recognized as the leading source of private capital market intelligence. PitchBook has grown to over 3,000 employees across offices in Seattle, San Francisco, New York, London, Singapore, Mumbai, and other global locations. Since 2016, PitchBook has operated as a subsidiary of Morningstar, Inc.
+
+For more information, visit [www.pitchbook.com](https://www.pitchbook.com/).

@@ -1,0 +1,3484 @@
+{
+ "summary": {
+  "verified": 568,
+  "unverified": 6,
+  "unchecked_web": 1
+ },
+ "rows": [
+  {
+   "id": 1,
+   "name": "Salesforce",
+   "quotes": [
+    {
+     "field": "mcp",
+     "url": "https://developer.salesforce.com/blogs/2026/04/salesforce-hosted-mcp-servers-are-now-generally-available",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://developer.salesforce.com/blogs/2026/04/salesforce-hosted-mcp-servers-are-now-generally-available",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://developer.salesforce.com/docs/platform/hosted-mcp-servers/guide/hosted-mcp-servers-overview.html",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://developer.salesforce.com/docs/platform/connect-rest-api/guide/quickstart_dev_org",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "name": "HubSpot",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://developers.hubspot.com/docs/api-reference/latest/authentication/manage-oauth-tokens",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://developers.hubspot.com/mcp",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://developers.hubspot.com/mcp",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://developers.hubspot.com/docs/getting-started/developer-overview",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "name": "Pipedrive",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://developers.pipedrive.com/docs/api/v1",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://developers.pipedrive.com/docs/api/v1/Oauth",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://developers.pipedrive.com/docs/api/v1",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://www.pipedrive.com/en/newsroom/pipedrive-launches-native-mcp-server-bringing-crm-workflows-directly-into-ai-assistants",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "name": "Attio",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://docs.attio.com/rest-api/guides/authentication",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://docs.attio.com/rest-api/guides/authentication",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://docs.attio.com/mcp/overview",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://attio.com/pricing",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "name": "Twenty",
+   "quotes": [
+    {
+     "field": "mcp",
+     "url": "https://twenty.com/llms.txt",
+     "status": "verified"
+    },
+    {
+     "field": "api",
+     "url": "https://twenty.com/llms.txt",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://twenty.com/pricing",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://docs.twenty.com/developers/introduction",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "name": "Podio",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://developers.podio.com/authentication",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://developers.podio.com/",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://www.progress.com/podio/documentation/using-podio/ai-and-mcp/podio-mcp-server-integration-guide.md",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://www.progress.com/podio/pricing",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 7,
+   "name": "Zoho CRM",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://www.zoho.com/crm/developer/docs/api/v8/oauth-overview.html",
+     "status": "verified"
+    },
+    {
+     "field": "api",
+     "url": "https://www.zoho.com/crm/developer/docs/api/v8/multi-dc.html",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://www.zoho.com/crm/developer/docs/api/v8/api-limits.html",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://www.zoho.com/crm/developer/docs/mcp/overview.html",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 8,
+   "name": "Close",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://developer.close.com/",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://developer.close.com/api/overview/api-key-authentication",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://developer.close.com/mcp",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://developer.close.com/",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 9,
+   "name": "Copper",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://developer.copper.com/introduction/authentication.html",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://support.copper.com/en/articles/8823347-generating-an-api-key",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://support.copper.com/en/articles/8823462-api-docs-and-tips",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://developer.copper.com/introduction/oauth/index.html",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 10,
+   "name": "DealCloud",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://api.docs.dealcloud.com/docs/token",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://api.docs.dealcloud.com/docs/apikeys",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://api.docs.dealcloud.com/mcp/getting-started",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://api.docs.dealcloud.com/mcp/getting-started",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 11,
+   "name": "Zendesk",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://developer.zendesk.com/api-reference/introduction/security-and-auth/",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://developer.zendesk.com/api-reference/introduction/security-and-auth/",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://developer.zendesk.com/documentation/api-basics/getting-started/getting-a-trial-or-sponsored-account-for-development/",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://developer.zendesk.com/documentation/marketplace/building-a-marketplace-app/set-up-a-global-oauth-client/",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://developer.zendesk.com/api-reference/introduction/security-and-auth/",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://support.zendesk.com/hc/en-us/articles/11400026079130",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://support.zendesk.com/hc/en-us/articles/11400026079130",
+     "status": "verified"
+    },
+    {
+     "field": "api",
+     "url": "https://developer.zendesk.com/api-reference/",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 12,
+   "name": "Intercom",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://developers.intercom.com/docs/build-an-integration/getting-started",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://developers.intercom.com/docs/build-an-integration/getting-started",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://developers.intercom.com/docs/build-an-integration/getting-started",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://developers.intercom.com/docs/build-an-integration/getting-started",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://developers.intercom.com/docs/guides/mcp",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://developers.intercom.com/docs/guides/mcp",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://developers.intercom.com/docs/guides/mcp",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 13,
+   "name": "Freshdesk",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://developers.freshdesk.com/api/",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://developers.freshdesk.com/api/",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://developers.freshdesk.com/api/",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://developers.freshdesk.com/api/",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://developers.freshdesk.com/api/",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://support.freshdesk.com/support/solutions/articles/50000012670-model-context-protocol-mcp-integration-in-freshdesk-eap-",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://support.freshdesk.com/support/solutions/articles/50000012670-model-context-protocol-mcp-integration-in-freshdesk-eap-",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 14,
+   "name": "Front",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://dev.frontapp.com/docs/authentication",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://dev.frontapp.com/docs/create-and-revoke-api-tokens",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://dev.frontapp.com/docs/welcome",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://dev.frontapp.com/docs/create-and-manage-apps",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://dev.frontapp.com/docs/mcp-server",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 15,
+   "name": "Pylon",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://docs.usepylon.com/pylon-docs/developer/api/authentication",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://docs.usepylon.com/pylon-docs/developer/api/authentication",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://www.usepylon.com/pricing",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://docs.usepylon.com/pylon-docs/integrations/pylon-mcp",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://docs.usepylon.com/pylon-docs/integrations/pylon-mcp",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 16,
+   "name": "LiveAgent",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://support.liveagent.com/066804-LiveAgent-API",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://www.liveagent.com/features/mcp-server/",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://www.liveagent.com/features/mcp-server/",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://www.liveagent.com/llms.txt",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://www.liveagent.com/llms.txt",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://www.liveagent.com/features/mcp-server/",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 17,
+   "name": "Plain",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://www.plain.com/docs/graphql/authentication",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://www.plain.com/docs/graphql/oauth",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://www.plain.com/pricing",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://www.plain.com/docs/integrations/mcp-server",
+     "status": "verified"
+    },
+    {
+     "field": "api",
+     "url": "https://www.plain.com/docs/graphql/introduction",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 18,
+   "name": "Help Scout",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://developer.helpscout.com/mailbox-api/overview/authentication/",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://www.helpscout.com/pricing/",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://docs.helpscout.com/article/1779-connect-your-ai-agent-with-help-scout-to-search-conversations-and-pull-reports",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://docs.helpscout.com/article/1779-connect-your-ai-agent-with-help-scout-to-search-conversations-and-pull-reports",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 19,
+   "name": "Gorgias",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://developers.gorgias.com/docs/access-tokens-api-keys",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://developers.gorgias.com/docs/private-vs-public-app",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://developers.gorgias.com/docs/1-register-on-developer-portal",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://developers.gorgias.com/docs/private-vs-public-app",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://docs.gorgias.com/en-US/connect-your-ai-assistant-to-the-gorgias-mcp-6310546",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://docs.gorgias.com/en-US/connect-your-ai-assistant-to-the-gorgias-mcp-6310546",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 20,
+   "name": "Gladly",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://developer.gladly.com/rest/",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://developer.gladly.com/rest/",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://developer.gladly.com/rest/",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://developer.gladly.com/rest/",
+     "status": "verified"
+    },
+    {
+     "field": "api",
+     "url": "https://developer.gladly.com/llms.txt",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 21,
+   "name": "Slack",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://docs.slack.dev/authentication/installing-with-oauth",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://docs.slack.dev/",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://docs.slack.dev/",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://docs.slack.dev/distribution/",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://docs.slack.dev/distribution/",
+     "status": "verified"
+    },
+    {
+     "field": "api",
+     "url": "https://docs.slack.dev/apis/web-api/rate-limits",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://docs.slack.dev/ai/slack-mcp-server",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://docs.slack.dev/",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 22,
+   "name": "Twilio",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://www.twilio.com/docs/usage/requests-to-twilio",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://www.twilio.com/docs/usage/tutorials/how-to-use-your-free-trial-account",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://www.twilio.com/docs/usage/tutorials/how-to-use-your-free-trial-account",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://github.com/twilio-labs/mcp",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://github.com/twilio-labs/mcp",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 23,
+   "name": "Zoho Cliq",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://www.zoho.com/cliq/help/restapi/v2/",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://www.zoho.com/cliq/help/restapi/v2/",
+     "status": "verified"
+    },
+    {
+     "field": "api",
+     "url": "https://www.zoho.com/cliq/help/restapi/v2/",
+     "status": "verified"
+    },
+    {
+     "field": "api",
+     "url": "https://www.zoho.com/cliq/help/restapi/v2/",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://www.zoho.com/cliq/pricing.html",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://www.zoho.com/mcp/",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://www.zoho.com/mcp/",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 24,
+   "name": "Lark (Larksuite)",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://open.larksuite.com/llms.txt",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://open.larksuite.com/llms.txt",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://open.larksuite.com/llms.txt",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://open.larksuite.com/llms.txt",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://www.larksuite.com/en_us/plans",
+     "status": "unverified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://github.com/larksuite/lark-openapi-mcp",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://github.com/larksuite/lark-openapi-mcp",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 25,
+   "name": "Pumble",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration/",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration/",
+     "status": "verified"
+    },
+    {
+     "field": "api",
+     "url": "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration/",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://pumble.com/help/integrations/automation-workflow-integrations/how-to-use-the-pumble-mcp-server/",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://pumble.com/help/integrations/automation-workflow-integrations/how-to-use-the-pumble-mcp-server/",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 26,
+   "name": "Discord",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://docs.discord.com/developers/reference",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://docs.discord.com/developers/reference",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://docs.discord.com/developers/platform/oauth2-and-permissions",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://docs.discord.com/developers/events/gateway",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://docs.discord.com/developers/events/gateway",
+     "status": "verified"
+    },
+    {
+     "field": "api",
+     "url": "https://docs.discord.com/developers/reference",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://docs.discord.com/mcp",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 27,
+   "name": "Telegram",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://core.telegram.org/bots/api",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://core.telegram.org/bots/api",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://core.telegram.org/bots/faq",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://core.telegram.org/bots/faq",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 28,
+   "name": "WhatsApp Business",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/access-tokens",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/access-tokens",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/solution-providers/get-started-for-tech-providers",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/solution-providers/get-started-for-tech-providers",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://developers.facebook.com/documentation/mcp/whatsapp-business-tools-mcp.md",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://developers.facebook.com/documentation/mcp/whatsapp-business-tools-mcp.md",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 29,
+   "name": "Aircall",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://developer.aircall.io/api-references/",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://developer.aircall.io/api-references/",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://developer.aircall.io/api-references/",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://developer.aircall.io/api-references/",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://aircall.io/blog/tech/ai-ecosystem-developer-guide/",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://aircall.io/blog/tech/ai-ecosystem-developer-guide/",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://developer.aircall.io/docs/mcp-faqs",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 30,
+   "name": "Vonage",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://developer.vonage.com/llms.txt",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://developer.vonage.com/en/account/guides/dashboard-management",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://developer.vonage.com/llms.txt",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://developer.vonage.com/en/mcp-server/how-to-guides/install-tooling-mcp-server",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://developer.vonage.com/en/mcp-server/how-to-guides/install-documentation-mcp-server",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 31,
+   "name": "Google Ads",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://developers.google.com/google-ads/api/docs/developer-toolkit/mcp-server",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://developers.google.com/google-ads/api/docs/api-policy/developer-token",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://developers.google.com/google-ads/api/docs/api-policy/developer-token",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://developers.google.com/google-ads/api/docs/api-policy/developer-token",
+     "status": "verified"
+    },
+    {
+     "field": "api",
+     "url": "https://developers.google.com/google-ads/api/docs/get-started/introduction",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://developers.google.com/google-ads/api/docs/developer-toolkit/mcp-server",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://developers.google.com/google-ads/api/docs/developer-toolkit/mcp-server",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 32,
+   "name": "Meta Ads",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/get-started/authorization",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/get-started/authentication",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/get-started/authorization",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/get-started/authorization",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/get-started/authorization",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://developers.facebook.com/documentation/ads-commerce/ads-ai-connectors/ads-mcp-server/ads-mcp-server-overview.md",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://developers.facebook.com/documentation/ads-commerce/ads-ai-connectors/ads-mcp-server/ads-mcp-server-overview.md",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 33,
+   "name": "LinkedIn Ads",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://learn.microsoft.com/en-us/linkedin/marketing/increasing-access?view=li-lms-2026-11",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://learn.microsoft.com/en-us/linkedin/marketing/quick-start?view=li-lms-2026-11",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://learn.microsoft.com/en-us/linkedin/marketing/quick-start?view=li-lms-2026-11",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://learn.microsoft.com/en-us/linkedin/marketing/quick-start?view=li-lms-2026-11",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://pypi.org/project/linkedin-ads-mcp/",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 34,
+   "name": "GoHighLevel",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://marketplace.gohighlevel.com/docs/Authorization/authorization_doc.md",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://marketplace.gohighlevel.com/docs/llms.txt",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://marketplace.gohighlevel.com/docs/Authorization/PrivateIntegrationsToken.md",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://marketplace.gohighlevel.com/docs/oauth/CreateDeveloperAccount.md",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://marketplace.gohighlevel.com/docs/oauth/AppTestingGuide.md",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://marketplace.gohighlevel.com/docs/oauth/AppReviewGuidelines.md",
+     "status": "verified"
+    },
+    {
+     "field": "api",
+     "url": "https://marketplace.gohighlevel.com/docs/llms.txt",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://help.gohighlevel.com/support/solutions/articles/155000005741",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://help.gohighlevel.com/support/solutions/articles/155000005741",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 35,
+   "name": "Mailchimp",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://mailchimp.com/developer/marketing/api/root/list",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://mailchimp.com/developer/marketing/build/start-developing/set-up-an-oauth-app",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://mailchimp.com/developer/marketing/build/get-started/generate-your-api-key",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://mailchimp.com/pricing/marketing/",
+     "status": "verified"
+    },
+    {
+     "field": "api",
+     "url": "https://mailchimp.com/developer/marketing/api-concepts/api-structure.md",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://mailchimp.com/developer/marketing/build/ai-tools/mcp-server",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://mailchimp.com/developer/marketing/build/ai-tools/mcp-server",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 36,
+   "name": "Klaviyo",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://developers.klaviyo.com/en/reference",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://developers.klaviyo.com/en/docs/authenticate_",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://developers.klaviyo.com/en/docs/set_up_oauth",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://developers.klaviyo.com/en/docs/create_a_public_oauth_app",
+     "status": "unverified"
+    },
+    {
+     "field": "api",
+     "url": "https://developers.klaviyo.com/llms.txt",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://developers.klaviyo.com/en/docs/connect_to_the_klaviyo_mcp_server.md",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://developers.klaviyo.com/.well-known/mcp/server-card.json",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 37,
+   "name": "systeme.io",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://developer.systeme.io/reference/api",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://help.systeme.io/article/2323-how-to-create-a-public-api-key-on-systeme-io",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://help.systeme.io/article/2323-how-to-create-a-public-api-key-on-systeme-io",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://systeme.io/pricing",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://developer.systeme.io/docs/mcp-server.md",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://developer.systeme.io/docs/mcp-server.md",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://help.systeme.io/article/11230-how-to-connect-your-systemeio-account-with-claude-using-mcp-keys",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 38,
+   "name": "Pinterest",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://developers.pinterest.com/docs/getting-started/set-up-authentication-and-authorization.md",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://developers.pinterest.com/docs/getting-started/connect-app.md",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://developers.pinterest.com/docs/key-concepts/access-tiers.md",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://developers.pinterest.com/docs/key-concepts/access-tiers.md",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://developers.pinterest.com/about-pinterest-mcp/",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://developers.pinterest.com/about-pinterest-mcp/",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://developers.pinterest.com/about-pinterest-mcp/",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 39,
+   "name": "Threads (Meta)",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://developers.facebook.com/documentation/threads/get-started.md",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://developers.facebook.com/documentation/threads/get-started.md",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://developers.facebook.com/documentation/threads/get-started.md",
+     "status": "verified"
+    },
+    {
+     "field": "api",
+     "url": "https://developers.facebook.com/documentation/threads",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://developers.facebook.com/documentation/threads/llms.txt",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://developers.facebook.com/documentation/threads/llms.txt",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 40,
+   "name": "SendGrid",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://www.twilio.com/docs/sendgrid/api-reference/how-to-use-the-sendgrid-v3-api/authentication",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://www.twilio.com/en-us/products/email-api/pricing.md",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://www.twilio.com/en-us/changelog/changes-coming-to-sendgrid-s-free-plans",
+     "status": "verified"
+    },
+    {
+     "field": "api",
+     "url": "https://www.twilio.com/docs/sendgrid/api-reference",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://www.twilio.com/en-us/blog/developers/community/build-a-sendgrid-mcp-server-for-ai-email-workflows",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 41,
+   "name": "Shopify",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://shopify.dev/docs/api/usage/authentication",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://shopify.dev/docs/apps/build/dev-dashboard",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://shopify.dev/docs/apps/launch/distribution",
+     "status": "verified"
+    },
+    {
+     "field": "api",
+     "url": "https://shopify.dev/docs/api",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://shopify.dev/docs/api/shopify-mcp",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://shopify.dev/docs/api/ai-toolkit",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 42,
+   "name": "WooCommerce",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://woocommerce.github.io/woocommerce-rest-api-docs/",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://woocommerce.github.io/woocommerce-rest-api-docs/",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://woocommerce.github.io/woocommerce-rest-api-docs/",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://developer.woocommerce.com/docs/features/mcp/",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://developer.woocommerce.com/docs/features/mcp/",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 43,
+   "name": "BigCommerce",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://docs.bigcommerce.com/developer/docs/overview/api-fundamentals/api-accounts",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://docs.bigcommerce.com/developer/docs/overview/quick-start",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://docs.bigcommerce.com/developer/docs/overview/quick-start",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://docs.bigcommerce.com/developer/docs/integrations/apps/guide/approval-requirements",
+     "status": "verified"
+    },
+    {
+     "field": "api",
+     "url": "https://docs.bigcommerce.com/developer/docs/overview/quick-start",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://docs.bigcommerce.com/developer/api-reference/mcp/overview",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://docs.bigcommerce.com/developer/api-reference/mcp/overview",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 44,
+   "name": "Salesforce Commerce Cloud",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://developer.salesforce.com/docs/commerce/commerce-api/guide/authorization-for-admin-apis.html",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://developer.salesforce.com/docs/commerce/commerce-api/guide/authorization-for-admin-apis.html",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://developer.salesforce.com/docs/commerce/commerce-api/guide/get-started.html",
+     "status": "verified"
+    },
+    {
+     "field": "api",
+     "url": "https://raw.githubusercontent.com/SalesforceCommerceCloud/commerce-sdk/main/README.md",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://salesforcecommercecloud.github.io/b2c-developer-tooling/mcp/index.md",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://salesforcecommercecloud.github.io/b2c-developer-tooling/mcp/index.md",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 45,
+   "name": "Magento (Adobe Commerce)",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://developer.adobe.com/commerce/webapi/get-started/authentication/",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://developer.adobe.com/commerce/webapi/get-started/authentication/",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://developer.adobe.com/commerce/webapi/get-started/authentication/",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://raw.githubusercontent.com/magento/magento2/2.4-develop/README.md",
+     "status": "verified"
+    },
+    {
+     "field": "api",
+     "url": "https://developer.adobe.com/commerce/webapi/",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://developer.adobe.com/commerce/extensibility/developer-agent/tools-overview",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 46,
+   "name": "Squarespace",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://developers.squarespace.com/commerce-apis/authentication-and-permissions",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://support.squarespace.com/hc/en-us/articles/236297987-Squarespace-API-keys",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://developers.squarespace.com/commerce-apis/oauth",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://developers.squarespace.com/commerce-apis/authentication-and-permissions",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://developers.squarespace.com/mcp",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://developers.squarespace.com/mcp",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 47,
+   "name": "Ecwid",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://docs.ecwid.com/get-started/make-your-first-api-request",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://docs.ecwid.com/get-started/make-your-first-api-request",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://docs.ecwid.com/get-started/set-up-your-dev-environment-in-ecwid",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://docs.ecwid.com/get-started/set-up-your-dev-environment-in-ecwid",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://docs.ecwid.com/launch-apps/steps-to-go-live-with-a-public-app",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://docs.ecwid.com/api-reference/rest-api/application.md?ask=Does%20Ecwid%20offer%20an%20official%20MCP%20server",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 48,
+   "name": "Gumroad",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://gumroad.com/api",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://gumroad.com/api",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://gumroad.com/llms.txt",
+     "status": "verified"
+    },
+    {
+     "field": "api",
+     "url": "https://gumroad.com/llms.txt",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://gumroad.com/llms.txt",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://gumroad.com/.well-known/mcp.json",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 49,
+   "name": "Amazon Selling Partner",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://developer-docs.amazon/sp-api/docs/authorizing-selling-partner-api-applications.md",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://developer-docs.amazon/sp-api/docs/onboarding-step-1-prepare-for-registration.md",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://developer-docs.amazon/sp-api/docs/onboarding-step-1-prepare-for-registration.md",
+     "status": "verified"
+    },
+    {
+     "field": "api",
+     "url": "https://developer-docs.amazon/sp-api",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://github.com/amzn/selling-partner-api-samples",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 50,
+   "name": "fanbasis",
+   "quotes": [
+    {
+     "field": "entity",
+     "url": "https://commas.com/",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://commasdocs.com/",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://commasdocs.com/",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://commasdocs.com/",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://commasdocs.com/",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://commasdocs.com/",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://commasdocs.com/",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://commas.com/",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 51,
+   "name": "DataForSEO",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://docs.dataforseo.com/v3/auth/",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://dataforseo.com/pricing",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://dataforseo.com/pricing",
+     "status": "verified"
+    },
+    {
+     "field": "api",
+     "url": "https://docs.dataforseo.com/v3/",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://dataforseo.com/model-context-protocol",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 52,
+   "name": "SE Ranking",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://seranking.com/api/data/authentication/",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://seranking.com/api/",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://seranking.com/api/integrations/mcp/",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://seranking.com/api/integrations/mcp/",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://seranking.com/api/integrations/mcp/",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 53,
+   "name": "Ahrefs",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://docs.ahrefs.com/llms.txt",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://docs.ahrefs.com/api/docs/introduction.md",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://docs.ahrefs.com/api/docs/api-keys-creation-and-management",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://docs.ahrefs.com/ahrefs-connect/docs/how-to-apply.md",
+     "status": "verified"
+    },
+    {
+     "field": "api",
+     "url": "https://docs.ahrefs.com/",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://docs.ahrefs.com/en/mcp/docs/introduction",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://docs.ahrefs.com/en/mcp/docs/introduction",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 54,
+   "name": "MrScraper",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://docs.mrscraper.com/docs/getting-started/quickstart",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://docs.mrscraper.com/docs/getting-started/billing",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://docs.mrscraper.com/docs/getting-started/mcp-server",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://docs.mrscraper.com/docs/getting-started/billing",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 55,
+   "name": "Apify",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://docs.apify.com/api/v2",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://apify.com/pricing",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://docs.apify.com/platform/integrations/mcp",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://docs.apify.com/platform/integrations/mcp",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 56,
+   "name": "Firecrawl",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://docs.firecrawl.dev/introduction",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://www.firecrawl.dev/pricing",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://docs.firecrawl.dev/mcp-server",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://docs.firecrawl.dev/mcp-server",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 57,
+   "name": "Bright Data",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://docs.brightdata.com/",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://docs.brightdata.com/",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://docs.brightdata.com/",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://docs.brightdata.com/api-reference/authentication",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://docs.brightdata.com/products/mcp-server/overview",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 58,
+   "name": "Sherlock",
+   "quotes": [
+    {
+     "field": "entity",
+     "url": "https://github.com/sherlock-project/sherlock",
+     "status": "verified"
+    },
+    {
+     "field": "api",
+     "url": "https://github.com/sherlock-project/sherlock",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://glama.ai/mcp/servers/Burnsedia/sherlock-mcp",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 59,
+   "name": "Waterfall.io",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://docs.waterfall.io/v1/authentication",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://docs.waterfall.io/v1/authentication",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://docs.waterfall.io/llms.txt",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 60,
+   "name": "Clay",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://developers.clay.com/public-api/authentication",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://university.clay.com/docs/clay-api-cli",
+     "status": "verified"
+    },
+    {
+     "field": "api",
+     "url": "https://developers.clay.com/llms.txt",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://university.clay.com/docs/connect-to-clay-mcp",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://university.clay.com/docs/connect-to-clay-mcp",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 61,
+   "name": "GitHub",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://docs.github.com/en/rest/quickstart",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://docs.github.com/llms.txt",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://github.com/github/github-mcp-server",
+     "status": "verified"
+    },
+    {
+     "field": "api",
+     "url": "https://docs.github.com/llms.txt",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 62,
+   "name": "Vercel",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://vercel.com/llms.txt",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://vercel.com/llms.txt",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://vercel.com/pricing.md",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://vercel.com/llms.txt",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 63,
+   "name": "Netlify",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api.md",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api.md",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://www.netlify.com/pricing/",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://docs.netlify.com/llms.txt",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://docs.netlify.com/llms.txt",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 64,
+   "name": "Cloudflare",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://developers.cloudflare.com/api/resources/accounts/subresources/tokens/",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://developers.cloudflare.com/api/",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://www.cloudflare.com/plans/",
+     "status": "unverified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://github.com/cloudflare/mcp-server-cloudflare",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://github.com/cloudflare/mcp-server-cloudflare",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 65,
+   "name": "Supabase",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://supabase.com/docs/reference/api/introduction",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://supabase.com/docs/reference/api/introduction",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://supabase.com/pricing",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://supabase.com/llms.txt",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 66,
+   "name": "Neo4j",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://neo4j.com/docs/aura/api/authentication/",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://neo4j.com/docs/aura/api/authentication/",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://neo4j.com/llms.txt",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://neo4j.com/docs/mcp/current/",
+     "status": "verified"
+    },
+    {
+     "field": "api",
+     "url": "https://neo4j.com/docs/aura/api/overview/",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 67,
+   "name": "Snowflake",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://docs.snowflake.com/en/developer-guide/sql-api/index",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://docs.snowflake.com/developer-guide/sql-api/authenticating",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://docs.snowflake.com/en/user-guide/admin-trial-account",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents-mcp",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents-mcp",
+     "status": "unverified"
+    }
+   ]
+  },
+  {
+   "id": 68,
+   "name": "MongoDB Atlas",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://www.mongodb.com/docs/atlas/api/api-authentication/",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://www.mongodb.com/docs/atlas/api/api-authentication/",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://www.mongodb.com/docs/atlas/configure-api-access/",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://www.mongodb.com/pricing",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://www.mongodb.com/docs/mcp-server/overview/",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 69,
+   "name": "Datadog",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://docs.datadoghq.com/api/latest/",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://docs.datadoghq.com/api/latest/",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://docs.datadoghq.com/api/latest/",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://docs.datadoghq.com/bits_ai/mcp_server/",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://docs.datadoghq.com/bits_ai/mcp_server/",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 70,
+   "name": "Sentry",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://docs.sentry.io/api/auth/",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://docs.sentry.io/api/auth/",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://docs.sentry.io/llms.txt",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://docs.sentry.io/ai/mcp/",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 71,
+   "name": "Notion",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://developers.notion.com/guides/notion-api/quick-start",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://developers.notion.com/guides/connections-and-tokens/overview.md",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://developers.notion.com/guides/notion-api/quick-start",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://developers.notion.com/guides/notion-api/quick-start",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://developers.notion.com/guides/connections-and-tokens/overview.md",
+     "status": "verified"
+    },
+    {
+     "field": "api",
+     "url": "https://developers.notion.com/guides/notion-api/quick-start",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://developers.notion.com/guides/mcp/get-started-with-mcp.md",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 72,
+   "name": "Airtable",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://airtable.com/developers/web/api/authentication",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://airtable.com/developers/web/api/authentication",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://support.airtable.com/docs/creating-personal-access-tokens",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://airtable.com/developers/web/guides/oauth-integrations",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://support.airtable.com/docs/using-the-airtable-mcp-server",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://support.airtable.com/docs/using-the-airtable-mcp-server",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 73,
+   "name": "Linear",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://linear.app/developers/graphql",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://linear.app/developers/graphql",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://linear.app/pricing",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://linear.app/pricing",
+     "status": "verified"
+    },
+    {
+     "field": "api",
+     "url": "https://linear.app/developers/graphql",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://linear.app/docs/mcp",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://linear.app/docs/mcp",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 74,
+   "name": "Jira",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/intro/",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://developer.atlassian.com/cloud/jira/platform/basic-auth-for-rest-apis/",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/intro/",
+     "status": "verified"
+    },
+    {
+     "field": "api",
+     "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/intro/",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://developer.atlassian.com/cloud/jira/platform/oauth-2-3lo-apps/",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://www.atlassian.com/software/jira/pricing",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://support.atlassian.com/atlassian-ai-gateway/docs/get-started-with-the-atlassian-remote-mcp-server/",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://support.atlassian.com/atlassian-ai-gateway/docs/set-up-clients/",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 75,
+   "name": "Asana",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://developers.asana.com/docs/quick-start",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://developers.asana.com/docs/authentication",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://developers.asana.com/docs/quick-start",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://developers.asana.com/docs/overview",
+     "status": "verified"
+    },
+    {
+     "field": "api",
+     "url": "https://developers.asana.com/docs/overview",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://developers.asana.com/docs/using-asanas-mcp-server",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 76,
+   "name": "Monday.com",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://developer.monday.com/api-reference/docs/basics",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://developer.monday.com/api-reference/docs/basics",
+     "status": "unverified"
+    },
+    {
+     "field": "access",
+     "url": "https://developer.monday.com/apps/docs/install-and-share-your-apps.md",
+     "status": "verified"
+    },
+    {
+     "field": "api",
+     "url": "https://developer.monday.com/api-reference/docs/authentication",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://developer.monday.com/api-reference/docs/mondaycom-mcp",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://developer.monday.com/api-reference/docs/mondaycom-mcp",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 77,
+   "name": "ClickUp",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://developer.clickup.com/docs/authentication",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://developer.clickup.com/docs/authentication",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://developer.clickup.com/docs/apis-available-by-plan.md",
+     "status": "verified"
+    },
+    {
+     "field": "api",
+     "url": "https://developer.clickup.com/docs/authentication",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://developer.clickup.com/docs/connect-an-ai-assistant-to-clickups-mcp-server.md",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://developer.clickup.com/docs/connect-an-ai-assistant-to-clickups-mcp-server.md",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 78,
+   "name": "Coda",
+   "quotes": [
+    {
+     "field": "entity",
+     "url": "https://docs.superhuman.com/developers/apis/v1",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://docs.superhuman.com/developers/apis/v1",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://docs.superhuman.com/developers/apis/v1",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://docs.superhuman.com/developers/apis/v1",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://superhuman.com/docs/features/docs-mcp",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://help.superhuman.com/hc/en-us/articles/46210076980365-Connect-to-the-Coda-MCP",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://docs.superhuman.com/developers/apis/v1",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 79,
+   "name": "Smartsheet",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://developers.smartsheet.com/api/smartsheet/guides/basics/authentication.md",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://developers.smartsheet.com/api/smartsheet/guides/basics/authentication.md",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://developers.smartsheet.com/api/smartsheet/guides/basics/authentication.md",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://developers.smartsheet.com/api/smartsheet/guides/getting-started.md",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://help.smartsheet.com/articles/2482389-generate-API-key",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://developers.smartsheet.com/ai-mcp/smartsheet/mcp-server.md",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://developers.smartsheet.com/ai-mcp/smartsheet/install-the-smartsheet-mcp-server/manually-configure-the-mcp-server.md",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 80,
+   "name": "Harvest",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://help.getharvest.com/api-v2/authentication-api/authentication/authentication/",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://help.getharvest.com/api-v2/authentication-api/authentication/authentication/",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://help.getharvest.com/api-v2/authentication-api/authentication/authentication/",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://www.getharvest.com/pricing",
+     "status": "verified"
+    },
+    {
+     "field": "api",
+     "url": "https://help.getharvest.com/api-v2/authentication-api/authentication/authentication/",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://support.getharvest.com/hc/en-us/articles/46293697226381-Harvest-MCP",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://support.getharvest.com/hc/en-us/articles/46293697226381-Harvest-MCP",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 81,
+   "name": "Stripe",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://docs.stripe.com/api/authentication",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://docs.stripe.com/stripe-apps/api-authentication/oauth",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://docs.stripe.com/api/authentication",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://docs.stripe.com/stripe-apps/api-authentication/oauth",
+     "status": "verified"
+    },
+    {
+     "field": "api",
+     "url": "https://docs.stripe.com/api",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://docs.stripe.com/mcp",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://docs.stripe.com/mcp",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 82,
+   "name": "Plaid",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://plaid.com/docs/api/",
+     "status": "verified"
+    },
+    {
+     "field": "api",
+     "url": "https://plaid.com/docs/api/",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://plaid.com/docs/account/billing/",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://plaid.com/docs/account/billing/",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://plaid.com/docs/resources/mcp/",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://plaid.com/docs/resources/mcp/",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 83,
+   "name": "Binance",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://raw.githubusercontent.com/binance/binance-spot-api-docs/master/faqs/api_key_types.md",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://raw.githubusercontent.com/binance/binance-spot-api-docs/master/rest-api.md",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://www.binance.com/en/support/faq/360002502072",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://www.binance.com/en/support/faq/360002502072",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://developers.binance.com/en/docs/agent-native/mcp-server",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://developers.binance.com/en/docs/agent-native/mcp-server/agentic",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 84,
+   "name": "Paygent Connect",
+   "quotes": [
+    {
+     "field": "entity",
+     "url": "https://www.paygent.co.jp/payment_service/",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://www.paygent.co.jp/safety/support/to_member/",
+     "status": "verified"
+    },
+    {
+     "field": "api",
+     "url": "https://www.paygent.co.jp/payment_service/",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 85,
+   "name": "iPayX",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://www.ipayx.ai/.well-known/openapi.json",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://www.ipayx.ai/llms.txt",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://www.ipayx.ai/llms.txt",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://www.ipayx.ai/.well-known/mcp.json",
+     "status": "verified"
+    },
+    {
+     "field": "api",
+     "url": "https://www.ipayx.ai/.well-known/openapi.json",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://www.ipayx.ai/llms.txt",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 86,
+   "name": "QuickBooks",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://developer.intuit.com/llms.txt",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://developer.intuit.com/llms.txt",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://developer.intuit.com/llms.txt",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://developer.intuit.com/llms.txt",
+     "status": "verified"
+    },
+    {
+     "field": "api",
+     "url": "https://developer.intuit.com/llms.txt",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://raw.githubusercontent.com/intuit/quickbooks-online-mcp-server/main/README.md",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://developer.intuit.com/llms.txt",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 87,
+   "name": "Xero",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://raw.githubusercontent.com/XeroAPI/xero-mcp-server/main/README.md",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://developer.xero.com/pricing",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://developer.xero.com/pricing",
+     "status": "verified"
+    },
+    {
+     "field": "api",
+     "url": "https://raw.githubusercontent.com/XeroAPI/xero-mcp-server/main/README.md",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://raw.githubusercontent.com/XeroAPI/xero-mcp-server/main/README.md",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://developer.xero.com/pricing",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 88,
+   "name": "Brex",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://developer.brex.com/guides/quickstart",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://developer.brex.com/guides/partner_authentication",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://developer.brex.com/guides/quickstart",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://developer.brex.com/guides/quickstart",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://developer.brex.com/guides/partner_authentication",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://developer.brex.com/docs/mcp",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://developer.brex.com/docs/mcp",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 89,
+   "name": "Ramp",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://docs.ramp.com/llms-guides/authorization.txt",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://docs.ramp.com/llms-guides/authorization.txt",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://docs.ramp.com/llms-guides/getting-started.txt",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://docs.ramp.com/llms-guides/getting-started.txt",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://docs.ramp.com/llms-guides/getting-started.txt",
+     "status": "verified"
+    },
+    {
+     "field": "api",
+     "url": "https://docs.ramp.com/llms.txt",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://docs.ramp.com/llms-guides/ramp-mcp.txt",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://docs.ramp.com/llms-guides/ramp-mcp.txt",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 90,
+   "name": "PitchBook",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://pitchbook.com/help/pitchbook-api",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://pitchbook.com/help/pitchbook-api",
+     "status": "verified"
+    },
+    {
+     "field": "api",
+     "url": "https://pitchbook.com/help/pitchbook-api",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://pitchbook.com/media/press-releases/pitchbooks-industry-leading-private-capital-market-intelligence-is-now-accessible-in-claude",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://tour.pitchbook.com/answers/pitchbook-announces-new-essential-mcp-integration-with-perplexity-expanding-access-to-ai-powered-verifiable-market-intelligence",
+     "status": "unchecked_web"
+    }
+   ]
+  },
+  {
+   "id": 91,
+   "name": "NotebookLM",
+   "quotes": [
+    {
+     "field": "entity",
+     "url": "https://cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/set-up-licensing",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/set-up-licensing",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/set-up-licensing",
+     "status": "verified"
+    },
+    {
+     "field": "api",
+     "url": "https://cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks",
+     "status": "verified"
+    },
+    {
+     "field": "api",
+     "url": "https://cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://pypi.org/project/notebooklm-mcp-server/",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 92,
+   "name": "Otter AI",
+   "quotes": [
+    {
+     "field": "api",
+     "url": "https://help.otter.ai/hc/en-us/articles/35287607569687-Otter-MCP-Server",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://help.otter.ai/hc/en-us/articles/35287607569687-Otter-MCP-Server",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://help.otter.ai/hc/en-us/articles/35287607569687-Otter-MCP-Server",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://help.otter.ai/hc/en-us/articles/35287607569687-Otter-MCP-Server",
+     "status": "unverified"
+    }
+   ]
+  },
+  {
+   "id": 93,
+   "name": "Fathom",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://developers.fathom.ai/quickstart",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://developers.fathom.ai/",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://developers.fathom.ai/faq.md",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://developers.fathom.ai/oauth.md",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://developers.fathom.ai/quickstart",
+     "status": "verified"
+    },
+    {
+     "field": "api",
+     "url": "https://developers.fathom.ai/quickstart",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://developers.fathom.ai/mcp-docs",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 94,
+   "name": "Consensus",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://consensus.app/llms-full.txt",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://consensus.app/llms-full.txt",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://consensus.app/llms-full.txt",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://consensus.app/.well-known/pricing.md",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://consensus.app/llms-full.txt",
+     "status": "verified"
+    },
+    {
+     "field": "api",
+     "url": "https://consensus.app/llms-full.txt",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://consensus.app/llms-full.txt",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 95,
+   "name": "Reducto",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://docs.reducto.ai/quickstart",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://docs.reducto.ai/quickstart",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://reducto.ai/pricing",
+     "status": "verified"
+    },
+    {
+     "field": "api",
+     "url": "https://reducto.ai/pricing",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://docs.reducto.ai/mcp-server",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://docs.reducto.ai/mcp-server",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 96,
+   "name": "Devin",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://docs.devin.ai/api-reference/authentication.md",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://docs.devin.ai/api-reference/authentication.md",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://docs.devin.ai/api-reference/getting-started/teams-quickstart.md",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://docs.devin.ai/api-reference/overview",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://devin.ai/pricing",
+     "status": "verified"
+    },
+    {
+     "field": "api",
+     "url": "https://docs.devin.ai/api-reference/overview",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://docs.devin.ai/work-with-devin/devin-mcp.md",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://docs.devin.ai/work-with-devin/devin-mcp.md",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 97,
+   "name": "higgsfield",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://docs.higgsfield.ai/docs",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://higgsfield.ai/higgsfield-api",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://higgsfield.ai/higgsfield-api",
+     "status": "verified"
+    },
+    {
+     "field": "api",
+     "url": "https://higgsfield.ai/higgsfield-api",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://higgsfield.ai/mcp",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://higgsfield.ai/mcp",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://higgsfield.ai/mcp",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 98,
+   "name": "Mermaid CLI",
+   "quotes": [
+    {
+     "field": "entity",
+     "url": "https://raw.githubusercontent.com/mermaid-js/mermaid-cli/master/README.md",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://raw.githubusercontent.com/mermaid-js/mermaid-cli/master/README.md",
+     "status": "verified"
+    },
+    {
+     "field": "api",
+     "url": "https://raw.githubusercontent.com/mermaid-js/mermaid-cli/master/README.md",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://www.npmjs.com/package/mermaid-mcp-server",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 99,
+   "name": "YouTube Transcript",
+   "quotes": [
+    {
+     "field": "entity",
+     "url": "https://transcriptapi.com/",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://transcriptapi.com/",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://transcriptapi.com/",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://transcriptapi.com/",
+     "status": "verified"
+    },
+    {
+     "field": "api",
+     "url": "https://transcriptapi.com/",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://transcriptapi.com/",
+     "status": "verified"
+    }
+   ]
+  },
+  {
+   "id": 100,
+   "name": "Grain",
+   "quotes": [
+    {
+     "field": "auth",
+     "url": "https://developers.grain.com/authentication.html",
+     "status": "verified"
+    },
+    {
+     "field": "auth",
+     "url": "https://developers.grain.com/authentication.html",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://developers.grain.com/authentication.html",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://developers.grain.com/authentication.html",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://developers.grain.com/authentication.html",
+     "status": "verified"
+    },
+    {
+     "field": "access",
+     "url": "https://grain.com/pricing",
+     "status": "verified"
+    },
+    {
+     "field": "api",
+     "url": "https://developers.grain.com/",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://developers.grain.com/authentication.html",
+     "status": "verified"
+    },
+    {
+     "field": "mcp",
+     "url": "https://developers.grain.com/mcp/tools-and-usage.html",
+     "status": "verified"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,22 @@
+SOURCE_URL: https://developers.binance.com/en/docs/agent-native/mcp-server
+[Model Context Protocol](https://modelcontextprotocol.io/) (MCP) is an open standard that lets AI agents and coding assistants connect to external tools and data sources over a single, well-defined transport — instead of every integration needing its own custom API glue.
+
+Trading
+
+Binance MCP Server
+
+Connect your AI agent to Binance to read market data, check balances, and trade Spot / Margin / Convert / Futures inside a dedicated Agentic sub-account.
+
+Learn more
+
+## Who this is for[](https://developers.binance.com/en/docs/agent-native/mcp-server#who-this-is-for)
+
+*   **Building a trading bot or want an AI agent to act on your Binance account?** Use the [Binance MCP Server](https://developers.binance.com/en/docs/agent-native/mcp-server/agentic).
+
+Was this page helpful?
+
+Last modified on
+
+November 23, 2026
+
+[Overview](https://developers.binance.com/en/docs/agent-native/overview)[Binance MCP Server](https://developers.binance.com/en/docs/agent-native/mcp-server/agentic)

@@ -1,0 +1,116 @@
+SOURCE_URL: https://www.binance.com/en/support/faq/360002502072
+# How to Create API Keys on Binance?
+
+Published on 2018-04-09 03:17
+
+*Last updated: 20 March 2025*
+
+Creating an API allows you to connect to Binance’s servers via several programming languages. Data can be pulled from Binance and interact with external applications. You can view your wallet and transaction data, make trades, and deposit and withdraw funds in third-party programs.
+
+**Please note that before creating an API Key, you need to make a deposit of any amount to your Spot Wallet to activate your account and** [**complete identity verification**](/en/support/faq/360027287111)**.**
+
+For more details on Binance API, please refer to the [Documentation](https://developers.binance.com/en/).
+
+### Step-by-step on how to create your own Binance API Key
+
+**(Website) How to create your own Binance API Key via web?**
+
+1. Log in to your Binance account and click the profile icon, then **[Account]**.
+
+![image](https://public.bnbstatic.com/image/cms/content/body/202403/4d1f2e0e900b88bc9fea339968a28222.png)
+
+2. Go to **[API Management]** then click **[Create API]**.
+
+Please note that before creating an API Key, you need to:
+
+- enable [two-factor authentication (2FA)](/en/support/faq/account-functions?c=1&navId=1#11) on your account;
+- make a deposit of any amount to your Spot Wallet to activate your account; and
+- verify your [identity](/en/support/faq/360027287111).
+![image](https://public.bnbstatic.com/image/cms/content/body/202403/05b8a1b8477ddcab3dc41fa67fadbaf9.png)
+
+For more details about the Tax Reporting API, please refer to our guide on [How to Obtain Tax Reporting on Binance & Frequently Asked Questions](/en/support/faq/538e05e2fd394c489b4cf89e92c55f70).
+
+3. Select your preferred API Key type.
+
+- **System-generated API keys** use HMAC symmetric encryption. You’ll get the API key and the Secret Key.
+- **Self-generated API keys** use Ed25519 or RSA asymmetric encryption. You’ll receive an API key, but you have to create your own public-private key pair via third-party software and provide the public key to Binance.
+For more details on self-generated API keys, please refer to [How to Generate an Ed25519 Key Pair to Send API Requests on Binance](/en/support/faq/6b9a63f1e3384cf48a2eedb82767a69a).
+![image](https://public.bnbstatic.com/image/cms/article/body/202311/47dd75a63be6a7bf78e192bd2c455b16.png)
+
+4. Enter a label/name for your API Key.
+
+![image](https://public.bnbstatic.com/image/cms/article/body/202311/69a62f3856d38d4ae35324558ea88f65.png)
+
+5. Verify with your 2FA devices and passkeys.
+
+![image](https://public.bnbstatic.com/image/cms/article/body/202311/412eb2242603ab25a6c2b303f95aa9f2.png)
+
+6. Your API key is now created.
+
+**(App) How to create your own Binance API Key via the app?**
+
+1. Log in to your Binance app and enable the Binance Pro version, and click **[More]** to access the Services panel.
+
+![image](https://public.bnbstatic.com/image/cms/article/body/202406/7d025b8960e6192858e7cfc99c9065ca.png)
+
+2. Scroll to the **[Other]** section and click on **[API Management]** icon.
+
+![image](https://public.bnbstatic.com/image/cms/article/body/202406/114a3b66fdb4e24dde29ad3f0a832fcf.png)
+
+3. Click **[Create API]**.
+
+![image](https://public.bnbstatic.com/image/cms/article/body/202406/60fe2835ba5b47662e22af84512d024b.jpeg)
+
+Please note that before creating an API Key, you need to:
+
+- Enable [two-factor authentication (2FA)](/en/support/faq/account-functions?c=1&navId=1#11) on your account;
+- Make a deposit of any amount to your Spot Wallet to activate your account;
+- Verify your [identity](https://www.binance.com/en/support/faq/how-to-complete-identity-verification-for-a-personal-account-360027287111).
+For more details about the Tax Reporting API, please refer to [How to Obtain Tax Reporting on Binance & Frequently Asked Questions](https://www.binance.com/en/support/faq/538e05e2fd394c489b4cf89e92c55f70).
+
+4. Select your preferred API Key type.
+
+![image](https://public.bnbstatic.com/image/cms/article/body/202406/eadca4077a242b77e7a1d3f2085f04c8.png)
+
+- System-generated API keys use HMAC symmetric encryption. You’ll get the API key and the Secret Key.
+- Self-generated API keys use Ed25519 or RSA asymmetric encryption. You’ll receive an API key, but you have to create your own public-private key pair via third-party software and provide the public key to Binance.
+For more details on self-generated API keys, please refer to [How to Generate an Ed25519 Key Pair to Send API Requests on Binance](/en/support/faq/on-binance-6b9a63f1e3384cf48a2eedb82767a69a).
+
+5. Enter a label/name for your API key.
+
+![image](https://public.bnbstatic.com/image/cms/article/body/202406/0b47dac4f851a1d35bdd6b19f08053df.png)
+
+6. Verify with your 2FA devices or passkeys.
+
+![image](https://public.bnbstatic.com/image/cms/article/body/202406/880e4f21cf740eeb07b0c21d1bec99ca.png)
+
+7. Your API Key is now created.
+
+![image](https://public.bnbstatic.com/image/cms/article/body/202406/813f40ae74205afa5c2882df944fa18c.png)
+
+### Frequently Asked Questions on Binance API Keys
+
+#### 1. Why can’t I enable any permission other than reading?
+
+We strongly recommend against enabling API keys for permissions other than reading without defining the appropriate IP access restrictions (“Unrestricted-IP-Access API Key(s)”). Unrestricted-IP-Access HMAC API Key(s) won’t have any permission other than reading. If you’d like to enable other permissions, please add IP access (IPv4 format) restrictions, use self-generated keys (such as Ed25519 or RSA), or disable the default security controls.
+
+**Web view:**
+
+![image](https://public.bnbstatic.com/image/cms/article/body/202311/3bbf8f45c328425f59e2af13040dff11.png)
+
+**App view:**
+
+![image](https://public.bnbstatic.com/image/cms/article/body/202406/1542a6b4cb0a62687493f9676a0992a6.png)
+
+#### 2. Why can't I enable withdrawal permission?
+
+Adding IP access (IPv4 format) restrictions is mandatory to enable withdrawal permission.
+
+#### 3. Why can’t my API key enable Futures permission?
+
+If the API key is created before you enable your Futures account, or you have activated Portfolio Margin, the API key won’t be able to enable Futures permission.
+
+To remain compliant with the latest industry requirements, Binance has updated its API services.
+
+- **Effective from 2023-01-30 00:00 (UTC), the system-generated API Key’s permission can only be set to [Enable Reading] if your IP is unrestricted.**
+**To learn more about Binance APIs, visit the** [**API Tutorial FAQs**](/en/support/faq/api?c=6&navId=6#24)** page.**

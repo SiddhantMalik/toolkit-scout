@@ -1,0 +1,76 @@
+SOURCE_URL: https://airtable.com/developers/web/guides/oauth-integrations
+# OAuth integrations
+
+OAuth integrations allow you to register with Airtable so that users may grant you the ability to access Airtable's API on their behalf via the [OAuth](https://oauth.net/2/) grant flow.
+
+If you are building an Airtable integration for your product or for many different users that needs to use the Airtable API on behalf of those users, you will need to create an OAuth integration.
+
+This guide will walk you through how to create your OAuth integration. For full reference on how to authorize via OAuth, please see our [OAuth reference](https://airtable.com/developers/web/api/oauth-reference).
+
+## Registering a new integration
+
+You can access the OAuth integrations panel at [/create/oauth](https://airtable.com/create/oauth). From here you can register new integrations, and see a summary of previously created integrations and their possible scopes.
+
+Click the ‘Register new OAuth integration’ button to create a new OAuth integration.
+
+Give your integration a unique name and register a valid redirect URL and click ‘Register integration’. You will be able to change these later. For more details on how we validate the redirect URL, see its section in the [OAuth reference](https://airtable.com/developers/web/api/oauth-reference).
+
+### OAuth integration properties
+
+After navigating to an existing OAuth integration’s management page, you can edit the various properties of your integration.
+
+When you are satisfied with your changes, you can click the “Save changes” button at the bottom of the page.
+
+Most properties are optional, but note that the Privacy policy URL and Terms of service URL must be provided before sharing your OAuth integration with other users - if you have not provided them, other users will not be able to authorize your integration.
+
+All of these fields will be visible to users when they authorize your integration.
+
+| Property | Description |
+|---|---|
+| Name | The name of your integration. |
+| OAuth redirect URI | A URI you control for use in the OAuth authorization flow. See the [reference documentation](https://airtable.com/developers/web/api/oauth-reference#redirect-uri) for more details. |
+| Permission scopes | The actions that your integration can take on behalf of a user. See the [Scopes reference](https://airtable.com/developers/web/api/scopes) for a full list of possible scopes. |
+| Tagline (optional) | A brief description of what your integration does. |
+| Homepage URL (optional) | URL of your website or homepage. |
+| Logo (optional) | Your logo. Visible to users when authorizing your integration. |
+| Support email (optional) | A support email where users may reach you. |
+| Privacy policy URL (required to share integration) | Your service's privacy policy. |
+| Terms of service URL (required to share integration) | Your service's TOS. |
+
+### Previewing the user authorization dialog
+
+When managing your OAuth integration, you can preview what the user authorization dialog will look like after adding at least one [scope](https://airtable.com/developers/web/api/scopes) to your integration.
+
+### Updating your client secret
+
+A client secret is an optional private key that authenticates your integration when requesting an OAuth token. You **should** generate a client secret if you will be issuing token requests from a server.
+
+To generate a client secret, navigate to your integration’s management page and click “Generate client secret”.
+
+Note that generating a client secret is potentially a breaking change: if you are already sending existing authorization requests, they will fail until you start sending this client secret. We ask you to confirm your decision to verify that this is ok.
+
+If you click “Generate”, a client secret will be generated:
+
+You will be unable to click “done” until you copy the client secret. Note that the client secret is **not recoverable**, as Airtable does not store a copy of your client secret. If you forget or misplace it, you can click “Regenerate client secret” to create a new one.
+
+Once your client secret is generated, you may also delete or regenerate your client secret at any time.
+
+## Building your integration
+
+You can view our [OAuth reference](https://airtable.com/developers/web/api/oauth-reference) for more details about how to construct an authorization request. The [OAuth.net Getting Started](https://oauth.net/getting-started/) guide is a good general resource about the OAuth protocol.
+
+If you feel ready to jump into some code, you can check out our example setup repo [here](https://github.com/Airtable/oauth-example).
+
+### Making API requests
+
+The OAuth access tokens you receive should be passed with your API requests as a `Authorization: Bearer header`. Refer to the [authentication reference page](https://airtable.com/developers/web/api/authentication) for more details.
+
+The token will only be able to access endpoints corresponding to the scopes granted to it, and the bases that the user has granted to it. These may change at any time (e.g. the user could add an additional base, or revoke access to one). Use the [list bases](https://airtable.com/developers/web/api/user-listBases) endpoint to list the bases that the token has access to, and the [get userId and scopes endpoint](https://airtable.com/developers/web/api/get-user-id-scopes) endpoint to list the token's scopes.
+
+OAuth access tokens can be used to make requests to most public Airtable API endpoints (assuming that the corresponding [scopes](https://airtable.com/developers/web/api/scopes) have been requested) including endpoints that were previously limited in availability such as the Metadata API and Enterprise API endpoints.
+
+> Note: OAuth access and refresh tokens should be treated as opaque, variable-length strings. In particular, do not rely on tokens having a particular length or format. Changes to the token format (for newly created tokens) are not considered to be breaking changes.
+
+## Distributing your integration
+
+After your integration has been built, the last step is to add a support email, privacy policy, and terms of service to your integration (via the management page at [/create/oauth](https://airtable.com/create/oauth)). This will enable other users to authorize your integration.

@@ -1,0 +1,73 @@
+SOURCE_URL: https://developer.salesforce.com/blogs/2026/04/salesforce-hosted-mcp-servers-are-now-generally-available
+Parker Harris said it himself: “[Why should you ever log into Salesforce again?](https://www.salesforce.com/news/stories/salesforce-headless-360-announcement/)”
+
+This is where the enterprise interface is heading; the AI revolution is here. Today, Salesforce hosted MCP servers are generally available — and they’re the infrastructure that enables that for your organization.
+
+What started as a pilot last spring and beta last October — connecting AI assistants to Salesforce logic and assets through the [Model Context Protocol](https://modelcontextprotocol.io) (MCP) — is now a production-ready capability for every Enterprise Edition org and above. Any MCP-compatible client can securely connect to Salesforce with enterprise-grade authentication, governance, and admin control built in.
+
+A hosted MCP server is a Salesforce-managed endpoint that exposes your org’s logic and assets — data, flows, Apex actions, queries, and more — to any AI client that speaks MCP. Salesforce handles hosting, authentication, and permission enforcement automatically. Whether your users live in Slack, Claude, ChatGPT, or something else entirely, MCP means they can work with Salesforce without switching contexts. All the major AI platforms and workplace communication solutions are building on MCP as the standard way to connect AI agents to enterprise systems. We now have an open standard for the industry to converge upon, and Salesforce is enthusiastically embracing the shift.
+
+## **What’s in the GA**
+
+If you read [the beta announcement](https://developer.salesforce.com/blogs/2025/10/salesforce-hosted-mcp-servers-are-in-beta-today), you saw the vision. For the GA, we’re highlighting the following:
+
+- **Fully managed infrastructure.** Salesforce hosts and scales your MCP servers, just as it does for the REST APIs you already use. No servers to provision, no uptime to manage. Enable a server in Setup and you’re live.
+- **Platform security built in.** Your existing permissions automatically apply — CRUD, [FLS](https://help.salesforce.com/s/articleView?id=platform.users_profiles_field_perms.htm&type=5), sharing rules, and all the other controls you’ve already mastered. Every transaction runs as the authenticated user, without anonymous service accounts or a new security model to learn. OAuth and [PKCE](https://help.salesforce.com/s/articleView?id=xcloud.remoteaccess_pkce.htm&type=5) control access.
+- **Robust, extensible feature set.** Use prebuilt standard servers for the Agentforce 360 Platform, Tableau Next, Data 360 SQL, and more — or configure custom servers that expose your flows, Apex actions, and [Named Query APIs](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/resources_named_query.htm).
+- **Prompt templates.** Craft prebuilt starting points for common tasks like account reviews or deal analysis in natural language to guide AI toward useful outputs grounded in your org’s data.
+
+And soon, you’ll be able to open up even more possibilities by invoking Agentforce agents via MCP.
+
+## **Real-world use cases and impact**
+
+We received great customer feedback during the pilot and beta periods regarding use cases for the MCP server:
+
+**Sales reps who never leave their AI assistant.** A rep preparing for a quarterly business review asks their chatbot to pull the account history, open opportunities, recent case activity, and stakeholder map — all from Salesforce, all in one conversation. No tab-switching, SOQL, or reports to build. The CRM data comes to them.
+
+**Cross-system intelligence.** A financial services company connects their AI assistant to Salesforce alongside their ERP system. The assistant reconciles quarterly revenue by comparing closed-won opportunities against general ledger entries, all with production data and enterprise-grade security.
+
+**Custom tools for domain-specific workflows.** ISV partners can build custom MCP tools backed by Apex invocable actions, Apex REST, and more. This gives our mutual customers’ AI assistants the ability to interact with their industry-specific data model through natural language, without the end user needing to understand the underlying schema.
+
+## **Human at the wheel**
+
+In the beta announcement, we characterized MCP as a universal translator between AI agents and your business data. Though that’s accurate, it undersells the importance of enabling **secure** access to data and actions **under human control**.
+
+Every MCP transaction runs with the authenticated user’s identity, permissions, and accountability. If the agent updates a record, that person’s name appears in the audit trail. If their permissions don’t allow an operation, the agent can’t do it either. The human is in the driver’s seat.
+
+Steve Jobs called the personal computer “[a bicycle for the mind](https://www.youtube.com/watch?v=ob_GX50Za6c&t=24s)” — a tool that amplified human capability beyond what was possible working by hand. With MCP and today’s AI assistants, we’ve moved past the bicycle. If personal computers were human-powered, now we’ve attached an engine, but the human is still at the wheel. A sales rep preparing for a meeting doesn’t log into Salesforce, navigate to the account, click through related records, and build a briefing by hand. They ask their AI assistant — in whatever tool they’re already working in — and get a comprehensive account review grounded in live customer data.
+
+The pace of business increases every day, and MCP helps your team keep up.
+
+## **Safety comes faster this time**
+
+It took more than 50 years for seat belt mandates in automobiles. In AI, safety controls are evolving in months, not decades.
+
+MCP itself is a safety mechanism. Structured tool calls replace unstructured API access. The server defines exactly which operations are available; there’s no way for an AI assistant to call an API that hasn’t been explicitly exposed. A new OAuth scope provides access to MCP, but not our existing REST APIs. Salesforce adds further layers: the platform’s decades-proven permission model, full audit trails, and the secure-by-default posture requiring MCP servers to be specifically enabled.
+
+Salesforce has always had strong access controls, but that’s not true of every enterprise system. A new category of products is emerging to help manage this on an enterprise-wide basis: MCP gateways — similar to API gateways, but purpose-built for the protocol. Products like [MuleSoft AI Gateway](https://www.mulesoft.com/platform/ai-gateway) provide centralized governance across all your MCP servers, not just Salesforce. Enterprises deploying MCP across multiple vendors will want to explore MCP gateways for centralized access control.
+
+## **Getting started**
+
+The setup takes less than 30 minutes. Here’s the shortest path:
+
+1. **Enable a server** in Setup → API Catalog → MCP Servers
+2. **Create an External Client App** with `mcp_api` and `refresh_token` scopes
+3. **Connect your client** — Postman for testing, then Claude, ChatGPT, or similar for everyday use
+
+Documentation is grouped into three layers to match the needs of various roles:
+
+- [**Salesforce Help**](https://help.salesforce.com/s/articleView?id=platform.api_catalog_manage_mcp_servers.htm) — Admin setup and configuration
+- [**Developer Docs**](https://developer.salesforce.com/docs/platform/hosted-mcp-servers) — [Technical reference](https://developer.salesforce.com/docs/platform/hosted-mcp-servers/references/reference/references-overview.html), [client setup](https://developer.salesforce.com/docs/platform/hosted-mcp-servers/guide/client-connection-overview.html), and [troubleshooting](https://developer.salesforce.com/docs/platform/hosted-mcp-servers/guide/troubleshooting-overview.html)
+- [**Community Wiki**](https://github.com/forcedotcom/mcp-hosted/wiki) — Patterns, tips, and the rationale behind our design decisions
+
+If you’re not sure where to begin, try the [platform/sobject-reads](https://developer.salesforce.com/docs/platform/hosted-mcp-servers/references/reference/sobject-reads.html) server in a sandbox. It’s read-only, risk-free, and immediately useful. When you’re ready for more, you can choose or build the exact tool set your organization needs.
+
+## **A new chapter**
+
+When we launched the beta, we imagined a world where every department could access CRM data through natural language. This year at TDX I presented on how our hosted MCP server brings this to life for Salesforce customers. You can now watch this TDX session on Salesforce+: [Master Agentic Integration with Salesforce MCP Servers](https://www.salesforce.com/plus/experience/tdx_2026/series/developers_at_tdx_2026/episode/episode-s1e2)
+
+CRM is a capability, not a destination. We’re just getting started.
+
+## **About the author**
+
+**Ross Belmont** is a Senior Director of Product Management focused on integrations, with more than 15 years of experience in the Salesforce ecosystem.

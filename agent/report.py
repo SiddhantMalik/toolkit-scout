@@ -33,7 +33,8 @@ def _cell(score):
 
 RUNS = [("pass1_memory", "Pass 1: memory only"),
         ("pass2a", "Pass 2a: agent + evidence + quotes"),
-        ("pass2b", "Pass 2b: after quote gate (verdict rubric v1)"),
+        ("pass2b_strict", "Pass 2b strict: Composio-checked quote gate, before re-quote"),
+        ("pass2b", "Pass 2b: after quote gate + re-quote (verdict rubric v1)"),
         ("pass2b_v3", "Pass 2b: verdict rubric v3 (post-hoc fix)")]
 
 
@@ -78,6 +79,35 @@ def _audit(crosscheck, evidence40):
         "partial": support.count("partial"), "no": support.count("no"), "n": len(evidence40)}
 
 
+def _composio_loop(scores):
+    """Numbers for the Composio verification loop (stage 3b/3d)."""
+    run = json.loads((ROOT / "data/composio_run.json").read_text())
+    pages = run["pages"].values()
+    raw = {r["id"]: r for r in _jsonl("data/pass2/pass2a.jsonl")}
+    before = json.loads((ROOT / "data/pass2/quote_check.json").read_text())["rows"]
+    after = json.loads((ROOT / "data/pass2/quote_check_requoted.json").read_text())["rows"]
+    def web_statuses(report):
+        out = []
+        for row in report:
+            for evidence, quote in zip(raw[row["id"]]["evidence"], row["quotes"]):
+                if evidence.get("src") == "web":
+                    out.append(quote["status"])
+        return out
+    web_before, web_after = web_statuses(before), web_statuses(after)
+    requotes = list(_jsonl("data/pass2/requote.jsonl"))
+    A = "goldA_hard_cases"
+    return {
+        "cx_pages_ok": sum(p["ok"] for p in pages), "cx_pages": len(run["pages"]),
+        "cx_web": len(web_before), "cx_verified": web_before.count("verified"),
+        "cx_failed": web_before.count("unverified"), "cx_unchecked": web_before.count("unchecked_web"),
+        "cx_requoted": len(requotes), "cx_failed_after": web_after.count("unverified"),
+        "cx_requote_names": ", ".join(sorted({r["app"] for r in requotes})),
+        "cx_a_mcp_strict": _frac(scores, "pass2b_strict", A, "mcp_official"),
+        "cx_a_mcp_final": _frac(scores, "pass2b", A, "mcp_official"),
+        "cx_session_runs": len(run["runs"]),
+    }
+
+
 def build_context():
     final = json.loads((ROOT / "data/final.json").read_text())
     summary, apps = final["summary"], final["apps"]
@@ -112,6 +142,7 @@ def build_context():
                   for a in (by_id[i] for i in human_ids)]
 
     ctx = {
+        **_composio_loop(scores),
         "retrieved": summary["retrieved"], "n": n, "nr": nr,
         "mcp_official": summary["mcp_official"], "mcp_remote": summary["mcp"].get("official_remote", 0),
         "mcp_local": summary["mcp"].get("official_local", 0), "mcp_flipped": drift["mcp_none_to_official"],
@@ -155,7 +186,7 @@ def build_context():
         "e40_present": audit_ev["present"], "e40_n": audit_ev["n"], "e40_clean": audit_ev["clean"],
         "e40_weak": audit_ev["weak"], "e40_part": audit_ev["partial"], "e40_no": audit_ev["no"],
         "queue_n": len(queue), "human_rows": _table(human_rows, ["App", "Auth", "Dev → prod access", "MCP", "Docs", "Check"]),
-        "web_only_apps": sum(1 for a in apps if a["quotes_web_only"] > 0),
+        "web_only_apps": sum(1 for r in _jsonl("data/pass2/pass2a.jsonl") if any(e.get("src") == "web" for e in r["evidence"])),
     }
     keep = ("id", "name", "category", "description", "auth", "access_dev", "access_prod", "min_plan", "admin_only_credential",
             "api_styles", "api_breadth", "api_beta", "tenancy", "mcp_type", "mcp_url", "docs_url", "evidence", "confidence",

@@ -1,0 +1,165 @@
+{
+ "runs": [
+  {
+   "at": "2026-11-23T10:41:42Z",
+   "tool": "KEENABLE_FETCH_URL_PUBLIC",
+   "session": "bank",
+   "attempted": 21
+  },
+  {
+   "at": "2026-11-23T10:44:13Z",
+   "tool": "KEENABLE_FETCH_URL_PUBLIC",
+   "session": "drew",
+   "targets": 21
+  }
+ ],
+ "pages": {
+  "https://developer.salesforce.com/blogs/2026/04/salesforce-hosted-mcp-servers-are-now-generally-available": {
+   "app_id": 1,
+   "tool": "KEENABLE_FETCH_URL_PUBLIC",
+   "ok": true,
+   "chars": 8884,
+   "error": null
+  },
+  "https://developer.salesforce.com/docs/platform/hosted-mcp-servers/guide/hosted-mcp-servers-overview.html": {
+   "app_id": 1,
+   "tool": "KEENABLE_FETCH_URL_PUBLIC",
+   "ok": true,
+   "chars": 3621,
+   "error": null
+  },
+  "https://developer.salesforce.com/docs/platform/connect-rest-api/guide/quickstart_dev_org": {
+   "app_id": 1,
+   "tool": "KEENABLE_FETCH_URL_PUBLIC",
+   "ok": true,
+   "chars": 716,
+   "error": null
+  },
+  "https://www.larksuite.com/en_us/plans": {
+   "app_id": 24,
+   "tool": "KEENABLE_FETCH_URL_PUBLIC",
+   "ok": true,
+   "chars": 1611,
+   "error": null
+  },
+  "https://pypi.org/project/linkedin-ads-mcp/": {
+   "app_id": 33,
+   "tool": "KEENABLE_FETCH_URL_PUBLIC",
+   "ok": true,
+   "chars": 8345,
+   "error": null
+  },
+  "https://developer.salesforce.com/docs/commerce/commerce-api/guide/authorization-for-admin-apis.html": {
+   "app_id": 44,
+   "tool": "KEENABLE_FETCH_URL_PUBLIC",
+   "ok": true,
+   "chars": 8346,
+   "error": null
+  },
+  "https://developer.salesforce.com/docs/commerce/commerce-api/guide/get-started.html": {
+   "app_id": 44,
+   "tool": "KEENABLE_FETCH_URL_PUBLIC",
+   "ok": true,
+   "chars": 10698,
+   "error": null
+  },
+  "https://glama.ai/mcp/servers/Burnsedia/sherlock-mcp": {
+   "app_id": 58,
+   "tool": "KEENABLE_FETCH_URL_PUBLIC",
+   "ok": true,
+   "chars": 6700,
+   "error": null
+  },
+  "https://airtable.com/developers/web/api/authentication": {
+   "app_id": 72,
+   "tool": "KEENABLE_FETCH_URL_PUBLIC",
+   "ok": true,
+   "chars": 3597,
+   "error": null
+  },
+  "https://airtable.com/developers/web/guides/oauth-integrations": {
+   "app_id": 72,
+   "tool": "KEENABLE_FETCH_URL_PUBLIC",
+   "ok": true,
+   "chars": 6238,
+   "error": null
+  },
+  "https://help.superhuman.com/hc/en-us/articles/46210076980365-Connect-to-the-Coda-MCP": {
+   "app_id": 78,
+   "tool": "KEENABLE_FETCH_URL_PUBLIC",
+   "ok": true,
+   "chars": 21295,
+   "error": null
+  },
+  "https://support.getharvest.com/hc/en-us/articles/46293697226381-Harvest-MCP": {
+   "app_id": 80,
+   "tool": "KEENABLE_FETCH_URL_PUBLIC",
+   "ok": true,
+   "chars": 8601,
+   "error": null
+  },
+  "https://www.binance.com/en/support/faq/360002502072": {
+   "app_id": 83,
+   "tool": "KEENABLE_FETCH_URL_PUBLIC",
+   "ok": true,
+   "chars": 6511,
+   "error": null
+  },
+  "https://developers.binance.com/en/docs/agent-native/mcp-server": {
+   "app_id": 83,
+   "tool": "KEENABLE_FETCH_URL_PUBLIC",
+   "ok": true,
+   "chars": 982,
+   "error": null
+  },
+  "https://developers.binance.com/en/docs/agent-native/mcp-server/agentic": {
+   "app_id": 83,
+   "tool": "KEENABLE_FETCH_URL_PUBLIC",
+   "ok": true,
+   "chars": 8586,
+   "error": null
+  },
+  "https://pitchbook.com/help/pitchbook-api": {
+   "app_id": 90,
+   "tool": "KEENABLE_FETCH_URL_PUBLIC",
+   "ok": true,
+   "chars": 3891,
+   "error": null
+  },
+  "https://pitchbook.com/media/press-releases/pitchbooks-industry-leading-private-capital-market-intelligence-is-now-accessible-in-claude": {
+   "app_id": 90,
+   "tool": "KEENABLE_FETCH_URL_PUBLIC",
+   "ok": true,
+   "chars": 4723,
+   "error": null
+  },
+  "https://tour.pitchbook.com/answers/pitchbook-announces-new-essential-mcp-integration-with-perplexity-expanding-access-to-ai-powered-verifiable-market-intelligence": {
+   "app_id": 90,
+   "tool": "KEENABLE_FETCH_URL_PUBLIC",
+   "ok": false,
+   "chars": 0,
+   "error": "Keenable could not find the target page: {\"error\":\"Not found\",\"message\":\"The page does not exist at this URL. Check that the URL is correct.\",\"type\":\"target_err"
+  },
+  "https://pypi.org/project/notebooklm-mcp-server/": {
+   "app_id": 91,
+   "tool": "KEENABLE_FETCH_URL_PUBLIC",
+   "ok": true,
+   "chars": 16589,
+   "error": null
+  },
+  "https://help.otter.ai/hc/en-us/articles/35287607569687-Otter-MCP-Server": {
+   "app_id": 92,
+   "tool": "KEENABLE_FETCH_URL_PUBLIC",
+   "ok": true,
+   "chars": 11881,
+   "error": null
+  },
+  "https://www.npmjs.com/package/mermaid-mcp-server": {
+   "app_id": 98,
+   "tool": "KEENABLE_FETCH_URL_PUBLIC",
+   "ok": true,
+   "chars": 2594,
+   "error": null
+  }
+ }
+}

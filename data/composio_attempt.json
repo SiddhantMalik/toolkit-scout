@@ -1,8 +1,0 @@
-{
-  "date": "2026-11-23",
-  "what": "Gap-fill attempt for apps whose pages the shell could not read, via Composio MCP tool KEENABLE_FETCH_URL_PUBLIC (free, keyless, shared per-IP quota). Run by the agent session, not by repo scripts.",
-  "apps_tried": ["Salesforce","Airtable","Xero","Gumroad","Binance","Magento","GoHighLevel","Salesforce Commerce Cloud"],
-  "result": "8 calls: 6 failed (Keenable shared quota 429 on most, GoHighLevel 404), 2 returned content. The Airtable page came back as 'not found'; the other result was in a truncated tool output and was not used.",
-  "data_changed": false,
-  "not_done": "Composio SDK from Python: the key (ck_ prefix) got HTTP 401 on backend.composio.dev /api/v3/tools. No Composio call is made by agent/*.py. Not re-run on the full 100 apps."
-}

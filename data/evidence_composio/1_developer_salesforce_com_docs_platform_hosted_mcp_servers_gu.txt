@@ -1,0 +1,37 @@
+SOURCE_URL: https://developer.salesforce.com/docs/platform/hosted-mcp-servers/guide/hosted-mcp-servers-overview.html
+# Salesforce Hosted MCP Servers
+
+Salesforce Hosted MCP Servers give AI agents a secure, governed way to interact with Salesforce data and automation. Using the open [Model Context Protocol (MCP)](https://modelcontextprotocol.io) standard, any compatible AI client—Claude, ChatGPT, Cursor, or a custom agent—can connect to a Salesforce org and act on behalf of authorized users.
+
+Think of it as a universal connector: instead of building custom API integrations for each AI tool your team uses, you configure a server once in Salesforce, and any MCP-compatible client can connect to it by using standard OAuth-based authentication.
+
+MCP (Model Context Protocol) is an open-source standard for connecting AI applications to external systems. Salesforce Hosted MCP Servers use this protocol to turn on secure agentic interoperability. External AI agents can securely connect with your Salesforce data, assets, and logic safely within the Salesforce security perimeter and governance policies.
+
+Use Hosted MCP Servers when you have an AI client—a chatbot, coding assistant, or agent workflow—that must interact with Salesforce logic and assets. MCP is the right choice if:
+
+- Your AI client already supports MCP (most major LLM clients do)
+- You want per-user authentication so that agent actions respect each user’s existing Salesforce permissions
+- You want an admin-configurable, auditable integration rather than a custom-coded API connection
+
+- **SObject Operations**: Read, create, update, and delete Salesforce records with tools that respect field-level security and sharing rules
+- **Custom Tools**: Expose Apex Invocable Actions, @AuraEnabled methods, Apex REST methods, Flows, and Named Queries as MCP tools without writing connector code
+- **Product Integration**: Access Data 360 SQL queries, Tableau analytics, and more
+- **Prompt Templates**: Use Prompt Builder templates from your MCP client
+- **Secure Authentication**: Per-user OAuth 2.0 with PKCE ensures that agents operate with appropriate permissions
+
+To begin using Hosted MCP Servers:
+
+1. [Set up your Salesforce org](https://developer.salesforce.com/docs/platform/hosted-mcp-servers/guide/create-external-client-app.html) to turn on the feature.
+2. [Connect an MCP client](https://developer.salesforce.com/docs/platform/hosted-mcp-servers/guide/client-connection-overview.html) like Claude, ChatGPT, or Postman.
+3. [Test your connection](https://developer.salesforce.com/docs/platform/hosted-mcp-servers/guide/test-connection.html) to verify everything works.
+4. Review [best practices](https://developer.salesforce.com/docs/platform/hosted-mcp-servers/guide/best-practices-overview.html) for secure, effective deployment.
+
+Salesforce Hosted MCP Servers are intended only for customers with Flex Credits and you may be billed for server usage. For details, see [Flex Credits usage](https://sfdc.co/usage_headless).
+
+To get Flex Credits, contact your account executive, or get started with [Salesforce Foundations](https://www.salesforce.com/ca/crm/foundations/).
+
+- To learn about which Salesforce products support MCP, see [Products Supporting MCP](https://developer.salesforce.com/docs/platform/hosted-mcp-servers/guide/products-supporting-mcp.html)
+- For detailed server documentation, see the [Servers Reference](https://developer.salesforce.com/docs/platform/hosted-mcp-servers/references/reference/servers-reference.html)
+- For release information, see Release Notes
+
+For the latest updates, see [Salesforce MCP Servers](https://help.salesforce.com/s/articleView?id=release-notes.rn_headless360_mcp_servers.htm) in the Salesforce Release Notes.

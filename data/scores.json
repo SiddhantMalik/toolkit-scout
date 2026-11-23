@@ -191,6 +191,102 @@
    }
   }
  },
+ "pass2b_strict": {
+  "goldA_hard_cases": {
+   "auth_jaccard_mean": 0.76,
+   "verdict_within_one": {
+    "n": 15,
+    "correct": 14
+   },
+   "auth": {
+    "n": 17,
+    "correct": 9,
+    "abstained": 0,
+    "acc": 53,
+    "ci95": [
+     31,
+     74
+    ]
+   },
+   "access": {
+    "n": 13,
+    "correct": 11,
+    "abstained": 0,
+    "acc": 85,
+    "ci95": [
+     58,
+     96
+    ]
+   },
+   "mcp_official": {
+    "n": 24,
+    "correct": 20,
+    "abstained": 2,
+    "acc": 83,
+    "ci95": [
+     64,
+     93
+    ]
+   },
+   "verdict": {
+    "n": 17,
+    "correct": 9,
+    "abstained": 0,
+    "acc": 53,
+    "ci95": [
+     31,
+     74
+    ]
+   }
+  },
+  "goldB_random_heldout": {
+   "auth_jaccard_mean": 0.97,
+   "verdict_within_one": {
+    "n": 20,
+    "correct": 20
+   },
+   "auth": {
+    "n": 20,
+    "correct": 18,
+    "abstained": 0,
+    "acc": 90,
+    "ci95": [
+     70,
+     97
+    ]
+   },
+   "access": {
+    "n": 20,
+    "correct": 19,
+    "abstained": 0,
+    "acc": 95,
+    "ci95": [
+     76,
+     99
+    ]
+   },
+   "mcp_official": {
+    "n": 20,
+    "correct": 20,
+    "abstained": 0,
+    "acc": 100,
+    "ci95": [
+     84,
+     100
+    ]
+   },
+   "verdict": {
+    "n": 20,
+    "correct": 11,
+    "abstained": 0,
+    "acc": 55,
+    "ci95": [
+     34,
+     74
+    ]
+   }
+  }
+ },
  "pass2b": {
   "goldA_hard_cases": {
    "auth_jaccard_mean": 0.76,

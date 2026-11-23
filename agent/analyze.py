@@ -5,7 +5,7 @@ from verdict import verdict
 from norm import auth_set, access_cls, from_pass1
 seed = {a["id"]: a for a in load_seed()}
 rows = [json.loads(l) for l in open(ROOT/"data/pass2/pass2c.jsonl")]
-qc = {r["id"]: r["quotes"] for r in json.load(open(ROOT/"data/pass2/quote_check.json"))["rows"]}
+qc = {r["id"]: r["quotes"] for r in json.load(open(ROOT/"data/pass2/quote_check_requoted.json"))["rows"]}
 final = []
 for r in rows:
     v, rule, blockers = verdict(r, fixed=True)

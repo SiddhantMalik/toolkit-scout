@@ -1,8 +1,8 @@
 {
  "summary": {
-  "verified": 540,
-  "unverified": 4,
-  "unchecked_web": 31
+  "verified": 565,
+  "unverified": 9,
+  "unchecked_web": 1
  },
  "rows": [
   {
@@ -12,22 +12,22 @@
     {
      "field": "mcp",
      "url": "https://developer.salesforce.com/blogs/2026/04/salesforce-hosted-mcp-servers-are-now-generally-available",
-     "status": "unchecked_web"
+     "status": "unverified"
     },
     {
      "field": "access",
      "url": "https://developer.salesforce.com/blogs/2026/04/salesforce-hosted-mcp-servers-are-now-generally-available",
-     "status": "unchecked_web"
+     "status": "verified"
     },
     {
      "field": "auth",
      "url": "https://developer.salesforce.com/docs/platform/hosted-mcp-servers/guide/hosted-mcp-servers-overview.html",
-     "status": "unchecked_web"
+     "status": "verified"
     },
     {
      "field": "access",
      "url": "https://developer.salesforce.com/docs/platform/connect-rest-api/guide/quickstart_dev_org",
-     "status": "unchecked_web"
+     "status": "verified"
     }
    ]
   },
@@ -760,7 +760,7 @@
     {
      "field": "access",
      "url": "https://www.larksuite.com/en_us/plans",
-     "status": "unchecked_web"
+     "status": "unverified"
     },
     {
      "field": "mcp",
@@ -1099,7 +1099,7 @@
     {
      "field": "mcp",
      "url": "https://pypi.org/project/linkedin-ads-mcp/",
-     "status": "unchecked_web"
+     "status": "verified"
     }
    ]
   },
@@ -1500,17 +1500,17 @@
     {
      "field": "auth",
      "url": "https://developer.salesforce.com/docs/commerce/commerce-api/guide/authorization-for-admin-apis.html",
-     "status": "unchecked_web"
+     "status": "verified"
     },
     {
      "field": "access",
      "url": "https://developer.salesforce.com/docs/commerce/commerce-api/guide/authorization-for-admin-apis.html",
-     "status": "unchecked_web"
+     "status": "verified"
     },
     {
      "field": "access",
      "url": "https://developer.salesforce.com/docs/commerce/commerce-api/guide/get-started.html",
-     "status": "unchecked_web"
+     "status": "verified"
     },
     {
      "field": "api",
@@ -1979,7 +1979,7 @@
     {
      "field": "mcp",
      "url": "https://glama.ai/mcp/servers/Burnsedia/sherlock-mcp",
-     "status": "unchecked_web"
+     "status": "verified"
     }
    ]
   },
@@ -2378,12 +2378,12 @@
     {
      "field": "auth",
      "url": "https://airtable.com/developers/web/api/authentication",
-     "status": "unchecked_web"
+     "status": "verified"
     },
     {
      "field": "auth",
      "url": "https://airtable.com/developers/web/api/authentication",
-     "status": "unchecked_web"
+     "status": "verified"
     },
     {
      "field": "access",
@@ -2393,7 +2393,7 @@
     {
      "field": "access",
      "url": "https://airtable.com/developers/web/guides/oauth-integrations",
-     "status": "unchecked_web"
+     "status": "verified"
     },
     {
      "field": "mcp",
@@ -2634,7 +2634,7 @@
     {
      "field": "mcp",
      "url": "https://help.superhuman.com/hc/en-us/articles/46210076980365-Connect-to-the-Coda-MCP",
-     "status": "unchecked_web"
+     "status": "verified"
     },
     {
      "field": "mcp",
@@ -2716,12 +2716,12 @@
     {
      "field": "mcp",
      "url": "https://support.getharvest.com/hc/en-us/articles/46293697226381-Harvest-MCP",
-     "status": "unchecked_web"
+     "status": "verified"
     },
     {
      "field": "mcp",
      "url": "https://support.getharvest.com/hc/en-us/articles/46293697226381-Harvest-MCP",
-     "status": "unchecked_web"
+     "status": "verified"
     }
    ]
   },
@@ -2819,22 +2819,22 @@
     {
      "field": "access",
      "url": "https://www.binance.com/en/support/faq/360002502072",
-     "status": "unchecked_web"
+     "status": "verified"
     },
     {
      "field": "access",
      "url": "https://www.binance.com/en/support/faq/360002502072",
-     "status": "unchecked_web"
+     "status": "unverified"
     },
     {
      "field": "mcp",
      "url": "https://developers.binance.com/en/docs/agent-native/mcp-server",
-     "status": "unchecked_web"
+     "status": "verified"
     },
     {
      "field": "mcp",
      "url": "https://developers.binance.com/en/docs/agent-native/mcp-server/agentic",
-     "status": "unchecked_web"
+     "status": "verified"
     }
    ]
   },
@@ -3066,22 +3066,22 @@
     {
      "field": "auth",
      "url": "https://pitchbook.com/help/pitchbook-api",
-     "status": "unchecked_web"
+     "status": "verified"
     },
     {
      "field": "access",
      "url": "https://pitchbook.com/help/pitchbook-api",
-     "status": "unchecked_web"
+     "status": "verified"
     },
     {
      "field": "api",
      "url": "https://pitchbook.com/help/pitchbook-api",
-     "status": "unchecked_web"
+     "status": "verified"
     },
     {
      "field": "mcp",
      "url": "https://pitchbook.com/media/press-releases/pitchbooks-industry-leading-private-capital-market-intelligence-is-now-accessible-in-claude",
-     "status": "unchecked_web"
+     "status": "verified"
     },
     {
      "field": "mcp",
@@ -3132,7 +3132,7 @@
     {
      "field": "mcp",
      "url": "https://pypi.org/project/notebooklm-mcp-server/",
-     "status": "unchecked_web"
+     "status": "verified"
     }
    ]
   },
@@ -3143,22 +3143,22 @@
     {
      "field": "api",
      "url": "https://help.otter.ai/hc/en-us/articles/35287607569687-Otter-MCP-Server",
-     "status": "unchecked_web"
+     "status": "verified"
     },
     {
      "field": "mcp",
      "url": "https://help.otter.ai/hc/en-us/articles/35287607569687-Otter-MCP-Server",
-     "status": "unchecked_web"
+     "status": "unverified"
     },
     {
      "field": "auth",
      "url": "https://help.otter.ai/hc/en-us/articles/35287607569687-Otter-MCP-Server",
-     "status": "unchecked_web"
+     "status": "verified"
     },
     {
      "field": "access",
      "url": "https://help.otter.ai/hc/en-us/articles/35287607569687-Otter-MCP-Server",
-     "status": "unchecked_web"
+     "status": "unverified"
     }
    ]
   },
@@ -3389,7 +3389,7 @@
     {
      "field": "mcp",
      "url": "https://www.npmjs.com/package/mermaid-mcp-server",
-     "status": "unchecked_web"
+     "status": "verified"
     }
    ]
   },

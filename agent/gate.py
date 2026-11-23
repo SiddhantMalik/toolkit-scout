@@ -1,38 +1,113 @@
-"""Stage 3b: verification gate. A field whose evidence quotes ALL fail the verbatim-presence check is reset to
-'unknown' (abstain) and queued for a human. src='web' quotes can't be machine-checked: kept, but flagged 'web_only'.
-python agent/gate.py  -> data/pass2/pass2a.jsonl, pass2b.jsonl, quote_check.json, human_queue.json"""
-import json, glob, subprocess, sys
-from common import ROOT
-rows = {}
-for p in sorted(glob.glob(str(ROOT/"data/pass2/raw_*.jsonl"))):
-    for l in open(p):
-        if l.strip(): r = json.loads(l); rows[r["id"]] = r
-assert sorted(rows)==list(range(1,101)), sorted(set(range(1,101))-set(rows))
-(ROOT/"data/pass2/pass2a.jsonl").write_text("".join(json.dumps(rows[i])+"\n" for i in sorted(rows)))
-out = subprocess.run([sys.executable, str(ROOT/"agent/check_quotes.py"), str(ROOT/"data/pass2/pass2a.jsonl")], capture_output=True, text=True).stdout
-qc = json.loads(out); (ROOT/"data/pass2/quote_check.json").write_text(out)
-status = {r["id"]: r["quotes"] for r in qc["rows"]}
-FIELD_KEYS = {"auth":["auth"],"access":["access_dev","access_prod"],"mcp":["mcp_type","mcp_url"],"api":["api_styles","api_breadth"]}
-RESET = {"auth":[], "access_dev":"unknown","access_prod":"unknown","mcp_type":"unknown","mcp_url":None,"api_styles":[],"api_breadth":"unknown"}
-b = {}; queue = []; resets = []
-for i, r in rows.items():
-    r2 = json.loads(json.dumps(r)); qs = status[i]
-    for f, keys in FIELD_KEYS.items():
-        fq = [q["status"] for q in qs if q["field"] == f]
-        if fq and all(s == "unverified" for s in fq):
-            for k in keys: r2[k] = RESET[k]
-            resets.append({"id": i, "name": r["name"], "field": f}); 
-    b[i] = r2
-    if r.get("needs_human") or r.get("entity_status") in ("ambiguous","not_found","renamed") or r.get("confidence")=="low":
-        queue.append({"id": i, "name": r["name"], "entity_status": r.get("entity_status"), "confidence": r.get("confidence"), "question": r.get("needs_human")})
-(ROOT/"data/pass2/pass2b.jsonl").write_text("".join(json.dumps(b[i])+"\n" for i in sorted(b)))
-(ROOT/"data/pass2/human_queue.json").write_text(json.dumps({"resets_by_gate": resets, "queue": queue}, indent=1))
-print(qc["summary"], "| gate resets:", resets, "| human queue:", len(queue))
+"""Stage 3: verification gate.
 
-# Stage 3c: logged corrections after the second audit -> pass2c (provenance marked; never counted as agent accuracy)
-corr = json.load(open(ROOT/"data/pass2/corrections.json"))["fixes"]
-c = {i: json.loads(json.dumps(b[i])) for i in b}
-for f in corr:
-    c[f["id"]].update(f["set"]); c[f["id"]]["provenance"] = "audit_correction: " + f["reason"]
-(ROOT/"data/pass2/pass2c.jsonl").write_text("".join(json.dumps(c[i])+"\n" for i in sorted(c)))
-print("corrections applied:", [f["id"] for f in corr])
+  pass2a   raw extractor output, merged from data/pass2/raw_*.jsonl
+  check    every quote is looked for in the page text saved for its app (check_quotes.py); quotes that came through a
+           web tool are checked against the Composio copy of the cited page when stage 3b saved one
+  gate     a field whose quotes ALL fail is reset to 'unknown' (abstain)          -> pass2b_strict.jsonl
+  requote  failed quotes replaced by text taken from the cited page (requote.jsonl), then everything is checked
+           again; values never change, and a replacement only counts if it is found verbatim  -> pass2b.jsonl
+  correct  logged audit corrections (corrections.json), never counted as agent accuracy  -> pass2c.jsonl
+
+python agent/gate.py   (also writes quote_check*.json and human_queue.json)
+"""
+import copy
+import glob
+import json
+import subprocess
+import sys
+
+from common import ROOT
+
+P2 = ROOT / "data/pass2"
+FIELD_KEYS = {"auth": ["auth"], "access": ["access_dev", "access_prod"],
+              "mcp": ["mcp_type", "mcp_url"], "api": ["api_styles", "api_breadth"]}
+RESET = {"auth": [], "access_dev": "unknown", "access_prod": "unknown", "mcp_type": "unknown",
+         "mcp_url": None, "api_styles": [], "api_breadth": "unknown"}
+
+
+def write_jsonl(path, rows):
+    path.write_text("".join(json.dumps(rows[i]) + "\n" for i in sorted(rows)))
+
+
+def load_raw():
+    rows = {}
+    for path in sorted(glob.glob(str(P2 / "raw_*.jsonl"))):
+        for line in filter(str.strip, open(path)):
+            record = json.loads(line)
+            rows[record["id"]] = record
+    missing = set(range(1, 101)) - set(rows)
+    assert not missing, f"apps missing from raw output: {sorted(missing)}"
+    return rows
+
+
+def check(path, out_name):
+    """Run check_quotes.py on a JSONL file; save its report; return {app id: [quote statuses]} and the summary."""
+    out = subprocess.run([sys.executable, str(ROOT / "agent/check_quotes.py"), str(path)],
+                         capture_output=True, text=True, check=True).stdout
+    (P2 / out_name).write_text(out)
+    report = json.loads(out)
+    return {r["id"]: r["quotes"] for r in report["rows"]}, report["summary"]
+
+
+def apply_gate(rows, status):
+    """Reset every field whose quotes all failed; return (gated rows, list of resets)."""
+    gated, resets = {}, []
+    for app_id, record in rows.items():
+        out = copy.deepcopy(record)
+        for field, keys in FIELD_KEYS.items():
+            statuses = [q["status"] for q in status[app_id] if q["field"] == field]
+            if statuses and all(s == "unverified" for s in statuses):
+                for key in keys:
+                    out[key] = copy.deepcopy(RESET[key])
+                resets.append({"id": app_id, "name": record["name"], "field": field})
+        gated[app_id] = out
+    return gated, resets
+
+
+def apply_requotes(rows):
+    requoted = copy.deepcopy(rows)
+    for line in filter(str.strip, open(P2 / "requote.jsonl")):
+        fix = json.loads(line)
+        for evidence in requoted[fix["id"]]["evidence"]:
+            if evidence["field"] == fix["field"] and evidence["quote"] == fix["old_quote"]:
+                evidence["quote"], evidence["requoted_from"] = fix["new_quote"], fix["old_quote"]
+    return requoted
+
+
+def human_queue(rows):
+    return [{"id": i, "name": r["name"], "entity_status": r.get("entity_status"),
+             "confidence": r.get("confidence"), "question": r.get("needs_human")}
+            for i, r in rows.items()
+            if r.get("needs_human") or r.get("entity_status") in ("ambiguous", "not_found", "renamed")
+            or r.get("confidence") == "low"]
+
+
+def main():
+    rows = load_raw()
+    write_jsonl(P2 / "pass2a.jsonl", rows)
+
+    status, summary = check(P2 / "pass2a.jsonl", "quote_check.json")
+    strict, strict_resets = apply_gate(rows, status)
+    write_jsonl(P2 / "pass2b_strict.jsonl", strict)
+
+    requoted = apply_requotes(rows)
+    write_jsonl(P2 / "pass2a_requoted.jsonl", requoted)
+    status_rq, summary_rq = check(P2 / "pass2a_requoted.jsonl", "quote_check_requoted.json")
+    gated, resets = apply_gate(requoted, status_rq)
+    write_jsonl(P2 / "pass2b.jsonl", gated)
+
+    corrected = copy.deepcopy(gated)
+    for fix in json.load(open(P2 / "corrections.json"))["fixes"]:
+        corrected[fix["id"]].update(fix["set"])
+        corrected[fix["id"]]["provenance"] = "audit_correction: " + fix["reason"]
+    write_jsonl(P2 / "pass2c.jsonl", corrected)
+
+    (P2 / "human_queue.json").write_text(json.dumps(
+        {"resets_by_strict_gate": strict_resets, "resets_by_gate": resets, "queue": human_queue(rows)}, indent=1))
+    print("quotes:", summary, "-> after re-quote:", summary_rq)
+    print("strict gate resets:", [(r["name"], r["field"]) for r in strict_resets])
+    print("final gate resets: ", [(r["name"], r["field"]) for r in resets])
+
+
+if __name__ == "__main__":
+    main()
